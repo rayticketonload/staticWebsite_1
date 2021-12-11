@@ -45,7 +45,7 @@
 ************
 */
 /* 公司简介 */
-.company_profile .container {
+.container {
   padding: 0 360px 100px;
 }
 .company_profile .container .article_box p {
@@ -97,18 +97,22 @@
 .company_profile .honor_box .item .icon-service {
   background-image: url(../image/service.png);
 }
+/* 企业文化 & 业务介绍 */
 .company_profile .container .card {
   margin-bottom: 50px;
   background-color: #f3f7fc;
 }
+/* .company_business .card .image_box, */
 .company_profile .card .image_box {
   width: 58%;
 }
+/* .company_business .card .desc_box, */
 .company_profile .card .desc_box {
   width: 42%;
   padding: 80px 50px;
   box-sizing: border-box;
 }
+.company_business .card .desc_box .desc_title,
 .company_profile .card .desc_box .desc_title {
   position: relative;
   font-size: 32px;
@@ -116,6 +120,7 @@
   margin-bottom: 20px;
   color: #00329b;
 }
+.company_business .card .desc_box .desc_title::after,
 .company_profile .card .desc_box .desc_title::after {
   content: '';
   position: absolute;
@@ -125,7 +130,101 @@
   height: 4px;
   background-color: #00329b;
 }
+.company_business .card .desc_box .desc_text,
 .company_profile .card .desc_box .desc_text {
   font-size: 16px;
   line-height: 2em;
+}
+
+/* 
+************
+经营业务
+************
+*/
+/* 业务介绍 */
+.company_business .card {
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+.company_business .card .image_box {
+  width: 53%;
+}
+.company_business .card .desc_box {
+  width: 47%;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+/* 企业荣誉 */
+.company_business .enterprise_content {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.company_business .enterprise_content > div {
+  flex: 0.25;
+  margin-bottom: 40px;
+}
+.company_business .enterprise_content .img_box {
+  position: relative;
+  width: 275px;
+  height: 200px;
+  margin: auto;
+  cursor: zoom-in;
+}
+.company_business .enterprise_content .img_box .icon-zoom {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  transform: translate(-50%, -50%);
+  background-image: url(/nanyou/static/image/zoomin.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+.company_business .enterprise_content .img_box:hover .icon-zoom {
+  display: block;
+}
+.company_business .enterprise_content .img_box:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  cursor: zoom-out;
+}
+.mask .image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 140px 400px;
+}
+.mask .image .close {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(/nanyou/static/image/clone.png);
+  cursor: pointer;
 }

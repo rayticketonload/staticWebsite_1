@@ -704,6 +704,7 @@ img {
 	transition: all 0.3s;
 	color: #333333;
 	box-shadow: 0 0 4px 0px #cdcdcd;
+	cursor: pointer;
 }
 .info_left li::before {
 	content: '';
@@ -766,7 +767,10 @@ img {
 	margin-top: 50px;
 }
 .enterprise_content .img_box {
-	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* text-align: center; */
 	width: 320px;
 	height: 220px;
 	border: 1px solid #eee;
@@ -774,6 +778,7 @@ img {
 }
 .enterprise_content img {
 	width: auto;
+	max-width: 100%;
 	height: 100%;
 }
 /* .enterprise_content .im_boxg:hover {

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<title>广东南油控股集团有限公司</title>
+		<!-- <link rel="stylesheet" href="/templates/jidian/static/css/common.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/index.css">
+		<link rel="stylesheet" href="/templates/jidian/static/swiper-4.5.1/css/swiper.min.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/animate.compat.css">
+		<link rel="stylesheet" href="/templates/jidian/static/layui/css/layui.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/iconfont.css"> -->
+
+		<link rel="stylesheet" href="/nanyou/static/css/common.css">
+		<link rel="stylesheet" href="/nanyou/static/css/other-page.css">
+		<link rel="stylesheet" href="/nanyou/static/css/index.css">
+		<link rel="stylesheet" href="/nanyou/static/swiper-4.5.1/css/swiper.min.css">
+		<link rel="stylesheet" href="/nanyou/static/css/animate.compat.css">
+		<link rel="stylesheet" href="/nanyou/static/layui/css/layui.css">
+		<link rel="stylesheet" href="/nanyou/static/css/iconfont.css">
+	</head>
+	<style>
+		.swiper-button-prev {
+			background-image: none;
+		}
+
+		.swiper-button-next {
+			background-image: none;
+			padding-right: 10px;
+		}
+	</style>
+	<body>
+		<div>
+			<!-- 导航栏 -->
+			<!-- #include("./common/header.html") -->
+			<div class="header">
+				<div class="header_box">
+					<div class="logo" style="margin-left: 0px;">
+						<img class="logo_img" src="/nanyou/static/image/logo.png" alt="">
+					</div>
+					<div class="head_nav">
+						<div class="navbar">
+							<ul class="nav_list">
+								<!--头部栏目-->
+								<li class="nav_item" >
+									<a class="nav-link" href="/nanyou/">网站首页</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/nanyou/company_index.html">关于我们</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/nanyou/company_business.html">经营业务</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/nanyou/company_party.html">企业党建</a>
+								</li>
+								<li class="nav_item active">
+									<a class="nav-link" href="/nanyou/information_center.html">资讯中心</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/nanyou/company_recruitment.html">人才招聘</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 右边 -->
+					<div class="head_sear" style="padding: 45px 0px;position: absolute;height: auto;z-index: 999;right: 100px;">
+						<!-- 搜索输入框 -->
+						<div class="">
+							<form action="#(currentSite.url)/search/title" class="layui-form" method="get" id="titleForm">
+								<div class="search_input_wrap">
+									<div class="layui-input-inline" style="width:100%;height: 100%;">
+										<input type="text" id="keyword" name="keyword" required placeholder="搜索关键词..."
+											autocomplete="off" class="layui-input search_input_box">
+									</div>
+									<button type="submit" class="layui-btn ico_search_bn">
+										<img src="/nanyou/static/image/ico_search.png" alt="">
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+			
+					<!-- 当屏幕小于1024 -->
+					<div class="head_col">
+						<div class="head_nav_item">
+							<img src="/nanyou/static/image/ico_collapse.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>			
+
+
+			<div class="content">
+				<!-- banner -->
+				<div class="swiper-container swiper animated zoomIn" id="swiper1">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper_item">
+							<a href="#" class="swiper_href">
+								<img src="/nanyou/static/image/banner_1.png" class="d-block w-100 swiper_ing">
+								<div class="swiper_title animated fadeInUp"></div>
+							</a>
+						</div>
+					</div>
+					<!-- 分页器 -->
+					<div class="swiper-pagination"></div>
+				</div>
+				<!-- sub nav -->
+				<div class="sub_nav flex_align">
+					<div class="breadcrumb">
+						<span class="icon-home iconfont"></span>
+						<span>首页 > 关于我们 > <span class="cur_nav">公司简介</span>
+					</div>
+					<ul class="nav_box">
+						<a href="javascript:;"><li onclick="handleClickNav(0)" class="active">公司简介</li></a>
+						<a href="javascript:;"><li onclick="handleClickNav(1)" class="">企业文化</li></a>
+						<a href="javascript:;"><li onclick="handleClickNav(2)" class="">组织结构</li></a>
+					</ul>
+				</div>
+
+				<!-- 公司简介 -->
+				<div class="company_profile">
+					<!-- 公司简介 -->
+					<div class="container">
+						<div class="article_box">
+							<p>
+								广东南油控股集团有限公司（简称南油集团），原名中国南海石油联合服务总公司，于1982年经由国家经委批准成立，由原石油工业部和广东省人民政府联合投资设立，是我国第一家专门为海洋石油天然气勘探开发提供各项专业服务的企业。公司以海洋环保及能源开发服务为主业发展方向，主要提供是有工程技术、技能人才支持、海洋是有增产增效技术、海洋环境实时监测、海底节能储油、工业清洗、海上供油等服务。客户包括国内外众多知名大型石油化工企业，是中国石化、中国海油长期优质供应商和服务商。
+							</p>
+							<p>
+								公司拥有海上工程管理、海上检测采集、海上智能装备、油田开发生产技术等10多项自主知识产权产品。拥有人力资源服务许可、劳务派遣经营许可、海洋船舶船员服务机构资质、工业清洗企业资质、化工防腐蚀施工资格、海上设备维修资格证书等。曾为中国海油981钻井平台、蓝鲸1号可燃冰开采、海洋石油291工程等国家重大项目提供优质可靠服务。围绕海洋强国战略，积极参与 “一带一路” 沿线国家海上平台建设。
+							</p>
+							<p>
+								南油集团将始终坚持以习近平新时代中国特色社会主义思想为指导，深耕海洋市场，全力服务于国家能源发展战略，努力构建 “高技术、高门槛、高服务能力” 的现代化服务产业体系，力争成为国内外知名、华南地区领先的海洋环保及能源开发服务供应商。
+							</p>
+						</div>
+						<div class="flex_align honor_box">
+							<div class="item flex_align">
+								<div>
+									<div class="value"><b>1982</b>年</div>
+									<div>成立时间</div>
+								</div>
+								<div class="icon icon-time"></div>
+							</div>
+							<div class="line"></div>
+							<div class="item flex_align">
+								<div>
+									<div class="value"><b>500</b>强</div>
+									<div>中国服务业</div>
+								</div>
+								<div class="icon icon-service"></div>
+							</div>
+							<div class="line"></div>
+							<div class="item flex_align">
+								<div>
+									<div class="value"><b>500</b>强</div>
+									<div>广东省企业</div>
+								</div>
+								<div class="icon icon-company"></div>
+							</div>
+							<div class="line"></div>
+							<div class="item flex_align">
+								<div>
+									<div class="value"><b>10</b><em>+</em>项</div>
+									<div>自主知识产权产品</div>
+								</div>
+								<div class="icon icon-honor"></div>
+							</div>
+						</div>
+						<div>
+							<img src="/nanyou/static/image/banner.png" alt="">
+						</div>
+					</div>
+					<!-- 企业文化 -->
+					<div class="container">
+						<div class="card flex">
+							<div class="image_box">
+								<img src="/nanyou/static/image/企业精神.png" alt="">
+							</div>
+							<div class="desc_box">
+								<div class="desc_title">企业精神</div>
+								<p class="desc_text">团结和谐、务实创新、优质高效、专业精良</p>
+							</div>
+						</div>
+						<div class="card flex">
+							<div class="desc_box">
+								<div class="desc_title">企业使命</div>
+								<p class="desc_text">为社会创造财富、为客户创造价值、为股东创造效益、为员工创造福祉</p>
+							</div>
+							<div class="image_box">
+								<img src="/nanyou/static/image/企业使命.png" alt="">
+							</div>
+						</div>
+					</div>
+					<!-- 组织结构 -->
+					<div class="container">
+						<div class="organization">
+							<img src="/nanyou/static/image/组织架构.png" alt="">
+						</div>
+					</div>
+				</div>
+				
+				<!-- 股票 -->
+				<!-- <div class="stock_price stock_price_fixed">
+				    <div class="stock_price_wrap width_col">
+				        <div class="stock_price_title font-size-16">实时股价</div>
+				        <div class="stock_price_content" id="stock_info">
+				        </div>
+				    </div>
+				</div> -->
+			</div>
+			<!-- 底部 -->
+			<!-- #include("./common/top.html")
+			#include("./common/footer.html") -->
+			<div class="gotop_box">
+				<a href="#" class="gotop_href">
+						<img src="/nanyou/static/image/ico_top.png" alt="">
+				</a>
+			</div>
+			<div class="footer">
+				<!-- 防止手机浏览器自动识别电话号码造成样式错误 -->
+				<meta name="format-detection" content="telephone=no" />
+				<div class="footer_box">
+					<div class="footer_nav flex">
+						<!--底部栏目-->
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">关于我们</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司简介</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">企业文化</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">组织结构</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">经营业务</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">业务介绍</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">荣誉资质</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">企业党建</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">党建专栏</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">廉洁专栏</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">资讯中心</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">新闻动态</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">信息公开</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">人才招聘</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">集团招聘</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">海股招聘</a>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="footer_right">
+						<p style="font-size: 18px;font-family: Source Han Sans CN, Source Han Sans CN-Normal;color: #ffffff;">联系我们
+						</p>
+						<p style="width: 26px;height: 2px;background: #dbe8e2;margin-top: 20px;"></p>
+						<div class="footer_message flex">
+							<div class="footer_qr_code">
+								<img src="/nanyou/static/image/qr_code.png" alt="">
+								<span>扫描二维码关注我们</span>
+							</div>
+							<div class="footer_message_nav">
+								<p class="footer_company">广东南油控股集团有限公司</p>
+								
+								<ul class="footer_company_list">
+									<li>
+										<img src="/nanyou/static/image/address.png"/>
+										<span>地址：</span>
+										<span>广东省广州市越秀区环市东路503号</span>
+									</li>
+									<li>
+										<img src="/nanyou/static/image/postcode.png" />
+										<span>传真：</span>
+										<span>020-37605840</span>
+									</li>
+									<li>
+										<img src="/nanyou/static/image/email.png" />
+										<span>邮编：</span>
+										<span>510075</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer_copyright">
+					COPYRIGHT 广东南油控股集团有限公司 2004-2015 粤ICP备15043811号-2
+				</div>
+			</div>
+		</div>
+
+
+		<script src="/nanyou/static/js/jquery.min.js" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.addEventListener("scroll",function(e){
+        var h =document.documentElement.scrollTop||document.body.scrollTop;
+        h<=0?$('.gotop_box').hide():'';
+        h>=200? $('.gotop_box').show():'';
+   	 	});
+			// 子导航点击方法
+			function handleClickNav(index) {
+				const $container = $('.company_profile .container');
+				const $li = $('.sub_nav .nav_box li');
+				const $curNav = $('.sub_nav .cur_nav');
+				$container.hide();
+				$container.eq(index).show();
+				$li.removeClass('active');
+				$li.eq(index).addClass('active');
+				$curNav.text($li.eq(index).text());
+			}
+			// 默认选中第一个
+			handleClickNav(0);
+
+			// $(document).ready(function() {
+			// 	queryPriceOfStock();
+			// })
+			// 查询股价
+			// function queryPriceOfStock() {
+			//     $.get("http://qt.gtimg.cn/q=sz000833,sz002683,sz836892", {}, function (res) {
+			//         var html = "";
+			//         // 获取以;分割的内容
+			//         var arr = res.split(";");
+			//         for (var i = 0; i < arr.length; i++) {
+			//             // 名字
+			//             var name = arr[i].split("~")[1];
+			//             // 代码
+			//             var code = arr[i].split("~")[2];
+			//             // 价格
+			//             var price = arr[i].split("~")[3];
+			//             // 涨跌
+			//             var rise = arr[i].split("~")[31];
+			//             // 涨跌%
+			//             var percentage = arr[i].split("~")[32];
+			//             if (name != undefined && code != undefined && price != undefined && rise != undefined) {
+			//                 // 设置 html <i class='layui-icon "+ (Number(rise) > 0 ? 'layui-icon-up' : 'layui-icon-down') +"' style='color: red;'></i>
+			//                 html += "<div class='stock_price_data'>" +
+			//                     "<span>" + name + "(" + code + ")</span>" +
+			//                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + price + "</span>" +
+			//                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + rise + "</span>" +
+			//                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + percentage + "%</span>" +
+			//                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;' class='iconfont " + (Number(rise) > 0 ? 'icon-xiangshang4' : 'icon-xiangxia4') + "'></span>" +
+			//                     "</div>"
+			//             }
+			//         }
+			//         $("#stock_info").empty().html(html);
+			//     })
+			// }
+			
+			// setInterval(function () {
+			//     queryPriceOfStock();
+			// }, 60 * 2 * 1000);
+		</script>
+	</body>
+</html>
