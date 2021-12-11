@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>广东省机电建筑设计研究院有限公司</title>
+		<link rel="stylesheet" href="/templates/jidian/static/css/index.css">
+	</head>
+	<body>
+		<div id="company">
+			<!-- 导航栏 -->
+			#include("./common/header.html")
+			<!-- banner -->
+			<div class="company_banner">
+				<img src="/templates/jidian/static/image/banner01.png" alt="">
+			</div>
+			<!-- 子导航 -->
+			#include("./common/second_header.html")
+			<!-- 内容 -->
+			<div class="company_course flex">
+				<div class="course_left">
+						#(currentCompany.introduce)
+				</div>
+				<div class="course_right">
+					<img src="/templates/jidian/static/image/course01.png" />
+				</div>
+			</div>
+			<!-- 底部 -->
+			#include("./common/top.html")
+			#include("./common/footer.html")
+		</div>
+	</body>
+</html>

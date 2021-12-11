@@ -1,0 +1,14 @@
+<!-- 置顶 -->
+<div class="gotop_box">
+    <a href="#" class="gotop_href">
+        <img src="/templates/guangye/static/image/ico_top.png" alt="">
+    </a>
+</div>
+<script src="/templates/guangye/static/js/jquery.min.js" charset="utf-8"></script>
+<script>
+    window.addEventListener("scroll",function(e){
+        var h =document.documentElement.scrollTop||document.body.scrollTop;
+        h<=0?$('.gotop_box').hide():'';
+        h>=200? $('.gotop_box').show():'';
+    });
+</script>

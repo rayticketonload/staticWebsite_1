@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>广东省机电建筑设计研究院有限公司</title>
+		<link rel="stylesheet" href="/templates/jidian/static/css/index.css">
+	</head>
+	<body>
+		<div id="projects">
+			<!-- 导航栏 -->
+			#include("./common/header.html")
+			<!-- banner -->
+			<div class="company_banner">
+				<img src="/templates/jidian/static/image/banner02.png" alt="">
+			</div>
+			<!-- 子导航 -->
+			#include("./common/second_header.html")
+			<!-- 内容 -->
+			<div class="projects_content">
+				#content_page(categoryId = 1264,pageNumber = pageNumber,pageSize =
+				4,condition="release_status=2",orderBy="sort desc,publishDate desc")
+				<ul class="product_list">
+					#for(i=0;i<contentPage.list.size();i++)
+						#if(i%2==0)
+						<li>
+							<div class="product_item_box flex">
+								<div class="product_item_img">
+									<img src="#(contentPage.list[i].image)" >
+								</div>
+								<div class="product_item_conten">
+									<p>#(contentPage.list[i].title)</p>
+									<div>
+										#(contentPage.list[i].introduction)
+									</div>
+								</div>
+							</div>
+						</li>
+						#else
+						<li>
+							<div class="product_item_box flex">
+								<div class="product_item_conten">
+									<p>#(contentPage.list[i].title)</p>
+									<div>
+										#(contentPage.list[i].introduction)
+									</div>
+								</div>
+								<div class="product_item_img">
+									<img src="#(contentPage.list[i].image)" >
+								</div>
+							</div>
+						</li>
+						#end
+					#end
+					
+				</ul>
+				<div class="page_box">
+					#page(pageNumber = contentPage.pageNumber,totalPages = contentPage.totalPage,pattern = currentCategory.cat+"?pageNumber=")
+					#include("./common/page.html")
+					#end
+				</div>
+				#end
+			</div>
+			<!-- 底部 -->
+			#include("./common/top.html")
+			#include("./common/footer.html")
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>广东省机电建筑设计研究院有限公司</title>
+		<link rel="stylesheet" href="/templates/jidian/static/css/index.css">
+	</head>
+	<body>
+		<div id="partyBuilding">
+			<!-- 导航栏 -->
+			#include("./common/header.html")
+			<!-- banner -->
+			<div class="company_banner">
+				<img src="/templates/jidian/static/image/banner02.png" alt="">
+			</div>
+			<!-- 子导航 -->
+			#include("./common/second_header.html")
+			<!-- 内容 -->
+			<div class="partyBuilding_news">
+				#content_page(categoryId = 1267,pageNumber = pageNumber,pageSize =
+				10,condition="release_status=2",orderBy="sort desc,publishDate desc")
+				#if(contentPage.list.size()>0)
+				<div class="first_news">
+					<div class="first_news_item flex">
+						<div class="first_news_item_img">
+							<img src="#if(contentPage.list[0].title.contains('双星'))/static/upload/keynote.jpg#else#(contentPage.list[0].image?contentPage.list[0].image:'/static/upload/news_background_image.jpg')#end"
+								alt="">
+						</div>
+						<div class="first_news_item_content">
+							<div class="first_news_title" onclick="jump('#(contentPage.list[0].path??)')"
+								style="cursor: pointer">
+								#(contentPage.list[0].title)
+							</div>
+							<div class="first_news_subtitle">
+								#(contentPage.list[0].subtitle ??)
+							</div>
+							<a href="#(contentPage.list[0].path)" class="more_box">
+								<span>了解更多</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<ul class="news_list">
+					#for(content:contentPage.list)
+					<li class="flex">
+						<div class="news_item_left">
+							<img src="#if(content.title.contains('双星'))/static/upload/keynote.jpg#else#(content.image?content.image:'/static/upload/news_background_image.jpg')#end"
+								alt="">
+						</div>
+						<div class="news_item_right">
+							<p class="news_item_title" title="#(content.title)">#(content.title)</p>
+							<div class="news_item_subtitle content_title" style="font-size: 14px;">
+								#(content.subtitle)
+							</div>
+							<a class="news_item_more" href="#(content.path)"><img
+									src="/templates/jidian/static/image/ico_more.png" /></a>
+
+						</div>
+					</li>
+					#end
+				</ul>
+				#end
+				#page(pageNumber = contentPage.pageNumber,totalPages = contentPage.totalPage,pattern =
+				currentCategory.cat+"?pageNumber=")
+
+				#include("./common/page.html")
+				#end
+				#end
+			</div>
+
+			<!-- 底部 -->
+			#include("./common/top.html")
+			#include("./common/footer.html")
+		</div>
+		<script src="/templates/jidian/static/layui/layui.js"></script>
+		<script src="/templates/jidian/static/js/jquery.min.js" charset="utf-8"></script>
+		<script>
+			// 跳转链接
+			function jump(path) {
+				location.href = path;
+			}
+			layui.use(function() {
+				var laypage = layui.laypage,
+					layer = layui.layer;
+				//分页
+				laypage.render({
+					elem: 'page',
+					count: 100,
+					theme: 'pagination',
+					layout: ['count', 'prev', 'page', 'next', 'limit', 'skip'],
+					jump: function(obj) { //切换分页的回调
+						console.log(obj);
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>广东省机电建筑设计研究院有限公司</title>
+		<link rel="stylesheet" href="/templates/jidian/static/css/common.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/index.css">
+		<link rel="stylesheet" href="/templates/jidian/static/swiper-4.5.1/css/swiper.min.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/animate.compat.css">
+		<link rel="stylesheet" href="/templates/jidian/static/layui/css/layui.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/iconfont.css">
+	</head>
+	<style>
+		.swiper-button-prev {
+			background-image: none;
+		}
+
+		.swiper-button-next {
+			background-image: none;
+			padding-right: 10px;
+		}
+	</style>
+	<body>
+		<div>
+			<!-- 导航栏 -->
+			#include("./common/header.html")
+			<div class="content">
+				<!-- banner -->
+				<div class="swiper-container swiper animated zoomIn" id="swiper1">
+					<div class="swiper-wrapper">
+						#slide_list(count=10,gid=1)
+						#for(slide : slides)
+						<div class="swiper-slide swiper_item">
+							<a href="#" class="swiper_href">
+								<img src="#(slide.image)" class="d-block w-100 swiper_ing">
+								<div class="swiper_title animated fadeInUp">#(slide.style)</div>
+							</a>
+						</div>
+						#end
+						#end
+					</div>
+					<!-- 分页器 -->
+					<div class="swiper-pagination"></div>
+				</div>
+				<!-- 公司概况 -->
+				<div class="company">
+					<div class="overview flex">
+						<div class="overview_left">
+							<div class="title">
+								<span>公司概况</span>
+								<p class="title_en">Company Overview</p>
+							</div>
+							<div class="overview_box">
+								#(currentCompany.survey)
+							</div>
+							<ul class="clear">
+								<li>
+									<img src="/templates/jidian/static/image/time.png" /><br /><br />
+									<b>1958<span>年</span></b><br /><br />
+									<span>成立时间</span>
+								</li>
+								<li> <img src="/templates/jidian/static/image/staff.png" /><br /><br />
+									<b>160<span>人</span></b><br /><br />
+									<span>公司员工</span>
+								</li>
+								<li><img src="/templates/jidian/static/image/technician.png" /><br /><br />
+									<b>80<span>%</span></b><br /><br />
+									<span>技术人员占</span>
+								</li>
+								<li><img src="/templates/jidian/static/image/engineer.png" /><br /><br />
+									<b>38<span>人</span></b><br /><br />
+									<span>国家注册工程师</span>
+								</li>
+								<li>
+									<a href="/sanjidianyuan/company_index">了解更多</a>
+								</li>
+							</ul>
+						</div>
+						<div class="overview_right">
+							<img src="/templates/jidian/static/image/overview.png" />
+						</div>
+					</div>
+				</div>
+				<!-- 组织机构 -->
+				<div class="structure">
+					<div class="title">
+						<span>组织结构</span>
+						<p class="title_en">organization structure</p>
+					</div>
+					<div class="structure_img">
+						<img src="/templates/jidian/static/image/structure.png" />
+					</div>
+				</div>
+				<!-- 发展历程 -->
+				<div class="history">
+					<div class="history_box">
+						<div class="history_title flex">
+							<div class="title history_title_left">
+								<span>发展历程</span>
+								<p class="title_en">development history</p>
+							</div>
+							<a class="history_title_right" href="/sanjidianyuan/company_course">
+								<span>查看更多</span>
+								<img src="/templates/jidian/static/image/ico_more.png" />
+							</a>
+						</div>
+						<div class="history_content flex_align">
+							<div style="width: 507px;">
+								<p>广东省机电建筑设计研究院有限公司（原广东省电子机械工业设计研究院）始建于1958年。具备甲级工程设计、甲级工程咨询资质和乙级城市规划编制资质。</p>
+							</div>
+							<div style="width: 516px;">
+								<p>2009年5月6日，广东省电子机械工业设计研究院注册资金由757.3万元增资到802万元。</p>
+								<p>2010年5月25日，广东省电子机械工业设计研究院更名为广东省机电建筑设计研究院。</p>
+								<p> 2019年3月14日，广东省机电建筑设计研究院公司制改制成功，更名为：广东省机电建筑设计研究院有限公司，主持资金为：1324023万元。</p>
+							</div>
+							<div style="width: 486px;padding: 0 16px 0 20px;">
+								<p>50余年来，公司建立了完善的规章制度和全面质量管理体系，于2004年通过了ISO9001：2000质量体系认证。 公司长期从事电子、机械、轻工、建筑等领域的工程设计和工程咨询等业务，具有独特的专长和丰富的经验，取得过多项国家级、省部级的优秀咨询、优秀设计奖。我们将本着“精心设计、精诚服务、持续改进、不断提高、顾客满意、孜孜以求”的质量方针，精诚为广大客户提供一流的工程设计和工程咨询等业务的优质服务！</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 股票 -->
+				<div class="stock_price stock_price_fixed">
+				    <div class="stock_price_wrap width_col">
+				        <div class="stock_price_title font-size-16">实时股价</div>
+				        <div class="stock_price_content" id="stock_info">
+				        </div>
+				    </div>
+				</div>
+			</div>
+			<!-- 底部 -->
+			#include("./common/top.html")
+			#include("./common/footer.html")
+		</div>
+		<script src="/templates/jidian/static/js/jquery.min.js" charset="utf-8"></script>
+		<script src="/templates/jidian/static/swiper-4.5.1/js/swiper.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//轮播图
+				var swiperLi = $('#swiper1 .swiper-slide');
+				var swiperAutoplay = false;
+				var swiperLoop = false;
+				if (swiperLi.length > 1) {
+					swiperAutoplay = true;
+					swiperLoop = true;
+				}
+				var mySwiper1 = new Swiper('#swiper1', {
+					direction: 'horizontal',
+					loop: swiperLoop,
+					observer: true, //实时检测，动态更新
+					autoplay: swiperAutoplay,
+					// 如果需要分页器
+					pagination: {
+						el: swiperLi.length < 2 ? null : '.swiper-pagination',
+						clickable: true,
+						type: 'custom',
+						renderCustom: function(swiper, current, total) {
+							var customPaginationHtml = "";
+							for (var i = 0; i < total; i++) {
+								//判断哪个分页器此刻应该被激活
+								if (i == (current - 1)) {
+									customPaginationHtml +=
+										'<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
+								} else {
+									customPaginationHtml +=
+										'<span class="swiper-pagination-customs"></span>';
+								}
+							}
+							return customPaginationHtml;
+						}
+					}
+				});
+				//监听页面滚动加动画
+				$(window).scroll(function(e) {
+					if (!window.name) { //是否是第一次加载页面
+						var viewHeight = window.innerHeight; //获取可视高度(屏幕高度)
+						var scrollHeight = document.documentElement.scrollTop || document.body
+							.scrollTop; //获取滚动的值
+						var animateList = $('.animated');
+						animateList.each(function(index, domEle) {
+							// 第一个（index为0）是banner，不用加滑入动效
+							if ((viewHeight + scrollHeight) > ($(domEle).offset().top) && index > 0) {
+								if (!$(domEle).hasClass('slideInUp')) {
+									$(domEle).addClass('slideInUp');
+								}
+							}
+						});
+					}
+				});
+				queryPriceOfStock();
+			})
+			// 查询股价
+			function queryPriceOfStock() {
+			    $.get("http://qt.gtimg.cn/q=sz000833,sz002683,sz836892", {}, function (res) {
+			        var html = "";
+			        // 获取以;分割的内容
+			        var arr = res.split(";");
+			        for (var i = 0; i < arr.length; i++) {
+			            // 名字
+			            var name = arr[i].split("~")[1];
+			            // 代码
+			            var code = arr[i].split("~")[2];
+			            // 价格
+			            var price = arr[i].split("~")[3];
+			            // 涨跌
+			            var rise = arr[i].split("~")[31];
+			            // 涨跌%
+			            var percentage = arr[i].split("~")[32];
+			            if (name != undefined && code != undefined && price != undefined && rise != undefined) {
+			                // 设置 html <i class='layui-icon "+ (Number(rise) > 0 ? 'layui-icon-up' : 'layui-icon-down') +"' style='color: red;'></i>
+			                html += "<div class='stock_price_data'>" +
+			                    "<span>" + name + "(" + code + ")</span>" +
+			                    "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + price + "</span>" +
+			                    "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + rise + "</span>" +
+			                    "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + percentage + "%</span>" +
+			                    "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;' class='iconfont " + (Number(rise) > 0 ? 'icon-xiangshang4' : 'icon-xiangxia4') + "'></span>" +
+			                    "</div>"
+			            }
+			        }
+			        $("#stock_info").empty().html(html);
+			    })
+			}
+			
+			setInterval(function () {
+			    queryPriceOfStock();
+			}, 60 * 2 * 1000);
+		</script>
+	</body>
+</html>

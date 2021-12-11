@@ -1,0 +1,86 @@
+<!-- 分页 -->
+#if(totalPages>1)  
+	<style>
+		.page-to {
+			color:#747474;
+			display: inline;
+			margin-left: 30px;
+		}
+		@media (max-width: 950px) {
+			.page-to {
+				display: block;
+				margin-left: 0px;
+				margin-top: 10px;
+			}
+		}
+	</style>
+   <nav aria-label="page navigation" class="my-4 pagination-box">
+     <div class="pagination justify-content-center">
+     	<!--<a class="page-item page-link page-home page_show" style="margin-right:20px;" href="#(pattern)1">首页</a>-->
+     	#if(hasPrevious)
+     	<a class="page-item page-link page-prev" href="#(pattern)#(previousPageNumber)">上一页</a>
+     	#end
+     	#for(segmentPageNumber : segment)
+			#if(segmentPageNumber != pageNumber)
+				#if(pageNumber - segmentPageNumber <= 2 && pageNumber - segmentPageNumber>= -2)
+					#if(pageNumber - segmentPageNumber == 2)
+						#if(pageNumber - 1 >= 3)
+						<a href="#(pattern)1" class="page-item page-link page-number page_hide">1</a>
+							#if(pageNumber - 1 > 3)
+							<a href="javascript:void(0)" class="page-item page-link page-number page_hide">...</a>
+							#end
+						#end
+					<a href="#(pattern)#(segmentPageNumber)" class="page-item page-link page-number page_hide">#(segmentPageNumber)</a>
+					#else if(pageNumber - segmentPageNumber == -2)
+					<a href="#(pattern)#(segmentPageNumber)" class="page-item page-link page-number page_hide">#(segmentPageNumber)</a>
+						#if(pageNumber - totalPages <= -3)
+							#if(pageNumber - totalPages < -3)
+							<a href="avascript:void(0)" class="page-item page-link page-number page_hide">...</a>
+							#end
+						<a href="#(pattern)#(totalPages)" class="page-item page-link page-number page_hide">#(totalPages)</a>
+						#end
+					#else
+					<a href="#(pattern)#(segmentPageNumber)" class="page-item page-link page-number page_hide">#(segmentPageNumber)</a>
+					#end
+				#end
+			#else
+			<a href="javascript:;" class="page-item page-link page-number page-active">#(segmentPageNumber)</a>
+			#end
+		#end
+      	#if(hasNext)
+      	<a class="page-item page-link page-prev" href="#(pattern)#(nextPageNumber)">下一页</a>
+      	#end
+      	<!--<a class="page-item page-link page-home page_show" style="margin-left:20px;" href="#(pattern)#(totalPages)">尾页</a>-->
+	 	<div class="page-to">
+			<div style="margin-right: 20px;display: inline;">共 #(totalPages) 页</div>
+			前往<input type="text" id="page" style="border: 1px solid #cccccc; height: 42px; width: 42px; border-radius: 4px; margin: 0 10px 0 10px; text-align: center"
+					 onkeydown="gotoPage(event)" data-total="#(totalPages)" value="#(pageNumber)">页
+		</div>
+     </div>
+   </nav>	
+#else
+   	<!-- <div class="text-center my-5 text-secondary">本分类下无任何数据！</div> -->
+#end
+<script>
+	function gotoPage(e) {
+		var ev = window.event||e;
+		// 总页数
+		var total = document.getElementById("page").getAttribute("data-total");
+
+		// 按下回车
+		if (ev.keyCode == 13) {
+			// 输入的页数
+			var value = document.getElementById("page").value;
+			if(value!='') {
+				if (Number(value) > Number(total)) {
+					document.getElementById("page").value = Number(total);
+					// 跳转页面
+					location.href = "#(pattern)" + Number(total);
+				} else {
+					// 跳转页面
+					location.href = "#(pattern)" + Number(value);
+				}
+			}
+		}
+	}
+</script>

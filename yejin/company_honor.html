@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>广东省机电建筑设计研究院有限公司</title>
+		<link rel="stylesheet" href="/templates/jidian/static/css/index.css">
+	</head>
+	<body>
+		<div id="company">
+			<!-- 导航栏 -->
+			#include("./common/header.html")
+			<!-- banner -->
+			<div class="company_banner">
+				<img src="/templates/jidian/static/image/banner01.png" alt="">
+			</div>
+			<!-- 子导航 -->
+			#include("./common/second_header.html")
+			<!-- 内容 -->
+			<div class="company_honor">
+
+				#content_page(categoryId = 1260,pageNumber = pageNumber,pageSize =
+				8,condition="release_status=2",orderBy="sort desc,publishDate desc")
+				<ul class="honor_uli">
+					#for(i=0;i<contentPage.list.size();i++) <li>
+						<div class="honor_item_img">
+							<img src="#(contentPage.list[i].image)">
+							<div class="honor_item_previewimg">
+								<img src="/templates/jidian/static/image/zoomin.png" />
+							</div>
+						</div>
+						<p>#(contentPage.list[i].title)</p>
+						<div class="big_previewimg">
+							<div class="previewimg_clone">
+								<img src="/templates/jidian/static/image/clone.png" />
+							</div>
+							<div class="big_previewimg_box">
+								<img src="#(contentPage.list[i].image)" mode="center">
+							</div>
+						</div>
+						</li>
+						#end
+				</ul>
+				#page(pageNumber = contentPage.pageNumber,totalPages = contentPage.totalPage,pattern =
+				currentCategory.cat+"?pageNumber=")
+				#include("./common/page.html")
+				#end
+				#end
+			</div>
+			<!-- 底部 -->
+			#include("./common/top.html")
+			#include("./common/footer.html")
+		</div>
+		<script src="/templates/jidian/static/js/jquery.min.js" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".honor_uli li").find(".honor_item_previewimg").on("click",function(){
+					$(this).parent().siblings(".big_previewimg").show()
+				})
+				$(".previewimg_clone").on("click",function(){
+					$(this).parent(".big_previewimg").hide()
+				})
+				
+			})
+		</script>
+	</body>
+</html>

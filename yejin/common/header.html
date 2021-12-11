@@ -1,0 +1,78 @@
+<div class="header">
+	<div class="header_box">
+		<div class="logo" style="margin-left: 0px;">
+			<img class="logo_img" src="/templates/jidian/static/image/logo.png" alt="">
+		</div>
+		<div class="head_nav">
+			<div class="navbar">
+				<ul class="nav_list">
+					<!--头部栏目-->
+					<li class="nav_item #if(currentCategory.id ?? == null) active #end" style="padding: 56px 0px;">
+						<a class="nav-link" href="#(currentSite.url)/">首页</a>
+					</li>
+					#category_root_list()
+					#for(category : categorys)
+					<li class="nav_item #if(currentCategory.parentId ?? == category.id ??) active #else if(currentCategory.id ?? == category.id ??) active #end"
+						style="padding: 56px 0px;">
+						<a class="nav-link" href="#(category.path ??)">#(category.name ??)</a>
+					</li>
+					#end
+					#end
+				</ul>
+			</div>
+		</div>
+		<!-- 右边 -->
+		<div class="head_sear" style="padding: 45px 0px;position: absolute;height: auto;z-index: 999;right: 100px;">
+			<!-- 搜索输入框 -->
+			<div class="">
+				<form action="#(currentSite.url)/search/title" class="layui-form" method="get" id="titleForm">
+					<div class="search_input_wrap">
+						<div class="layui-input-inline" style="width:100%;height: 100%;">
+							<input type="text" id="keyword" name="keyword" required placeholder="搜索关键词"
+								autocomplete="off" class="layui-input search_input_box">
+						</div>
+						<button type="submit" class="layui-btn ico_search_bn">
+							<img src="/templates/guangye/static/image/ico_search.png" alt="">
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- 当屏幕小于1024 -->
+		<div class="head_col">
+			<div class="head_nav_item">
+				<img src="/templates/guangye/static/image/ico_collapse.png" alt="">
+			</div>
+		</div>
+
+		<!-- h5版头部 -->
+		<div class="collapse_box">
+			<div class="shadow_box"></div>
+			<div class="collapse_wrap">
+				<ul class="collapse_nav">
+					<li class="collapse_item cursor">
+						<a href="#(currentSite.url)/" class="collapse_href">首页</a>
+						<div class="collapse_ico" onclick="javascript:location.href = '#(currentSite.url)/'">></div>
+					</li>
+					#category_root_list()
+					#for(category : categorys)
+					<li class="collapse_item cursor">
+						<a href="#(category.path ??)" class="collapse_href">#(category.name ??)</a>
+						<div class="collapse_ico collapse_more font-size-30">+</div>
+						<div class="sub_nav">
+							#category_children_list(categoryId=category.id)
+							#for(categoryItem : categorys)
+							<a class="sub_nav_item" href="#(categoryItem.path ??)">#(categoryItem.name ??)</a>
+							#end
+							#end
+						</div>
+					</li>
+					#end
+					#end
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>

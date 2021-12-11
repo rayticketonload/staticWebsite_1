@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>广东南油控股集团有限公司</title>
+		<!-- <link rel="stylesheet" href="/templates/jidian/static/css/common.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/index.css">
+		<link rel="stylesheet" href="/templates/jidian/static/swiper-4.5.1/css/swiper.min.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/animate.compat.css">
+		<link rel="stylesheet" href="/templates/jidian/static/layui/css/layui.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/iconfont.css"> -->
+
+		<link rel="stylesheet" href="/nanyou/static/css/common.css">
+		<link rel="stylesheet" href="/nanyou/static/css/index.css">
+		<link rel="stylesheet" href="/nanyou/static/swiper-4.5.1/css/swiper.min.css">
+		<link rel="stylesheet" href="/nanyou/static/css/animate.compat.css">
+		<link rel="stylesheet" href="/nanyou/static/layui/css/layui.css">
+		<link rel="stylesheet" href="/nanyou/static/css/iconfont.css">
+	</head>
+	<style>
+		.swiper-button-prev {
+			background-image: none;
+		}
+
+		.swiper-button-next {
+			background-image: none;
+			padding-right: 10px;
+		}
+	</style>
+	<body>
+		<div>
+			<!-- 导航栏 -->
+			<!-- #include("./common/header.html") -->
+			<div class="content">
+				<!-- banner -->
+				<div class="swiper-container swiper animated zoomIn" id="swiper1">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper_item">
+							<a href="#" class="swiper_href">
+								<img src="/nanyou/static/image/banner.png" class="d-block w-100 swiper_ing">
+								<div class="swiper_title animated fadeInUp"></div>
+							</a>
+						</div>
+						<!-- #slide_list(count=10,gid=1)
+						#for(slide : slides)
+						<div class="swiper-slide swiper_item">
+							<a href="#" class="swiper_href">
+								<img src="#(slide.image)" class="d-block w-100 swiper_ing">
+								<div class="swiper_title animated fadeInUp">#(slide.style)</div>
+							</a>
+						</div>
+						#end
+						#end -->
+					</div>
+					<!-- 分页器 -->
+					<div class="swiper-pagination"></div>
+				</div>
+				<!-- 公司概况 -->
+				<div class="company">
+					<div class="overview flex">
+						<div class="overview_left">
+							<div class="item flex" style="width: 400px;">
+								<div><b>1982</b></div>
+								<div>
+									<p>公司成立时间</p>
+									<p>1982年</p>
+								</div>
+							</div>
+							<div class="item flex" style="width: 300px;">
+								<div><b>500</b></div>
+								<div>
+									<p>中国服务业</p>
+									<p>500强</p>
+								</div>
+							</div>
+							<div class="item flex" style="width: 250px;">
+								<div><b>500</b></div>
+								<div>
+									<p>广东省企业</p>
+									<p>500强</p>
+								</div>
+							</div>
+						</div>
+						<div class="overview_right">
+							<div class="title">
+								<span style="font-size: 44px;">广东南油控股集团有限公司</span>
+								<p class="title_en">Guangdong Nanyou Holding Group Co., Ltd</p>
+							</div>
+							<div class="line"></div>
+							
+							<div class="overview_box">
+								<!-- #(currentCompany.survey) -->
+								<p>
+									广东南油控股集团有限公司（简称南油集团），原名中国南海石油联合服务总公司，于1982年经由国家经委批准成立，由原石油工业部和广东省人民政府联合投资设立，是我国第一家专门为海洋石油天然气勘探开发提供各项专业服务的企业。公司以海洋环保及能源开发服务为主业发展方向，主要提供是有工程技术、技能人才支持、海洋是有增产增效技术、海洋环境实时监测、海底节能储油、工业清洗、海上供油等服务。客户包括国内外众多知名大型石油化工企业，是中国石化、中国海油长期优质供应商和服务商。
+								</p>
+							</div>
+							<a class="check_details fill flex" href="/sanjidianyuan/company_course">
+								<span>查看详情</span>
+								<img src="/nanyou/static/image/ico_more_fill.png" />
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- 业务介绍 -->
+				<div class="business">
+					<div class="title">
+						<span>业务介绍</span>
+						<p class="title_en">Business Introduction</p>
+					</div>
+					<div class="flex">
+						<div class="business_left">
+							<div class="business_box">
+								<p>
+									公司以海洋环保及能源开发服务为主业发展方向，主要提供石油工程技术、技能人才支持、海洋石油增产增效技术、海洋环境实时监测、海洋节能储油、工业清洗、海上供油等服务。客户包括国内外众多知名大型石油化工企业，是中国石油化、中国海油长期优质供应商和服务商。
+								</p>
+							</div>
+							<a class="check_details flex" style="margin-top: 150px" href="/sanjidianyuan/company_course">
+								<span>查看详情</span>
+								<img src="/nanyou/static/image/ico_more.png" />
+							</a>
+						</div>
+						<div class="business_right">
+							<img src="/nanyou/static/image/business.png" alt="">
+						</div>
+					</div>
+				</div>
+				<!-- 资讯中心 -->
+				<div class="information">
+					<div class="information_box">
+						<div class="information_title">
+							<div class="title">
+								<span>资讯中心</span>
+								<p class="title_en">information centre</p>
+							</div>
+							<!-- <a class="information_title_right" href="/sanjidianyuan/company_course">
+								<span>查看更多</span>
+								<img src="/templates/jidian/static/image/ico_more.png" />
+							</a> -->
+						</div>
+						<div class="information_content flex">
+							<div class="info_left">
+								<ul>
+									<li>
+										<p class="li_title">南服总本部8月“党员之星” “员工之星”进行工作特色亮点和总结</p>
+										<p class="li_date">2020-10-23</p>
+									</li>
+									<li>
+										<p class="li_title">南服总本部8月“党员之星” “员工之星”进行工作特色亮点和总结</p>
+										<p class="li_date">2020-10-23</p>
+									</li>
+									<li>
+										<p class="li_title">南服总本部8月“党员之星” “员工之星”进行工作特色亮点和总结</p>
+										<p class="li_date">2020-10-23</p>
+									</li>
+									<li>
+										<p class="li_title">南服总本部8月“党员之星” “员工之星”进行工作特色亮点和总结</p>
+										<p class="li_date">2020-10-23</p>
+									</li>
+								</ul>
+							</div>
+							<div class="info_right">
+								<img src="/nanyou/static/image/banner.png" alt="">
+								<div>
+									<p class="li_title">南服总本部8月“党员之星” “员工之星”进行工作特色亮点和总结</p>
+									<p class="desc">为更好地在全系统树立榜样、弘扬正气、振奋精神，现将南服总本部8月 “党员之星” 和 “员工之星” 进行工作特色亮点和总结</p>
+									<p class="li_date">2020-10-23</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 股票 -->
+				<div class="stock_price stock_price_fixed">
+				    <div class="stock_price_wrap width_col">
+				        <div class="stock_price_title font-size-16">实时股价</div>
+				        <div class="stock_price_content" id="stock_info">
+				        </div>
+				    </div>
+				</div>
+			</div>
+			<!-- 底部 -->
+			<!-- #include("./common/top.html")
+			#include("./common/footer.html") -->
+		</div>
+		<script src="/templates/jidian/static/js/jquery.min.js" charset="utf-8"></script>
+		<script src="/templates/jidian/static/swiper-4.5.1/js/swiper.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//轮播图
+				var swiperLi = $('#swiper1 .swiper-slide');
+				var swiperAutoplay = false;
+				var swiperLoop = false;
+				if (swiperLi.length > 1) {
+					swiperAutoplay = true;
+					swiperLoop = true;
+				}
+				var mySwiper1 = new Swiper('#swiper1', {
+					direction: 'horizontal',
+					loop: swiperLoop,
+					observer: true, //实时检测，动态更新
+					autoplay: swiperAutoplay,
+					// 如果需要分页器
+					pagination: {
+						el: swiperLi.length < 2 ? null : '.swiper-pagination',
+						clickable: true,
+						type: 'custom',
+						renderCustom: function(swiper, current, total) {
+							var customPaginationHtml = "";
+							for (var i = 0; i < total; i++) {
+								//判断哪个分页器此刻应该被激活
+								if (i == (current - 1)) {
+									customPaginationHtml +=
+										'<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
+								} else {
+									customPaginationHtml +=
+										'<span class="swiper-pagination-customs"></span>';
+								}
+							}
+							return customPaginationHtml;
+						}
+					}
+				});
+				//监听页面滚动加动画
+				$(window).scroll(function(e) {
+					if (!window.name) { //是否是第一次加载页面
+						var viewHeight = window.innerHeight; //获取可视高度(屏幕高度)
+						var scrollHeight = document.documentElement.scrollTop || document.body
+							.scrollTop; //获取滚动的值
+						var animateList = $('.animated');
+						animateList.each(function(index, domEle) {
+							// 第一个（index为0）是banner，不用加滑入动效
+							if ((viewHeight + scrollHeight) > ($(domEle).offset().top) && index > 0) {
+								if (!$(domEle).hasClass('slideInUp')) {
+									$(domEle).addClass('slideInUp');
+								}
+							}
+						});
+					}
+				});
+				queryPriceOfStock();
+			})
+			// 查询股价
+			function queryPriceOfStock() {
+			    $.get("http://qt.gtimg.cn/q=sz000833,sz002683,sz836892", {}, function (res) {
+			        var html = "";
+			        // 获取以;分割的内容
+			        var arr = res.split(";");
+			        for (var i = 0; i < arr.length; i++) {
+			            // 名字
+			            var name = arr[i].split("~")[1];
+			            // 代码
+			            var code = arr[i].split("~")[2];
+			            // 价格
+			            var price = arr[i].split("~")[3];
+			            // 涨跌
+			            var rise = arr[i].split("~")[31];
+			            // 涨跌%
+			            var percentage = arr[i].split("~")[32];
+			            if (name != undefined && code != undefined && price != undefined && rise != undefined) {
+			                // 设置 html <i class='layui-icon "+ (Number(rise) > 0 ? 'layui-icon-up' : 'layui-icon-down') +"' style='color: red;'></i>
+			                html += "<div class='stock_price_data'>" +
+			                    "<span>" + name + "(" + code + ")</span>" +
+			                    "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + price + "</span>" +
+			                    "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + rise + "</span>" +
+			                    "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + percentage + "%</span>" +
+			                    "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;' class='iconfont " + (Number(rise) > 0 ? 'icon-xiangshang4' : 'icon-xiangxia4') + "'></span>" +
+			                    "</div>"
+			            }
+			        }
+			        $("#stock_info").empty().html(html);
+			    })
+			}
+			
+			setInterval(function () {
+			    queryPriceOfStock();
+			}, 60 * 2 * 1000);
+		</script>
+	</body>
+</html>
