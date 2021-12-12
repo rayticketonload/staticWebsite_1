@@ -3,13 +3,21 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<title>广东省机电建筑设计研究院有限公司</title>
-		<link rel="stylesheet" href="/templates/jidian/static/css/common.css">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<title>广东省冶金建筑设计研究院有限公司</title>
+		<!-- <link rel="stylesheet" href="/templates/jidian/static/css/common.css">
 		<link rel="stylesheet" href="/templates/jidian/static/css/index.css">
 		<link rel="stylesheet" href="/templates/jidian/static/swiper-4.5.1/css/swiper.min.css">
 		<link rel="stylesheet" href="/templates/jidian/static/css/animate.compat.css">
 		<link rel="stylesheet" href="/templates/jidian/static/layui/css/layui.css">
-		<link rel="stylesheet" href="/templates/jidian/static/css/iconfont.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/iconfont.css"> -->
+
+		<link rel="stylesheet" href="/yejin/static/css/common.css">
+		<link rel="stylesheet" href="/yejin/static/css/index.css">
+		<link rel="stylesheet" href="/yejin/static/swiper-4.5.1/css/swiper.min.css">
+		<link rel="stylesheet" href="/yejin/static/css/animate.compat.css">
+		<link rel="stylesheet" href="/yejin/static/layui/css/layui.css">
+		<link rel="stylesheet" href="/yejin/static/css/iconfont.css">
 	</head>
 	<style>
 		.swiper-button-prev {
@@ -24,12 +32,108 @@
 	<body>
 		<div>
 			<!-- 导航栏 -->
-			#include("./common/header.html")
+			<!-- #include("./common/header.html") -->
+			<div class="header">
+				<div class="header_box">
+					<div class="logo" style="margin-left: 0px;">
+						<img class="logo_img" src="/yejin/static/image/logo.png" alt="">
+					</div>
+					<div class="head_nav">
+						<div class="navbar">
+							<ul class="nav_list">
+								<!--头部栏目-->
+								<li class="nav_item active" >
+									<a class="nav-link" href="/yejin/">网站首页</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/yejin/company_index.html">走进环保院</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/yejin/behalf_project.html">代表项目</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/yejin/company_business.html">荣誉资质</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/yejin/company_party.html">企业党建</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/yejin/information_center.html">新闻中心</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/yejin/company_recruitment.html">人才招聘</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 右边 -->
+					<div class="head_sear" style="padding: 45px 0px;position: absolute;height: auto;z-index: 999;right: 100px;">
+						<!-- 搜索输入框 -->
+						<div class="">
+							<form action="#(currentSite.url)/search/title" class="layui-form" method="get" id="titleForm">
+								<div class="search_input_wrap">
+									<div class="layui-input-inline" style="width:100%;height: 100%;">
+										<input type="text" id="keyword" name="keyword" required placeholder="搜索关键词..."
+											autocomplete="off" class="layui-input search_input_box">
+									</div>
+									<button type="submit" class="layui-btn ico_search_bn">
+										<img src="/yejin/static/image/ico_search.png" alt="">
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+			
+					<!-- 当屏幕小于1024 -->
+					<div class="head_col">
+						<div class="head_nav_item">
+							<img src="/yejin/static/image/ico_collapse.png" alt="">
+						</div>
+					</div>
+			
+					<!-- h5版头部 -->
+					<!-- <div class="collapse_box">
+						<div class="shadow_box"></div>
+						<div class="collapse_wrap">
+							<ul class="collapse_nav">
+								<li class="collapse_item cursor">
+									<a href="#(currentSite.url)/" class="collapse_href">首页</a>
+									<div class="collapse_ico" onclick="javascript:location.href = '#(currentSite.url)/'">></div>
+								</li>
+								#category_root_list()
+								#for(category : categorys)
+								<li class="collapse_item cursor">
+									<a href="#(category.path ??)" class="collapse_href">#(category.name ??)</a>
+									<div class="collapse_ico collapse_more font-size-30">+</div>
+									<div class="sub_nav">
+										#category_children_list(categoryId=category.id)
+										#for(categoryItem : categorys)
+										<a class="sub_nav_item" href="#(categoryItem.path ??)">#(categoryItem.name ??)</a>
+										#end
+										#end
+									</div>
+								</li>
+								#end
+								#end
+							</ul>
+						</div>
+					</div> -->
+			
+				</div>
+			</div>			
+
+
 			<div class="content">
 				<!-- banner -->
 				<div class="swiper-container swiper animated zoomIn" id="swiper1">
 					<div class="swiper-wrapper">
-						#slide_list(count=10,gid=1)
+						<div class="swiper-slide swiper_item">
+							<a href="#" class="swiper_href">
+								<img src="/yejin/static/image/banner.png" class="d-block w-100 swiper_ing">
+								<div class="swiper_title animated fadeInUp"></div>
+							</a>
+						</div>
+						<!-- #slide_list(count=10,gid=1)
 						#for(slide : slides)
 						<div class="swiper-slide swiper_item">
 							<a href="#" class="swiper_href">
@@ -38,7 +142,7 @@
 							</a>
 						</div>
 						#end
-						#end
+						#end -->
 					</div>
 					<!-- 分页器 -->
 					<div class="swiper-pagination"></div>
@@ -47,75 +151,262 @@
 				<div class="company">
 					<div class="overview flex">
 						<div class="overview_left">
-							<div class="title">
-								<span>公司概况</span>
-								<p class="title_en">Company Overview</p>
+							<div class="item flex" style="width: 400px;">
+								<div><b>1958</b><em>+</em></div>
+								<div>
+									<p>公司成立时间</p>
+									<p>1958年</p>
+								</div>
 							</div>
-							<div class="overview_box">
-								#(currentCompany.survey)
+							<div class="item flex" style="width: 300px;">
+								<div><b>400</b><em>+</em></div>
+								<div>
+									<p>公司本部员工</p>
+									<p>14项</p>
+								</div>
 							</div>
-							<ul class="clear">
-								<li>
-									<img src="/templates/jidian/static/image/time.png" /><br /><br />
-									<b>1958<span>年</span></b><br /><br />
-									<span>成立时间</span>
-								</li>
-								<li> <img src="/templates/jidian/static/image/staff.png" /><br /><br />
-									<b>160<span>人</span></b><br /><br />
-									<span>公司员工</span>
-								</li>
-								<li><img src="/templates/jidian/static/image/technician.png" /><br /><br />
-									<b>80<span>%</span></b><br /><br />
-									<span>技术人员占</span>
-								</li>
-								<li><img src="/templates/jidian/static/image/engineer.png" /><br /><br />
-									<b>38<span>人</span></b><br /><br />
-									<span>国家注册工程师</span>
-								</li>
-								<li>
-									<a href="/sanjidianyuan/company_index">了解更多</a>
-								</li>
-							</ul>
+							<div class="item flex" style="width: 250px;">
+								<div><b>300</b><em>+</em></div>
+								<div>
+									<p>资质荣誉</p>
+									<p>300多项</p>
+								</div>
+							</div>
 						</div>
 						<div class="overview_right">
-							<img src="/templates/jidian/static/image/overview.png" />
-						</div>
-					</div>
-				</div>
-				<!-- 组织机构 -->
-				<div class="structure">
-					<div class="title">
-						<span>组织结构</span>
-						<p class="title_en">organization structure</p>
-					</div>
-					<div class="structure_img">
-						<img src="/templates/jidian/static/image/structure.png" />
-					</div>
-				</div>
-				<!-- 发展历程 -->
-				<div class="history">
-					<div class="history_box">
-						<div class="history_title flex">
-							<div class="title history_title_left">
-								<span>发展历程</span>
-								<p class="title_en">development history</p>
+							<div class="title">
+								<span style="font-size: 40px;">广东省冶金建筑设计研究院有限公司</span>
+								<p class="title_en">Guangdong Metallurgical architectural design and Research Institute Co., Ltd</p>
 							</div>
-							<a class="history_title_right" href="/sanjidianyuan/company_course">
-								<span>查看更多</span>
-								<img src="/templates/jidian/static/image/ico_more.png" />
+							<div class="line"></div>
+							
+							<div class="overview_box">
+								<!-- #(currentCompany.survey) -->
+								<p>
+									广东省冶金建筑设计研究院有限公司始建于1958年，2018年完成公司制改制，隶属于广东省环保集团下属企业环保研究总院。
+								</p>
+								<p>
+									公司主要从事规划、咨询、勘察、设计、项目管理以及造价咨询与工程总承包等全过程服务，业务范围涵盖了环境工程、市政路桥、公路、有色冶金、工业与民用建筑、风景园林、电气、地下空间、综合管廊等领域，尤其在市政路桥、污水治理勘察设计方面积累了丰富的经验。
+								</p>
+								<p>
+									公司目前设置8个职能部门，12个专业生产部门以及10个分支机构。公司本部现有员工近400人，其中本科以上学历员工占75%以上，具有中高级职称员工和各类注册师资格人员占60%以上，教授级高工7人。
+								</p>
+							</div>
+							<a class="check_details fill flex" href="/sanjidianyuan/company_course">
+								<span>查看详情</span>
+								<img src="/yejin/static/image/ico_more_fill.png" />
 							</a>
 						</div>
-						<div class="history_content flex_align">
-							<div style="width: 507px;">
-								<p>广东省机电建筑设计研究院有限公司（原广东省电子机械工业设计研究院）始建于1958年。具备甲级工程设计、甲级工程咨询资质和乙级城市规划编制资质。</p>
+					</div>
+				</div>
+				<!-- 业绩成果 -->
+				<div class="business">
+					<div class="title">
+						<span>业绩成果</span>
+						<p class="title_en">Performance results</p>
+					</div>
+					<div class="flex">
+						<div class="col_card">
+							<div class="top">
+								<div class="card_title">廉江生活污水处理设施PPP项目</div>
+								<div class="card_desc">4个镇级污水处理厂及1个城区污水处理厂的设计内容...</div>
 							</div>
-							<div style="width: 516px;">
-								<p>2009年5月6日，广东省电子机械工业设计研究院注册资金由757.3万元增资到802万元。</p>
-								<p>2010年5月25日，广东省电子机械工业设计研究院更名为广东省机电建筑设计研究院。</p>
-								<p> 2019年3月14日，广东省机电建筑设计研究院公司制改制成功，更名为：广东省机电建筑设计研究院有限公司，主持资金为：1324023万元。</p>
+							<div class="bottom">
+								<img src="/yejin/static/image/img.png" alt="">
 							</div>
-							<div style="width: 486px;padding: 0 16px 0 20px;">
-								<p>50余年来，公司建立了完善的规章制度和全面质量管理体系，于2004年通过了ISO9001：2000质量体系认证。 公司长期从事电子、机械、轻工、建筑等领域的工程设计和工程咨询等业务，具有独特的专长和丰富的经验，取得过多项国家级、省部级的优秀咨询、优秀设计奖。我们将本着“精心设计、精诚服务、持续改进、不断提高、顾客满意、孜孜以求”的质量方针，精诚为广大客户提供一流的工程设计和工程咨询等业务的优质服务！</p>
+						</div>
+						<div class="col_card">
+							<div class="top">
+								<div class="card_title">南方医科大学第三附属医院新住院大楼工程</div>
+								<div class="card_desc">南方医科大学第三附属医院，本工程位于天河区中山...</div>
+							</div>
+							<div class="bottom">
+								<img src="/yejin/static/image/img.png" alt="">
+							</div>
+						</div>
+						<div class="col_card">
+							<div class="top">
+								<div class="card_title">东莞市东江梨川大桥</div>
+								<div class="card_desc">东莞梨川大桥工程，为东莞市 “十二五” 规划重点建...</div>
+							</div>
+							<div class="bottom">
+								<img src="/yejin/static/image/img.png" alt="">
+							</div>
+						</div>
+						<div class="col_card">
+							<div class="top">
+								<div class="card_title">普宁市练江流域污染综合整治次支管网建设项目</div>
+								<div class="card_desc">秉持科学认真的态度，实事求是的原则，精益求精的...</div>
+							</div>
+							<div class="bottom">
+								<img src="/yejin/static/image/img.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 荣誉资质 -->
+				<div class="enterprise">
+					<div class="enterprise_box">
+						<div class="enterprise_title flex_align">
+							<div class="title">
+								<span>荣誉资质</span>
+								<p class="title_en">Enterprise Honor</p>
+							</div>
+							<div>
+								<button type="button" class="layui-btn layui-btn-primary"><span style="font-size: 20px" class="iconfont icon-arrow-left"></span></button>
+								<button type="button" class="layui-btn layui-btn-primary"><span style="font-size: 20px" class="iconfont icon-arrow-right"></span></button>
+							</div>
+						</div>
+						<div class="enterprise_content flex_align">
+							<div>
+								<div class="img_box">
+									<img src="/yejin/static/image/科学技术奖.png" alt="">
+								</div>
+								<p class="desc">广东省环境保护优秀示范工程</p>
+							</div>
+							<div>
+								<div class="img_box">
+									<img src="/yejin/static/image/科学技术奖.png" alt="">
+								</div>
+								<p class="desc">广东省环境保护优秀示范工程</p>
+							</div>
+							<div>
+								<div class="img_box">
+									<img src="/yejin/static/image/科学技术奖.png" alt="">
+								</div>
+								<p class="desc">环保科学技术将一等奖</p>
+							</div>
+							<div>
+								<div class="img_box">
+									<img src="/yejin/static/image/科学技术奖.png" alt="">
+								</div>
+								<p class="desc">环保科学技术将三等奖</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 新闻中心 -->
+				<div class="information">
+					<div class="information_box">
+						<div class="information_title">
+							<div class="title">
+								<span>新闻中心</span>
+								<p class="title_en">New centre</p>
+							</div>
+						</div>
+						<div class="information_content flex">
+							<div class="info_left">
+								<ul>
+									<li>
+										<p class="li_title">环保院顺利完成新办公场所搬迁工作</p>
+										<p class="li_date">2021-07-30</p>
+									</li>
+									<li>
+										<p class="li_title">环保院顺利完成新办公场所搬迁工作</p>
+										<p class="li_date">2021-07-30</p>
+									</li>
+									<li>
+										<p class="li_title">环保院顺利完成新办公场所搬迁工作</p>
+										<p class="li_date">2021-07-30</p>
+									</li>
+									<li>
+										<p class="li_title">环保院顺利完成新办公场所搬迁工作</p>
+										<p class="li_date">2021-07-30</p>
+									</li>
+								</ul>
+							</div>
+							<div class="info_right">
+								<img src="/yejin/static/image/资讯中心.png" alt="">
+								<div>
+									<p class="li_title">环保院顺利完成新办公场所搬迁工作</p>
+									<p class="desc">在广东省国资委三年国企改革行动的号召下、环保总院的战略部署下，2021年8月22日，环保院顺利完成了从原办公地点越秀区北京路374号之二瑞安中心12至13楼，搬迁至新办公点越秀区中山二路35号7至9楼的相关工作，并于8月23日...</p>
+									<p class="li_date" style="float: right;">2021-07-30</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 人才招聘 -->
+				<div class="enterprise">
+					<div class="enterprise_box">
+						<div class="enterprise_title center">
+							<div class="title">
+								<span>人才招聘</span>
+								<p class="title_en">Talent recruitment</p>
+							</div>
+						</div>
+						<div class="recruitment_content flex_align">
+							<div class="card flex">
+								<div class="top flex_align">
+									<b>建筑设计师</b>
+									<span>学历本科以上</span>
+								</div>
+								<div class="middle">
+									<p>岗位职责：</p>
+									<p>1、组织完成建筑设计方案和施工图设计，提高方案的合理性；</p>
+									<p>2、项目前期调研工作、项目跟踪、服务、沟通工作。</p>
+								</div>
+								<div class="bottom flex_align">
+									<div class="info">
+										<span>
+											<span class="iconfont icon-locationfill"></span>
+											广州
+										</span>
+										<span>经验不限</span>
+										<span>1人</span>
+									</div>
+									<a class="check_details fill flex" style="width: 100px; font-size: 14px; line-height: 1.5em; margin: 0;" href="/sanjidianyuan/company_course">
+										<span>查看详情</span>
+									</a>
+								</div>
+							</div>
+							<div class="card flex">
+								<div class="top flex_align">
+									<b>建筑设计师</b>
+									<span>学历本科以上</span>
+								</div>
+								<div class="middle">
+									<p>岗位职责：</p>
+									<p>1、组织完成建筑设计方案和施工图设计，提高方案的合理性；</p>
+									<p>2、项目前期调研工作、项目跟踪、服务、沟通工作。</p>
+								</div>
+								<div class="bottom flex_align">
+									<div class="info">
+										<span>
+											<span class="iconfont icon-locationfill"></span>
+											广州
+										</span>
+										<span>经验不限</span>
+										<span>1人</span>
+									</div>
+									<a class="check_details fill flex" style="width: 100px; font-size: 14px; line-height: 1.5em; margin: 0;" href="/sanjidianyuan/company_course">
+										<span>查看详情</span>
+									</a>
+								</div>
+							</div>
+							<div class="card flex">
+								<div class="top flex_align">
+									<b>建筑设计师</b>
+									<span>学历本科以上</span>
+								</div>
+								<div class="middle">
+									<p>岗位职责：</p>
+									<p>1、组织完成建筑设计方案和施工图设计，提高方案的合理性；</p>
+									<p>2、项目前期调研工作、项目跟踪、服务、沟通工作。</p>
+								</div>
+								<div class="bottom flex_align">
+									<div class="info">
+										<span>
+											<span class="iconfont icon-locationfill"></span>
+											广州
+										</span>
+										<span>经验不限</span>
+										<span>1人</span>
+									</div>
+									<a class="check_details fill flex" style="width: 100px; font-size: 14px; line-height: 1.5em; margin: 0;" href="/sanjidianyuan/company_course">
+										<span>查看详情</span>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -130,12 +421,137 @@
 				</div>
 			</div>
 			<!-- 底部 -->
-			#include("./common/top.html")
-			#include("./common/footer.html")
+			<!-- #include("./common/top.html")
+			#include("./common/footer.html") -->
+			<div class="gotop_box">
+				<a href="#" class="gotop_href">
+						<img src="/yejin/static/image/ico_top.png" alt="">
+				</a>
+			</div>
+			<div class="footer">
+				<!-- 防止手机浏览器自动识别电话号码造成样式错误 -->
+				<meta name="format-detection" content="telephone=no" />
+				<div class="footer_box">
+					<div class="footer_nav flex">
+						<!--底部栏目-->
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">走进环保院</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司概况</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">发展历程</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">管理团队</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">代表项目</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">污水处理项目</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">固废处理项目</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">荣誉资质</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司荣誉</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司资质</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">企业党建</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">党建团建</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">学习专栏</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">新闻中心</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司要闻</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">企业动态</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">人才招聘</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">社会招聘</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">校园招聘</a>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="footer_right">
+						<p style="font-size: 18px;font-family: Source Han Sans CN, Source Han Sans CN-Normal;color: #ffffff;">联系我们
+						</p>
+						<p style="width: 26px;height: 2px;background: #dbe8e2;margin-top: 20px;"></p>
+						<div class="footer_message">
+							<!-- <div class="footer_qr_code">
+								<img src="/yejin/static/image/qr_code.png" alt="">
+								<span>扫描二维码关注我们</span>
+							</div> -->
+							<div class="footer_message_nav">
+								<p class="footer_company">广东省冶金建筑设计研究院有限公司</p>
+								
+								<ul class="footer_company_list">
+									<li>
+										<img src="/yejin/static/image/address.png"/>
+										<span>地址：</span>
+										<span>广州市越秀区中山二路35号7-9楼</span>
+									</li>
+									<li>
+										<img src="/yejin/static/image/postcode.png" />
+										<span>传真：</span>
+										<span>020-87558760</span>
+									</li>
+									<li>
+										<img src="/yejin/static/image/email.png" />
+										<span>邮编：</span>
+										<span>510062</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer_copyright">
+					COPYRIGHT 广东省冶金建筑设计研究院有限公司 2004-2015 粤ICP备15043811号-2
+				</div>
+			</div>
+			
 		</div>
-		<script src="/templates/jidian/static/js/jquery.min.js" charset="utf-8"></script>
-		<script src="/templates/jidian/static/swiper-4.5.1/js/swiper.min.js"></script>
+		<script src="/yejin/static/js/jquery.min.js" charset="utf-8"></script>
+		<script src="/yejin/static/swiper-4.5.1/js/swiper.min.js"></script>
 		<script type="text/javascript">
+			window.addEventListener("scroll",function(e){
+        var h =document.documentElement.scrollTop||document.body.scrollTop;
+        h<=0?$('.gotop_box').hide():'';
+        h>=200? $('.gotop_box').show():'';
+			});
 			$(document).ready(function() {
 				//轮播图
 				var swiperLi = $('#swiper1 .swiper-slide');
@@ -190,6 +606,10 @@
 				});
 				queryPriceOfStock();
 			})
+			function handleBusinessSwitch(index) {
+				$('.business_list > li').removeClass('active');
+				$('.business_list > li').eq(index).addClass('active');
+			}
 			// 查询股价
 			function queryPriceOfStock() {
 			    $.get("http://qt.gtimg.cn/q=sz000833,sz002683,sz836892", {}, function (res) {

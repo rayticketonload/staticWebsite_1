@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<title>广东省冶金建筑设计研究院有限公司</title>
+		<!-- <link rel="stylesheet" href="/templates/jidian/static/css/common.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/index.css">
+		<link rel="stylesheet" href="/templates/jidian/static/swiper-4.5.1/css/swiper.min.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/animate.compat.css">
+		<link rel="stylesheet" href="/templates/jidian/static/layui/css/layui.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/iconfont.css"> -->
+
+		<link rel="stylesheet" href="/yejin/static/css/common.css">
+		<link rel="stylesheet" href="/yejin/static/css/other-page.css">
+		<link rel="stylesheet" href="/yejin/static/css/index.css">
+		<link rel="stylesheet" href="/yejin/static/swiper-4.5.1/css/swiper.min.css">
+		<link rel="stylesheet" href="/yejin/static/css/animate.compat.css">
+		<link rel="stylesheet" href="/yejin/static/layui/css/layui.css">
+		<link rel="stylesheet" href="/yejin/static/css/iconfont.css">
+	</head>
+	<style>
+		.swiper-button-prev {
+			background-image: none;
+		}
+
+		.swiper-button-next {
+			background-image: none;
+			padding-right: 10px;
+		}
+	</style>
+	<body>
+		<div>
+			<!-- 导航栏 -->
+			<!-- #include("./common/header.html") -->
+			<div class="header">
+				<div class="header_box">
+					<div class="logo" style="margin-left: 0px;">
+						<img class="logo_img" src="/yejin/static/image/logo.png" alt="">
+					</div>
+					<div class="head_nav">
+						<div class="navbar">
+							<ul class="nav_list">
+								<!--头部栏目-->
+								<li class="nav_item" >
+									<a class="nav-link" href="/yejin/">网站首页</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/yejin/company_index.html">走进环保院</a>
+								</li>
+								<li class="nav_item active">
+									<a class="nav-link" href="/yejin/behalf_project.html">代表项目</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/yejin/company_business.html">荣誉资质</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/yejin/company_party.html">企业党建</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/yejin/information_center.html">新闻中心</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/yejin/company_recruitment.html">人才招聘</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 右边 -->
+					<div class="head_sear" style="padding: 45px 0px;position: absolute;height: auto;z-index: 999;right: 100px;">
+						<!-- 搜索输入框 -->
+						<div class="">
+							<form action="#(currentSite.url)/search/title" class="layui-form" method="get" id="titleForm">
+								<div class="search_input_wrap">
+									<div class="layui-input-inline" style="width:100%;height: 100%;">
+										<input type="text" id="keyword" name="keyword" required placeholder="搜索关键词..."
+											autocomplete="off" class="layui-input search_input_box">
+									</div>
+									<button type="submit" class="layui-btn ico_search_bn">
+										<img src="/yejin/static/image/ico_search.png" alt="">
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+			
+					<!-- 当屏幕小于1024 -->
+					<div class="head_col">
+						<div class="head_nav_item">
+							<img src="/yejin/static/image/ico_collapse.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>			
+
+
+			<div class="content">
+				<!-- banner -->
+				<div class="swiper-container swiper animated zoomIn" id="swiper1">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper_item">
+							<a href="#" class="swiper_href">
+								<img src="/yejin/static/image/banner04.png" class="d-block w-100 swiper_ing">
+								<div class="swiper_title animated fadeInUp"></div>
+							</a>
+						</div>
+						<div class="swiper-slide swiper_item">
+							<a href="#" class="swiper_href">
+								<img src="/yejin/static/image/banner05.png" class="d-block w-100 swiper_ing">
+								<div class="swiper_title animated fadeInUp"></div>
+							</a>
+						</div>
+						<div class="swiper-slide swiper_item">
+							<a href="#" class="swiper_href">
+								<img src="/yejin/static/image/banner03.png" class="d-block w-100 swiper_ing">
+								<div class="swiper_title animated fadeInUp"></div>
+							</a>
+						</div>
+					</div>
+					<!-- 分页器 -->
+					<div class="swiper-pagination"></div>
+				</div>
+				<!-- sub nav -->
+				<div class="sub_nav flex_align" style="margin-bottom: 0;">
+					<div class="breadcrumb">
+						<span class="icon-home iconfont"></span>
+						<span>首页 > 代表项目 > <span class="cur_nav"></span>
+					</div>
+					<ul class="nav_box">
+						<a href="javascript:;"><li onclick="handleClickNav(0)" class="active">污水处理项目</li></a>
+						<a href="javascript:;"><li onclick="handleClickNav(1)" class="">固废处理项目</li></a>
+					</ul>
+				</div>
+
+				<!-- 代表项目 -->
+				<div class="behalf_project">
+					<!-- 污水处理项目 -->
+					<div class="container">
+						
+					</div>
+					<!-- 固废处理项目 -->
+					<div class="container">
+						<div class="card flex">
+							<div class="image_box">
+								<img src="/yejin/static/image/1.png" alt="">
+							</div>
+							<div class="desc_box">
+								<div class="desc_title">高州市金坑垃圾处理场生活垃圾综合处理一期工程</div>
+								<p class="desc_text">建设地点：广东高州市</p>
+								<p class="desc_text">设计时间：2012年</p>
+								<p class="desc_text">工程类别：固废处理项目（卫生填埋工艺技术）</p>
+								<p class="desc_text">处理规模：200吨/天</p>
+								<p class="desc_text">获奖情况：获得2018年度广东省环境保护优秀示范工程</p>
+							</div>
+						</div>
+						<div class="card flex">
+							<div class="desc_box">
+								<div class="desc_title">长沙城市固体废弃物处理场垃圾渗沥液处理厂提量扩改工程</div>
+								<p class="desc_text">建设地点：湖南省长沙市</p>
+								<p class="desc_text">设计时间：2013年</p>
+								<p class="desc_text">工程类别：固废处理项目（水质均衡+MBR外置式超滤+膜深度处理）</p>
+								<p class="desc_text">处理规模：1200吨/天</p>
+								<p class="desc_text">获奖情况：2018年重点环境保护实用技术及示范工程</p>
+							</div>
+							<div class="image_box">
+								<img src="/yejin/static/image/2.png" alt="">
+							</div>
+						</div>
+						<div class="card flex">
+							<div class="image_box">
+								<img src="/yejin/static/image/3.png" alt="">
+							</div>
+							<div class="desc_box">
+								<div class="desc_title">韶关市花拉寨生活垃圾卫生填埋场项目</div>
+								<p class="desc_text">建设地点：广东省韶关市</p>
+								<p class="desc_text">设计时间：2017年</p>
+								<p class="desc_text">工程类别：固废处理项目（卫生填埋工艺技术）</p>
+								<p class="desc_text">处理规模：500吨/天</p>
+							</div>
+						</div>
+						<div class="card flex">
+							<div class="desc_box">
+								<div class="desc_title">陈家林填埋场东南挖潜区项目</div>
+								<p class="desc_text">建设地点：广东省广州市</p>
+								<p class="desc_text">设计时间：2018年</p>
+								<p class="desc_text">工程类别：固废处理项目（垃圾堆填覆盖）</p>
+								<p class="desc_text">处理规模：700吨/天</p>
+							</div>
+							<div class="image_box">
+								<img src="/yejin/static/image/4.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- mask -->
+				<div class="mask" style="display: none;">
+					<div class="image">
+						<div class="close"></div>
+					</div>
+				</div>
+				
+				<!-- 股票 -->
+				<!-- <div class="stock_price stock_price_fixed">
+				    <div class="stock_price_wrap width_col">
+				        <div class="stock_price_title font-size-16">实时股价</div>
+				        <div class="stock_price_content" id="stock_info">
+				        </div>
+				    </div>
+				</div> -->
+			</div>
+			<!-- 底部 -->
+			<!-- #include("./common/top.html")
+			#include("./common/footer.html") -->
+			<div class="gotop_box">
+				<a href="#" class="gotop_href">
+						<img src="/yejin/static/image/ico_top.png" alt="">
+				</a>
+			</div>
+			<div class="footer">
+				<!-- 防止手机浏览器自动识别电话号码造成样式错误 -->
+				<meta name="format-detection" content="telephone=no" />
+				<div class="footer_box">
+					<div class="footer_nav flex">
+						<!--底部栏目-->
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">走进环保院</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司概况</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">发展历程</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">管理团队</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">代表项目</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">污水处理项目</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">固废处理项目</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">荣誉资质</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司荣誉</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司资质</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">企业党建</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">党建团建</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">学习专栏</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">新闻中心</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司要闻</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">企业动态</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">人才招聘</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">社会招聘</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">校园招聘</a>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="footer_right">
+						<p style="font-size: 18px;font-family: Source Han Sans CN, Source Han Sans CN-Normal;color: #ffffff;">联系我们
+						</p>
+						<p style="width: 26px;height: 2px;background: #dbe8e2;margin-top: 20px;"></p>
+						<div class="footer_message">
+							<!-- <div class="footer_qr_code">
+								<img src="/yejin/static/image/qr_code.png" alt="">
+								<span>扫描二维码关注我们</span>
+							</div> -->
+							<div class="footer_message_nav">
+								<p class="footer_company">广东省冶金建筑设计研究院有限公司</p>
+								
+								<ul class="footer_company_list">
+									<li>
+										<img src="/yejin/static/image/address.png"/>
+										<span>地址：</span>
+										<span>广州市越秀区中山二路35号7-9楼</span>
+									</li>
+									<li>
+										<img src="/yejin/static/image/postcode.png" />
+										<span>传真：</span>
+										<span>020-87558760</span>
+									</li>
+									<li>
+										<img src="/yejin/static/image/email.png" />
+										<span>邮编：</span>
+										<span>510062</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer_copyright">
+					COPYRIGHT 广东省冶金建筑设计研究院有限公司 2004-2015 粤ICP备15043811号-2
+				</div>
+			</div>
+		</div>
+
+
+		<script src="/yejin/static/js/jquery.min.js" charset="utf-8"></script>
+		<script src="/yejin/static/swiper-4.5.1/js/swiper.min.js"></script>
+		<script type="text/javascript">
+			window.addEventListener("scroll",function(e){
+        var h =document.documentElement.scrollTop||document.body.scrollTop;
+        h<=0?$('.gotop_box').hide():'';
+        h>=200? $('.gotop_box').show():'';
+   	 	});
+			// 子导航点击方法
+			function handleClickNav(index) {
+				const $container = $('.container');
+				const $li = $('.sub_nav .nav_box li');
+				const $curNav = $('.sub_nav .cur_nav');
+				$container.hide();
+				$container.eq(index).show();
+				$li.removeClass('active');
+				$li.eq(index).addClass('active');
+				$curNav.text($li.eq(index).text());
+			}
+			// 默认选中第一个
+			handleClickNav(1);
+
+			$(document).ready(function() {
+				//轮播图
+				var swiperLi = $('#swiper1 .swiper-slide');
+				var swiperAutoplay = false;
+				var swiperLoop = false;
+				if (swiperLi.length > 1) {
+					swiperAutoplay = true;
+					swiperLoop = true;
+				}
+				var mySwiper1 = new Swiper('#swiper1', {
+					direction: 'horizontal',
+					loop: swiperLoop,
+					observer: true, //实时检测，动态更新
+					autoplay: swiperAutoplay,
+					// 如果需要分页器
+					pagination: {
+						el: swiperLi.length < 2 ? null : '.swiper-pagination',
+						clickable: true,
+						type: 'custom',
+						renderCustom: function(swiper, current, total) {
+							var customPaginationHtml = "";
+							for (var i = 0; i < total; i++) {
+								//判断哪个分页器此刻应该被激活
+								if (i == (current - 1)) {
+									customPaginationHtml +=
+										'<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
+								} else {
+									customPaginationHtml +=
+										'<span class="swiper-pagination-customs"></span>';
+								}
+							}
+							return customPaginationHtml;
+						}
+					}
+				});
+			});
+
+			// 图片放大
+			$('.company_business .img_box').click(function() {
+				$('.mask .image').css({
+					backgroundImage: 'url(' + $(this).children('img').attr('src') + ')'
+				});
+				$('.mask').show();
+			});
+			$('.mask').click(function() {
+				$('.mask').hide();
+			});
+
+
+			// $(document).ready(function() {
+			// 	queryPriceOfStock();
+			// })
+			// 查询股价
+			// function queryPriceOfStock() {
+			//     $.get("http://qt.gtimg.cn/q=sz000833,sz002683,sz836892", {}, function (res) {
+			//         var html = "";
+			//         // 获取以;分割的内容
+			//         var arr = res.split(";");
+			//         for (var i = 0; i < arr.length; i++) {
+			//             // 名字
+			//             var name = arr[i].split("~")[1];
+			//             // 代码
+			//             var code = arr[i].split("~")[2];
+			//             // 价格
+			//             var price = arr[i].split("~")[3];
+			//             // 涨跌
+			//             var rise = arr[i].split("~")[31];
+			//             // 涨跌%
+			//             var percentage = arr[i].split("~")[32];
+			//             if (name != undefined && code != undefined && price != undefined && rise != undefined) {
+			//                 // 设置 html <i class='layui-icon "+ (Number(rise) > 0 ? 'layui-icon-up' : 'layui-icon-down') +"' style='color: red;'></i>
+			//                 html += "<div class='stock_price_data'>" +
+			//                     "<span>" + name + "(" + code + ")</span>" +
+			//                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + price + "</span>" +
+			//                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + rise + "</span>" +
+			//                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + percentage + "%</span>" +
+			//                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;' class='iconfont " + (Number(rise) > 0 ? 'icon-xiangshang4' : 'icon-xiangxia4') + "'></span>" +
+			//                     "</div>"
+			//             }
+			//         }
+			//         $("#stock_info").empty().html(html);
+			//     })
+			// }
+			
+			// setInterval(function () {
+			//     queryPriceOfStock();
+			// }, 60 * 2 * 1000);
+		</script>
+	</body>
+</html>
