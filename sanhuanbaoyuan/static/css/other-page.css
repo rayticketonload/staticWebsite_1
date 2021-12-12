@@ -1,6 +1,7 @@
 /* 
-主题色(蓝) #00329b
-浅蓝色 #f3f7fc
+主题色(蓝) #0c673e
+浅蓝色 #e6f0eb
+线条颜色(黄) #c09b30
 */
 /* 公共样式 */
 .sub_nav {
@@ -19,7 +20,7 @@
 }
 .sub_nav .breadcrumb .icon-home {
   font-size: 18px;
-  color: #00329b;
+  color: #0c673e;
   /* background-image: url(../image/); */
 }
 .sub_nav .nav_box {
@@ -35,8 +36,8 @@
   box-sizing: border-box;
 }
 .sub_nav .nav_box li.active {
-  color: #00329b;
-  border-bottom: 3px solid #00329b;
+  color: #0c673e;
+  border-bottom: 3px solid #0c673e;
 }
 
 /* 
@@ -44,7 +45,7 @@
 关于我们
 ************
 */
-/* 公司简介 */
+/* 公司概况 */
 .container {
   padding: 0 360px 100px;
 }
@@ -52,6 +53,16 @@
   font-size: 16px;
   line-height: 2em;
   text-indent: 2em;
+}
+.company_profile .paragraph {
+  margin: 20px 0;
+  line-height: 2em;
+  font-size: 16px;
+}
+.company_profile .paragraph .paragraph_title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0c673e;
 }
 .company_profile .honor_box {
   padding: 30px 0;
@@ -70,7 +81,7 @@
 }
 .company_profile .honor_box .item .value {
   font-weight: bold;
-  color: #00329b;
+  color: #0c673e;
 }
 .company_profile .honor_box .item .value b {
   font-size: 32px;
@@ -100,7 +111,7 @@
 /* 企业文化 & 业务介绍 */
 .company_profile .container .card {
   margin-bottom: 50px;
-  background-color: #f3f7fc;
+  background-color: #e6f0eb;
 }
 /* .company_business .card .image_box, */
 .company_profile .card .image_box {
@@ -112,14 +123,16 @@
   padding: 80px 50px;
   box-sizing: border-box;
 }
+.behalf_project .card .desc_box .desc_title,
 .company_business .card .desc_box .desc_title,
 .company_profile .card .desc_box .desc_title {
   position: relative;
   font-size: 32px;
   line-height: 2em;
   margin-bottom: 20px;
-  color: #00329b;
+  color: #0c673e;
 }
+.behalf_project .card .desc_box .desc_title::after,
 .company_business .card .desc_box .desc_title::after,
 .company_profile .card .desc_box .desc_title::after {
   content: '';
@@ -128,12 +141,47 @@
   bottom: -4px;
   width: 55px;
   height: 4px;
-  background-color: #00329b;
+  background-color: #0c673e;
 }
+.behalf_project .card .desc_box .desc_text,
 .company_business .card .desc_box .desc_text,
 .company_profile .card .desc_box .desc_text {
   font-size: 16px;
   line-height: 2em;
+}
+/* 管理团队 */
+.company_profile .team {
+  justify-content: flex-start;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #eee;
+}
+.company_profile .team .image_box {
+  flex-direction: column;
+  justify-content: center;
+  width: 270px;
+  height: 200px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  color: #333;
+  background-color: #f5f5f5;
+}
+.company_profile .team .image_box img {
+  width: 30%;
+  margin-bottom: 16px;
+}
+.company_profile .team .merber_box {
+  flex-direction: column;
+  height: 150px;
+  margin-left: 120px;
+  font-size: 16px;
+  color: #666;
+}
+.company_profile .team .merber_box .label {
+  font-weight: bold;
+  display: inline-block;
+  width: 180px;
+  color: #0c673e;
 }
 
 /* 
@@ -227,6 +275,40 @@
   background-repeat: no-repeat;
   background-image: url(/sanhuanbaoyuan/static/image/clone.png);
   cursor: pointer;
+}
+
+
+/* 
+************
+代表项目
+************
+*/
+/* 固废处理项目 */
+.behalf_project .container {
+  padding-top: 50px;
+  background-color: #f7f7f7;
+}
+.behalf_project .card {
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 50px;
+}
+.behalf_project .card .image_box {
+  width: 40%;
+}
+.behalf_project .card .desc_box {
+  width: 60%;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+.behalf_project .card .desc_box .desc_title {
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+}
+.behalf_project .card .desc_box .desc_title::after {
+  width: 120px;
+  background-color: #c09b30;
 }
 
 /* 
@@ -326,7 +408,7 @@
   justify-content: center;
 }
 .information_center .card .desc_box .desc_title {
-  color: #00329b;
+  color: #0c673e;
 }
 .information_center .card .desc_box .desc_text {
   margin-top: 20px;
@@ -378,12 +460,94 @@
   color: #666;
 }
 .information_center .list .item:hover {
-  color: #00329b;
-  border-color: #00329b;
+  color: #0c673e;
+  border-color: #0c673e;
 }
 .information_center .list .item:hover::before {
-  background-color: #00329b;
+  background-color: #0c673e;
 }
+/* 企业动态详情 */
+.information_center.detail {
+  padding: 50px 360px;
+}
+.information_center .detail_left {
+  width: 75%;
+}
+.information_center .detail_left .left_header {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+.information_center .detail_left .left_title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 24px;
+}
+.information_center .time {
+  color: #999;
+  font-size: 16px;
+}
+.information_center .detail_left .image_box {
+  text-align: center;
+  padding: 20px 0;
+}
+.information_center .detail_left .image_box img {
+  width: 90%;
+}
+.information_center .detail_left .detail_footer {
+  font-weight: bold;
+  margin-top: 50px;
+}
+.information_center .detail_left .detail_footer .prev,
+.information_center .detail_left .detail_footer .next {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+}
+.information_center .detail_left .detail_footer .is_null {
+  color: #666;
+}
+.information_center .detail_right {
+  width: 22%;
+}
+.information_center .detail_right .right_title {
+  position: relative;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 12px;
+}
+.information_center .detail_right .right_title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 24px;
+  background-color: #0c673e;
+}
+.information_center .detail_right .item {
+  padding: 20px 0;
+  border-bottom: 2px solid #eee;
+}
+.information_center .detail_right > ul {
+  margin-top: 20px;
+}
+.information_center .detail_right .item_title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  /* 溢出省略 */
+  text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+  line-height: 1.5em;
+}
+.information_center .detail_right {}
+.information_center .detail_right {}
 
 /* 
 ************
@@ -408,7 +572,7 @@
 .company_recruitment .card_info {
   font-weight: bold;
   font-size: 16px;
-  color: #00329b;
+  color: #0c673e;
 }
 .company_recruitment .card_info > span {
   padding: 0 10px;
@@ -445,7 +609,7 @@
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  color: #00329b;
+  color: #0c673e;
   padding: 20px;
   margin-top: 50px;
   border-top: 1px solid #eee;

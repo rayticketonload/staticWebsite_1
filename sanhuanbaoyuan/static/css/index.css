@@ -229,7 +229,7 @@ img {
 
 .header .head_nav {
 	height: 100%;
-	margin-left: 7%;
+	margin-left: 4%;
 	float: left;
 }
 
@@ -267,7 +267,7 @@ img {
 }
 
 .header .head_nav .navbar .nav_list .nav_item+.nav_item {
-	margin-left: 36px;
+	margin-left: 12px;
 }
 
 .header .head_nav .search_wrap {
@@ -646,13 +646,16 @@ img {
 }
 
 /* 代表项目 */
+.shadow_img {
+	box-shadow: 20px 20px 0 0 #e6f0eb;
+}
 .business{
 	width: 100%;
 	padding: 0 240px;
 	margin: 100px 0;
 	box-sizing: border-box;
 	text-align: center;
-	background-image: url(../image/business_bg.png);
+	/* background-image: url(../image/business_bg.png); */
 	background-repeat: no-repeat;
 	background-position: bottom left;
 }
@@ -681,7 +684,7 @@ img {
 	/* color: #333; */
 }
 .business_left .business_list .li_desc {
-	/* display: none; */
+	display: none;
 	font-size: 14px;
 	padding: 20px 0;
 	margin-top: 15px;
@@ -690,12 +693,17 @@ img {
 .business_left .business_list li {
 	margin: 30px 0;
 	border-radius: 4px;
+	padding: 20px 0;
+	cursor: pointer;
 }
 .business_left .business_list li.active {
 	position: relative;
-	padding: 20px 30px;
+	padding: 20px 30px 40px;
 	color: #fff;
 	background-color: #0c673e;
+}
+.business_left .business_list li.active .li_desc {
+	display: block;
 }
 .business_left .business_list li.active::before {
 	content: '';
@@ -707,10 +715,10 @@ img {
 	background-color: #c09b30;
 }
 
-/* 资讯中心 */
+/* 新闻中心 */
 .information{
 	width: 100%;
-	background: #e6f0eb;
+	background: #f8f9fb;
 }
 .information .title,
 .information .title_en {
@@ -746,7 +754,7 @@ img {
 	transform: translateY(-50%);
 	width: 4px;
 	height: 50px;
-	background-color: #ff0909;
+	background-color: #c09b30;
 }
 .info_left li:hover {
 	background-color: #0c673e;
@@ -778,12 +786,12 @@ img {
 	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 1;
+	-webkit-line-clamp: 2;
 	overflow: hidden;
 	line-height: 1.3em;
-	max-height: 1.3em;
+	max-height: 2.6em;
 	color: #666;
-	padding-bottom: 8px;
+	margin-bottom: 8px;
 }
 
 /* 企业荣誉 */
@@ -828,6 +836,51 @@ img {
 }
 .enterprise_content > div:hover .img_box {
 	box-shadow: 0 0 8px 0 #acacac;
+}
+
+/* 人才招聘 */
+.recruitment_content {
+	margin-top: 50px;
+}
+.recruitment_content .card {
+	flex-direction: column;
+	width: 32%;
+	height: 310px;
+	line-height: 2em;
+	font-size: 16px;
+	padding: 50px 20px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	box-shadow: 0 0 10px 2px #eee;
+	transition: all 0.3s;
+}
+	.recruitment_content .top b {
+	font-weight: bold;
+}
+.recruitment_content .info {
+  font-size: 16px;
+	margin: 0 -10px;
+}
+.recruitment_content .info .icon-locationfill {
+	color: #0c673e;
+}
+.recruitment_content .info > span {
+  padding: 0 10px;
+  border-right: 1px solid #b7b7b7;
+}
+.recruitment_content .info > span:last-child {
+  border-right: none;
+}
+.recruitment_content .card:hover {
+	background-color: #0c673e;
+	color: #fff;
+}
+.recruitment_content .card:hover .info .icon-locationfill {
+	color: #fff;
+}
+.recruitment_content .card:hover .check_details.fill {
+	background-color: #fff;
+	color: #0c673e;
 }
 
 /* 股票 */
@@ -887,7 +940,7 @@ img {
 }
 
 .stock_price_fixed {
-	background: #e6f0eb;
+	background: #f7f7f7;
 	position: sticky;
 	left: 0;
 	bottom: 0;
@@ -1623,7 +1676,7 @@ img {
 	margin: 60px auto 0;
 	padding-bottom: 69px;
 	padding-left: 5%;
-	border-left: 1px solid #447ca3;
+	border-left: 1px solid #3c916b;
 	box-sizing: border-box;
 }
 
@@ -1689,7 +1742,7 @@ img {
 	font-size: 14px;
 	font-family: Microsoft YaHei, Microsoft YaHei-Regular;
 	font-weight: 400;
-	border-top: 1px solid #447ca3;
+	border-top: 1px solid #3c916b;
 	color: #d1d7d5;
 }
 

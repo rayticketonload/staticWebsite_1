@@ -46,16 +46,19 @@
 									<a class="nav-link" href="/sanhuanbaoyuan/">网站首页</a>
 								</li>
 								<li class="nav_item">
-									<a class="nav-link" href="/sanhuanbaoyuan/company_index.html">关于我们</a>
+									<a class="nav-link" href="/sanhuanbaoyuan/company_index.html">走进环保院</a>
 								</li>
 								<li class="nav_item">
-									<a class="nav-link" href="/sanhuanbaoyuan/company_business.html">经营业务</a>
+									<a class="nav-link" href="/sanhuanbaoyuan/behalf_project.html">代表项目</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/sanhuanbaoyuan/company_business.html">荣誉资质</a>
 								</li>
 								<li class="nav_item">
 									<a class="nav-link" href="/sanhuanbaoyuan/company_party.html">企业党建</a>
 								</li>
 								<li class="nav_item">
-									<a class="nav-link" href="/sanhuanbaoyuan/information_center.html">资讯中心</a>
+									<a class="nav-link" href="/sanhuanbaoyuan/information_center.html">新闻中心</a>
 								</li>
 								<li class="nav_item">
 									<a class="nav-link" href="/sanhuanbaoyuan/company_recruitment.html">人才招聘</a>
@@ -202,107 +205,196 @@
 					<div class="flex">
 						<div class="business_left">
 							<ul class="business_list">
-								<li class="active">
+								<li class="active" onclick="handleBusinessSwitch(0)">
 									<div class="li_title">火炬水净化厂一期工程</div>
 									<div class="li_desc">获得2019年广东省环境保护优秀示范工程</div>
 								</li>
-								<li class="">
+								<li class="" onclick="handleBusinessSwitch(1)">
 									<div class="li_title">河源市源城污水处理厂一期尾水提标工程</div>
 									<div class="li_desc">获得2019年广东省环境保护优秀示范工程</div>
 								</li>
-								<li class="">
+								<li class="" onclick="handleBusinessSwitch(2)">
 									<div class="li_title">清远市横荷污水处理厂一期尾水提标工程</div>
 									<div class="li_desc">获得2019年广东省环境保护优秀示范工程</div>
 								</li>
-								<li class="">
+								<li class="" onclick="handleBusinessSwitch(3)">
 									<div class="li_title">高州市金坑垃圾处理场生活垃圾综合处理一期工程</div>
 									<div class="li_desc">获得2019年广东省环境保护优秀示范工程</div>
 								</li>
 							</ul>
-							<a class="check_details flex" style="margin-top: 150px" href="/sanjidianyuan/company_course">
+							<a class="check_details flex" href="/sanjidianyuan/company_course">
 								<span>查看详情</span>
 								<img src="/sanhuanbaoyuan/static/image/ico_more.png" />
 							</a>
 						</div>
 						<div class="business_right">
-							<img src="/sanhuanbaoyuan/static/image/business.png" alt="">
+							<img class="shadow_img" src="/sanhuanbaoyuan/static/image/business.png" alt="">
 						</div>
 					</div>
 				</div>
-				<!-- 资讯中心 -->
+				<!-- 荣誉资质 -->
+				<div class="enterprise">
+					<div class="enterprise_box">
+						<div class="enterprise_title flex_align">
+							<div class="title">
+								<span>荣誉资质</span>
+								<p class="title_en">Enterprise Honor</p>
+							</div>
+							<div>
+								<button type="button" class="layui-btn layui-btn-primary"><span style="font-size: 20px" class="iconfont icon-arrow-left"></span></button>
+								<button type="button" class="layui-btn layui-btn-primary"><span style="font-size: 20px" class="iconfont icon-arrow-right"></span></button>
+							</div>
+						</div>
+						<div class="enterprise_content flex_align">
+							<div>
+								<div class="img_box">
+									<img src="/sanhuanbaoyuan/static/image/科学技术奖.png" alt="">
+								</div>
+								<p class="desc">广东省环境保护优秀示范工程</p>
+							</div>
+							<div>
+								<div class="img_box">
+									<img src="/sanhuanbaoyuan/static/image/科学技术奖.png" alt="">
+								</div>
+								<p class="desc">广东省环境保护优秀示范工程</p>
+							</div>
+							<div>
+								<div class="img_box">
+									<img src="/sanhuanbaoyuan/static/image/科学技术奖.png" alt="">
+								</div>
+								<p class="desc">环保科学技术将一等奖</p>
+							</div>
+							<div>
+								<div class="img_box">
+									<img src="/sanhuanbaoyuan/static/image/科学技术奖.png" alt="">
+								</div>
+								<p class="desc">环保科学技术将三等奖</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 新闻中心 -->
 				<div class="information">
 					<div class="information_box">
 						<div class="information_title">
 							<div class="title">
-								<span>资讯中心</span>
-								<p class="title_en">information centre</p>
+								<span>新闻中心</span>
+								<p class="title_en">New centre</p>
 							</div>
 						</div>
 						<div class="information_content flex">
 							<div class="info_left">
 								<ul>
 									<li>
-										<p class="li_title">南服总本部8月“党员之星” “员工之星”进行工作特色亮点和总结</p>
-										<p class="li_date">2020-10-23</p>
+										<p class="li_title">环保院顺利完成新办公场所搬迁工作</p>
+										<p class="li_date">2021-07-30</p>
 									</li>
 									<li>
-										<p class="li_title">南服总本部8月“党员之星” “员工之星”进行工作特色亮点和总结</p>
-										<p class="li_date">2020-10-23</p>
+										<p class="li_title">环保院顺利完成新办公场所搬迁工作</p>
+										<p class="li_date">2021-07-30</p>
 									</li>
 									<li>
-										<p class="li_title">南服总本部8月“党员之星” “员工之星”进行工作特色亮点和总结</p>
-										<p class="li_date">2020-10-23</p>
+										<p class="li_title">环保院顺利完成新办公场所搬迁工作</p>
+										<p class="li_date">2021-07-30</p>
 									</li>
 									<li>
-										<p class="li_title">南服总本部8月“党员之星” “员工之星”进行工作特色亮点和总结</p>
-										<p class="li_date">2020-10-23</p>
+										<p class="li_title">环保院顺利完成新办公场所搬迁工作</p>
+										<p class="li_date">2021-07-30</p>
 									</li>
 								</ul>
 							</div>
 							<div class="info_right">
 								<img src="/sanhuanbaoyuan/static/image/资讯中心.png" alt="">
 								<div>
-									<p class="li_title">南服总本部8月“党员之星” “员工之星”进行工作特色亮点和总结</p>
-									<p class="desc">为更好地在全系统树立榜样、弘扬正气、振奋精神，现将南服总本部8月 “党员之星” 和 “员工之星” 进行工作特色亮点和总结</p>
-									<p class="li_date">2020-10-23</p>
+									<p class="li_title">环保院顺利完成新办公场所搬迁工作</p>
+									<p class="desc">在广东省国资委三年国企改革行动的号召下、环保总院的战略部署下，2021年8月22日，环保院顺利完成了从原办公地点越秀区北京路374号之二瑞安中心12至13楼，搬迁至新办公点越秀区中山二路35号7至9楼的相关工作，并于8月23日...</p>
+									<p class="li_date" style="float: right;">2021-07-30</p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- 企业荣誉 -->
+				<!-- 人才招聘 -->
 				<div class="enterprise">
 					<div class="enterprise_box">
 						<div class="enterprise_title center">
 							<div class="title">
-								<span>企业荣誉</span>
-								<p class="title_en">Enterprise Honor</p>
+								<span>人才招聘</span>
+								<p class="title_en">Talent recruitment</p>
 							</div>
 						</div>
-						<div class="enterprise_content flex_align">
-							<div>
-								<div class="img_box">
-									<img src="/sanhuanbaoyuan/static/image/honor_1.png" alt="">
+						<div class="recruitment_content flex_align">
+							<div class="card flex">
+								<div class="top flex_align">
+									<b>建筑设计师</b>
+									<span>学历本科以上</span>
 								</div>
-								<p class="desc">广东服务业100强</p>
+								<div class="middle">
+									<p>岗位职责：</p>
+									<p>1、组织完成建筑设计方案和施工图设计，提高方案的合理性；</p>
+									<p>2、项目前期调研工作、项目跟踪、服务、沟通工作。</p>
+								</div>
+								<div class="bottom flex_align">
+									<div class="info">
+										<span>
+											<span class="iconfont icon-locationfill"></span>
+											广州
+										</span>
+										<span>经验不限</span>
+										<span>1人</span>
+									</div>
+									<a class="check_details fill flex" style="width: 100px; font-size: 14px; line-height: 1.5em; margin: 0;" href="/sanjidianyuan/company_course">
+										<span>查看详情</span>
+									</a>
+								</div>
 							</div>
-							<div>
-								<div class="img_box">
-									<img src="/sanhuanbaoyuan/static/image/honor_2.png" alt="">
+							<div class="card flex">
+								<div class="top flex_align">
+									<b>建筑设计师</b>
+									<span>学历本科以上</span>
 								</div>
-								<p class="desc">广东企业500强</p>
+								<div class="middle">
+									<p>岗位职责：</p>
+									<p>1、组织完成建筑设计方案和施工图设计，提高方案的合理性；</p>
+									<p>2、项目前期调研工作、项目跟踪、服务、沟通工作。</p>
+								</div>
+								<div class="bottom flex_align">
+									<div class="info">
+										<span>
+											<span class="iconfont icon-locationfill"></span>
+											广州
+										</span>
+										<span>经验不限</span>
+										<span>1人</span>
+									</div>
+									<a class="check_details fill flex" style="width: 100px; font-size: 14px; line-height: 1.5em; margin: 0;" href="/sanjidianyuan/company_course">
+										<span>查看详情</span>
+									</a>
+								</div>
 							</div>
-							<div>
-								<div class="img_box">
-									<img src="/sanhuanbaoyuan/static/image/honor_3.png" alt="">
+							<div class="card flex">
+								<div class="top flex_align">
+									<b>建筑设计师</b>
+									<span>学历本科以上</span>
 								</div>
-								<p class="desc">南服总荣获第二十四届广东省企业管理现代化...</p>
-							</div>
-							<div>
-								<div class="img_box">
-									<img src="/sanhuanbaoyuan/static/image/honor_4.png" alt="">
+								<div class="middle">
+									<p>岗位职责：</p>
+									<p>1、组织完成建筑设计方案和施工图设计，提高方案的合理性；</p>
+									<p>2、项目前期调研工作、项目跟踪、服务、沟通工作。</p>
 								</div>
-								<p class="desc">中国服务业500强第425位</p>
+								<div class="bottom flex_align">
+									<div class="info">
+										<span>
+											<span class="iconfont icon-locationfill"></span>
+											广州
+										</span>
+										<span>经验不限</span>
+										<span>1人</span>
+									</div>
+									<a class="check_details fill flex" style="width: 100px; font-size: 14px; line-height: 1.5em; margin: 0;" href="/sanjidianyuan/company_course">
+										<span>查看详情</span>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -332,27 +424,38 @@
 						<!--底部栏目-->
 						<ul class="footer_nav_item">
 							<li>
-								<a class="footer_nav_first" href="#(category.path ??)">关于我们</a>
+								<a class="footer_nav_first" href="#(category.path ??)">走进环保院</a>
 							</li>
 							<li style="margin: 5px 0">
-								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司简介</a>
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司概况</a>
 							</li>
 							<li style="margin: 5px 0">
-								<a class="footer_nav_other" href="#(categoryItem.path ??)">企业文化</a>
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">发展历程</a>
 							</li>
 							<li style="margin: 5px 0">
-								<a class="footer_nav_other" href="#(categoryItem.path ??)">组织结构</a>
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">管理团队</a>
 							</li>
 						</ul>
 						<ul class="footer_nav_item">
 							<li>
-								<a class="footer_nav_first" href="#(category.path ??)">经营业务</a>
+								<a class="footer_nav_first" href="#(category.path ??)">代表项目</a>
 							</li>
 							<li style="margin: 5px 0">
-								<a class="footer_nav_other" href="#(categoryItem.path ??)">业务介绍</a>
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">污水处理项目</a>
 							</li>
 							<li style="margin: 5px 0">
-								<a class="footer_nav_other" href="#(categoryItem.path ??)">荣誉资质</a>
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">固废处理项目</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">荣誉资质</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司荣誉</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司资质</a>
 							</li>
 						</ul>
 						<ul class="footer_nav_item">
@@ -360,21 +463,21 @@
 								<a class="footer_nav_first" href="#(category.path ??)">企业党建</a>
 							</li>
 							<li style="margin: 5px 0">
-								<a class="footer_nav_other" href="#(categoryItem.path ??)">党建专栏</a>
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">党建团建</a>
 							</li>
 							<li style="margin: 5px 0">
-								<a class="footer_nav_other" href="#(categoryItem.path ??)">廉洁专栏</a>
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">学习专栏</a>
 							</li>
 						</ul>
 						<ul class="footer_nav_item">
 							<li>
-								<a class="footer_nav_first" href="#(category.path ??)">资讯中心</a>
+								<a class="footer_nav_first" href="#(category.path ??)">新闻中心</a>
 							</li>
 							<li style="margin: 5px 0">
-								<a class="footer_nav_other" href="#(categoryItem.path ??)">新闻动态</a>
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司要闻</a>
 							</li>
 							<li style="margin: 5px 0">
-								<a class="footer_nav_other" href="#(categoryItem.path ??)">信息公开</a>
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">企业动态</a>
 							</li>
 						</ul>
 						<ul class="footer_nav_item">
@@ -382,10 +485,10 @@
 								<a class="footer_nav_first" href="#(category.path ??)">人才招聘</a>
 							</li>
 							<li style="margin: 5px 0">
-								<a class="footer_nav_other" href="#(categoryItem.path ??)">集团招聘</a>
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">社会招聘</a>
 							</li>
 							<li style="margin: 5px 0">
-								<a class="footer_nav_other" href="#(categoryItem.path ??)">海股招聘</a>
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">校园招聘</a>
 							</li>
 						</ul>
 					</div>
@@ -394,11 +497,11 @@
 						<p style="font-size: 18px;font-family: Source Han Sans CN, Source Han Sans CN-Normal;color: #ffffff;">联系我们
 						</p>
 						<p style="width: 26px;height: 2px;background: #dbe8e2;margin-top: 20px;"></p>
-						<div class="footer_message flex">
-							<div class="footer_qr_code">
+						<div class="footer_message">
+							<!-- <div class="footer_qr_code">
 								<img src="/sanhuanbaoyuan/static/image/qr_code.png" alt="">
 								<span>扫描二维码关注我们</span>
-							</div>
+							</div> -->
 							<div class="footer_message_nav">
 								<p class="footer_company">广东省环境保护工程研究设计院有限公司</p>
 								
@@ -406,17 +509,17 @@
 									<li>
 										<img src="/sanhuanbaoyuan/static/image/address.png"/>
 										<span>地址：</span>
-										<span>广东省广州市越秀区环市东路503号</span>
+										<span>广州市越秀区中山二路35号7-9楼</span>
 									</li>
 									<li>
 										<img src="/sanhuanbaoyuan/static/image/postcode.png" />
 										<span>传真：</span>
-										<span>020-37605840</span>
+										<span>020-87558760</span>
 									</li>
 									<li>
 										<img src="/sanhuanbaoyuan/static/image/email.png" />
 										<span>邮编：</span>
-										<span>510075</span>
+										<span>510062</span>
 									</li>
 								</ul>
 							</div>
@@ -491,6 +594,10 @@
 				});
 				queryPriceOfStock();
 			})
+			function handleBusinessSwitch(index) {
+				$('.business_list > li').removeClass('active');
+				$('.business_list > li').eq(index).addClass('active');
+			}
 			// 查询股价
 			function queryPriceOfStock() {
 			    $.get("http://qt.gtimg.cn/q=sz000833,sz002683,sz836892", {}, function (res) {
