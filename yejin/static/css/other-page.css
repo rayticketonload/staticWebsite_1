@@ -436,25 +436,33 @@
 /* 信息公开 */
 .information_center .list {
   padding: 20px 360px;
+  flex-wrap: wrap;
 }
 .information_center .list .item {
-  position: relative;
-  font-size: 16px;
-  height: 75px;
-  padding-left: 20px;
-  color: #333;
-  border-bottom: 1px solid #eee;
-  cursor: pointer;
+  width: 32%;
+  height: 250px;
+  flex-direction: column;
+  padding: 40px 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  background-color: #f8f9fb;
+  transition: all 0.3s;
 }
-.information_center .list .item::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #666;
+.information_center .list .list_title {
+  font-size: 18px;
+  font-weight: bold;
 }
+.information_center .list .list_title,
+.information_center .list .list_desc {
+  /* 溢出省略 */
+  text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+  line-height: 1.5em;
+}
+.information_center .list .item .list_desc,
 .information_center .list .item .list_date {
   font-size: 14px;
   color: #666;
@@ -462,6 +470,7 @@
 .information_center .list .item:hover {
   color: #0074cd;
   border-color: #0074cd;
+  box-shadow: 0 0 18px 4px #eee;
 }
 .information_center .list .item:hover::before {
   background-color: #0074cd;
@@ -491,6 +500,10 @@
 .information_center .detail_left .image_box {
   text-align: center;
   padding: 20px 0;
+}
+.information_center .detail_left .image_box p {
+  text-align: center;
+  padding-bottom: 10px;
 }
 .information_center .detail_left .image_box img {
   width: 90%;
