@@ -102,6 +102,18 @@
 								<div class="swiper_title animated fadeInUp"></div>
 							</a>
 						</div>
+						<div class="swiper-slide swiper_item">
+							<a href="#" class="swiper_href">
+								<img src="/nanyou/static/image/banner_2.png" class="d-block w-100 swiper_ing">
+								<div class="swiper_title animated fadeInUp"></div>
+							</a>
+						</div>
+						<div class="swiper-slide swiper_item">
+							<a href="#" class="swiper_href">
+								<img src="/nanyou/static/image/banner03.png" class="d-block w-100 swiper_ing">
+								<div class="swiper_title animated fadeInUp"></div>
+							</a>
+						</div>
 					</div>
 					<!-- 分页器 -->
 					<div class="swiper-pagination"></div>
@@ -324,6 +336,7 @@
 
 
 		<script src="/nanyou/static/js/jquery.min.js" charset="utf-8"></script>
+		<script src="/nanyou/static/swiper-4.5.1/js/swiper.min.js"></script>
 		<script type="text/javascript">
 			window.addEventListener("scroll",function(e){
         var h =document.documentElement.scrollTop||document.body.scrollTop;
@@ -343,6 +356,43 @@
 			}
 			// 默认选中第一个
 			handleClickNav(0);
+
+			$(document).ready(function() {
+				//轮播图
+				var swiperLi = $('#swiper1 .swiper-slide');
+				var swiperAutoplay = false;
+				var swiperLoop = false;
+				if (swiperLi.length > 1) {
+					swiperAutoplay = true;
+					swiperLoop = true;
+				}
+				var mySwiper1 = new Swiper('#swiper1', {
+					direction: 'horizontal',
+					loop: swiperLoop,
+					observer: true, //实时检测，动态更新
+					autoplay: swiperAutoplay,
+					// 如果需要分页器
+					pagination: {
+						el: swiperLi.length < 2 ? null : '.swiper-pagination',
+						clickable: true,
+						type: 'custom',
+						renderCustom: function(swiper, current, total) {
+							var customPaginationHtml = "";
+							for (var i = 0; i < total; i++) {
+								//判断哪个分页器此刻应该被激活
+								if (i == (current - 1)) {
+									customPaginationHtml +=
+										'<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
+								} else {
+									customPaginationHtml +=
+										'<span class="swiper-pagination-customs"></span>';
+								}
+							}
+							return customPaginationHtml;
+						}
+					}
+				});
+			});
 
 			// $(document).ready(function() {
 			// 	queryPriceOfStock();
