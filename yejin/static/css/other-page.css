@@ -190,6 +190,25 @@
 ************
 */
 /* 业务介绍 */
+.company_business {
+  padding-top: 50px;
+  background-color: #f5f6f7;
+}
+.company_business .enterprise_header_btn {
+  padding: 20px;
+  background-color: #fff;
+}
+.company_business .enterprise_header_btn .tag {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.company_business .enterprise_header_btn .tag.active {
+  border: 1px solid #0074cd;
+  color: #0074cd;
+}
 .company_business .card {
   padding: 40px;
   background-color: #f9f9f9;
@@ -297,14 +316,17 @@
   width: 40%;
 }
 .behalf_project .card .desc_box {
-  width: 60%;
-  padding-left: 40px;
+  width: 56%;
+  /* padding-left: 40px; */
   box-sizing: border-box;
 }
 .behalf_project .card .desc_box .desc_title {
   font-size: 20px;
   color: #333;
   font-weight: bold;
+}
+.behalf_project .card:hover .desc_box .desc_title {
+  color: #0074cd;
 }
 .behalf_project .card .desc_box .desc_title::after {
   width: 120px;
@@ -559,8 +581,6 @@
 	overflow: hidden;
   line-height: 1.5em;
 }
-.information_center .detail_right {}
-.information_center .detail_right {}
 
 /* 
 ************
@@ -627,4 +647,43 @@
   margin-top: 50px;
   border-top: 1px solid #eee;
   cursor: pointer;
+}
+
+/* 科技创新 */
+.innovation {
+  background-color: #f5f6f7;
+}
+.information_center.innovation .detail_left .left_header {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.information_center.innovation .detail_left .left_title {
+  color: #0074cd;
+}
+.innovation .detail_right ul {
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+.innovation .detail_right li {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px;
+  color: #333;
+}
+.innovation .detail_right li + li {
+  font-size: 14px;
+}
+.innovation .detail_right li.active a {
+  color: #fff;
+}
+.innovation .detail_right li.active {
+  background-color: #0074cd;
+  color: #fff;
+}
+.innovation .detail_left {
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
 }

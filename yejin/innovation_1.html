@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <title>广东省冶金建筑设计研究院有限公司</title>
+    <!-- <link rel="stylesheet" href="/templates/jidian/static/css/common.css">
+    <link rel="stylesheet" href="/templates/jidian/static/css/index.css">
+    <link rel="stylesheet" href="/templates/jidian/static/swiper-4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" href="/templates/jidian/static/css/animate.compat.css">
+    <link rel="stylesheet" href="/templates/jidian/static/layui/css/layui.css">
+    <link rel="stylesheet" href="/templates/jidian/static/css/iconfont.css"> -->
+
+    <link rel="stylesheet" href="/yejin/static/css/common.css">
+    <link rel="stylesheet" href="/yejin/static/css/other-page.css">
+    <link rel="stylesheet" href="/yejin/static/css/index.css">
+    <link rel="stylesheet" href="/yejin/static/swiper-4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" href="/yejin/static/css/animate.compat.css">
+    <link rel="stylesheet" href="/yejin/static/layui/css/layui.css">
+    <link rel="stylesheet" href="/yejin/static/css/iconfont.css">
+  </head>
+  <style>
+    .swiper-button-prev {
+      background-image: none;
+    }
+
+    .swiper-button-next {
+      background-image: none;
+      padding-right: 10px;
+    }
+  </style>
+  <body>
+    <div>
+      <!-- 导航栏 -->
+      <!-- #include("./common/header.html") -->
+      <div class="header">
+        <div class="header_box">
+          <div class="logo" style="margin-left: 0px;">
+            <img class="logo_img" src="/yejin/static/image/logo.png" alt="">
+          </div>
+          <div class="head_nav">
+            <div class="navbar">
+              <ul class="nav_list">
+                <!--头部栏目-->
+                <li class="nav_item" >
+									<a class="nav-link" href="/yejin/">网站首页</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/yejin/company_index.html">公司概况</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/yejin/information_center.html">公司资讯</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/yejin/company_business.html">公司荣誉</a>
+								</li>
+								<li class="nav_item active">
+									<a class="nav-link" href="/yejin/innovation.html">科技创新</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/yejin/performance_results.html">业绩成果</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/yejin/company_recruitment.html">人才招聘</a>
+								</li>
+              </ul>
+            </div>
+          </div>
+          <!-- 右边 -->
+          <div class="head_sear" style="padding: 45px 0px;position: absolute;height: auto;z-index: 999;right: 100px;">
+            <!-- 搜索输入框 -->
+            <div class="">
+              <form action="#(currentSite.url)/search/title" class="layui-form" method="get" id="titleForm">
+                <div class="search_input_wrap">
+                  <div class="layui-input-inline" style="width:100%;height: 100%;">
+                    <input type="text" id="keyword" name="keyword" required placeholder="搜索关键词..."
+                      autocomplete="off" class="layui-input search_input_box">
+                  </div>
+                  <button type="submit" class="layui-btn ico_search_bn">
+                    <img src="/yejin/static/image/ico_search.png" alt="">
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+      
+          <!-- 当屏幕小于1024 -->
+          <div class="head_col">
+            <div class="head_nav_item">
+              <img src="/yejin/static/image/ico_collapse.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>			
+
+
+      <div class="content">
+        <!-- banner -->
+        <div class="swiper-container swiper animated zoomIn" id="swiper1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper_item">
+              <a href="#" class="swiper_href">
+                <img src="/yejin/static/image/banner05.png" class="d-block w-100 swiper_ing">
+                <div class="swiper_title animated fadeInUp"></div>
+              </a>
+            </div>
+            <div class="swiper-slide swiper_item">
+              <a href="#" class="swiper_href">
+                <img src="/yejin/static/image/banner04.png" class="d-block w-100 swiper_ing">
+                <div class="swiper_title animated fadeInUp"></div>
+              </a>
+            </div>
+            <div class="swiper-slide swiper_item">
+              <a href="#" class="swiper_href">
+                <img src="/yejin/static/image/banner03.png" class="d-block w-100 swiper_ing">
+                <div class="swiper_title animated fadeInUp"></div>
+              </a>
+            </div>
+          </div>
+          <!-- 分页器 -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- sub nav -->
+        <div class="sub_nav flex_align" style="margin-bottom: 0;">
+          <div class="breadcrumb">
+            <span class="icon-home iconfont"></span>
+            <span>首页 > 科技创新</span>
+          </div>
+        </div>
+
+        <!-- 科技创新 -->
+        <div class="innovation information_center detail company_profile">
+          <!-- 企业动态 详情 -->
+          <div class="container flex">
+            <div class="detail_right" style="margin-top: 0;">
+              <ul>
+                <li class=""><a href="/yejin/innovation.html">总体情况介绍</a></li>
+              </ul>
+              <ul>
+                <li>我院近年来主要科技创新情况</li>
+                <li class="active"><a href="/yejin/innovation_1.html">1、政府立项的科技创新项目</a></li>
+                <li>2、自主立项的科技创新项目</li>
+              </ul>
+            </div>
+            <div class="detail_left">
+              <div class="left_header">
+                <div class="left_title">1、政府立项的科技创新项目</div>
+              </div>
+              <div class="article_box">
+                <p>
+                  （1） “互通立交曲线连续梁CAD软件开发” 是我院与华南理工大学合作开展的产学研项目，2011年获得科技厅的产学研专项费20万元。本课题于2014年11月19日进行了科技成果鉴定及验收会，通过了鉴定及验收，成果达到国际先进水平。该软件应用于红棉大道，济南至广州国家高速公路平远至兴宁段等工程项目上，软件出图率达80%以上，极大的提高了设计效率。
+                </p>
+                <div class="image_box">
+                  <img src="/yejin/static/image/article1.png" alt="">
+                </div>
+                <p>
+                  （2） “梨川大桥无背索曲塔曲梁钢砼结合斜拉桥关键技术研究” 是东莞市公路桥梁开发建设总公司联合湖南大学和我院开展的广东省交通科技项目，2010获得省交通厅科技项目立项。该项目获得2项实用新型专利，2014年4月2日项目通过验收。
+                </p>
+                <p>
+                  梨川大桥起点位于东莞高埗，跨越东江，终点顺接红川路及东江大道，全场2294m，该桥处于一曲线段内，设计难度大。我院采用了无背索曲塔曲梁钢砼结合斜拉桥的设计理念，提出了塔梁墩固结的刚构-连续梁矮塔斜拉桥结构体系，完善了预应力钢壳混凝土索塔、塔梁墩固结处、钢混结合段及拉锁塔梁锚固等关键位置的细部构造设计。采用MIDAS结构整体分析、ANSYS局部空间有限元分析、模型试验等相结合的方式，对桥梁的安全性进行了详细分析。同事综合利用了反应谱分析和时程响应分析等方法，提出了较好的抗震构造方案和钢筋布置方案。
+                </p>
+                <div class="image_box">
+                  <img src="/yejin/static/image/梨川大桥.png" alt="">
+                </div>
+                <p>
+                  （3） “石灰岩地下矿山中深孔房柱法安全高效回采技术研究” 于2009年获得广东省省安监局安全生产专享资金45万元。2013年11月11日通过了广东省安全生产质量监督局的项目结题验收，并于2014年9月10日通过了建设厅的科技成果鉴定，成果达国内领先水平，2016年1月进行了科技成果登记。
+                </p>
+                <p>
+                  该项目通过对梅县雁洋矿业有限公司对抗石灰岩矿进行中深孔房柱法开采技术进行联合科技攻关，解决了我省石灰岩地下矿山开采面临的关键技术问题，实现了矿山 “安全、高效、经济” 开采目标。
+                </p>
+                <p>
+                  本项目的实施近两年时间，矿房的生产能力从原来的200t/d提高到1000t/d，矿块综合回采率从原来的30%提高到50%，采矿工效也由原来40t/人*d提高到200t/人*d。据统计，实验矿块的采矿成本降低2.5元/t，年节约采矿成本50万
+                </p>
+                <div class="image_box">
+                  <img style="width: 50%" src="/yejin/static/image/article3.png" alt="">
+                </div>
+                <p>
+                  （4）我院和长沙理工大学合作申报的产学研项目 “水泥路面多功能快速修补材料研制及产业化”，2012年获得广东科技厅的立项，立项经费30万元，该项目2017年4月结题验收，本项目所研究的是一种用于修补水泥混凝土路面病害的新型修补材料，即水泥混凝土路面多功能快速修补材料，能够快速的修补路面病害，优化养护方案，保障项目的工程进度，节约工程造价。
+                </p>
+                <div class="image_box">
+                  <img style="width: 50%" src="/yejin/static/image/article4.png" alt="">
+                </div>
+                <p>
+                  （5）《广东省农村生活污水处理设施运营维护与评价标准》DBJ/T15-207-2020，我司作为主编单位已列入《广东省住房和城乡建设厅关于发布做好2018年广东省工程建设标准制修订工作的通知》（粤建科函[2018]2954号文）的2018年度标准编制计划，2021年3月《广东省农村生活污水处理设施运营维护与效能评价标准》已获批正式出版实施。该标准2021年8月获得2021年度广东省勘查设计协会科技进步二等奖。
+                </p>
+                <p>
+                  该标准的颁发，实现了广东省农村污水收集处理设施运营维护技术标准 “零” 的突破，为农村生活污水设施的检查、维护、废弃物的处理、安全管理及考核要求及付费机制等有据可依。可以吸引社会资本投入到农村生活污水治理中，确保了农污设施不仅能够建设好，也能够运行维护好。同时在国内率先提出智慧化运维，建议建立区域云平台，接轨扑面而来
+                </p>
+                <div class="image_box">
+                  <img style="width: 30%" src="/yejin/static/image/article5.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 股票 -->
+        <!-- <div class="stock_price stock_price_fixed">
+            <div class="stock_price_wrap width_col">
+                <div class="stock_price_title font-size-16">实时股价</div>
+                <div class="stock_price_content" id="stock_info">
+                </div>
+            </div>
+        </div> -->
+      </div>
+      <!-- 底部 -->
+      <!-- #include("./common/top.html")
+      #include("./common/footer.html") -->
+      <div class="gotop_box">
+        <a href="#" class="gotop_href">
+            <img src="/yejin/static/image/ico_top.png" alt="">
+        </a>
+      </div>
+      <div class="footer">
+        <!-- 防止手机浏览器自动识别电话号码造成样式错误 -->
+        <meta name="format-detection" content="telephone=no" />
+        <div class="footer_box">
+					<div class="footer_nav flex">
+						<!--底部栏目-->
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">公司改款</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司简介</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">组织结构</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">资质情况</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">公司资讯</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司新闻</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">通知公告</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">公司荣誉</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">科技创新</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">业绩成果</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">环保板块</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">市政道路桥梁</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">建筑类</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">地质勘察类</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">人才招聘</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">社会招聘</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">校园招聘</a>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="footer_right">
+						<p style="font-size: 18px;font-family: Source Han Sans CN, Source Han Sans CN-Normal;color: #ffffff;">联系我们
+						</p>
+						<p style="width: 26px;height: 2px;background: #dbe8e2;margin-top: 20px;"></p>
+						<div class="footer_message flex">
+							<div class="footer_qr_code">
+								<img src="/yejin/static/image/qr_code.png" alt="">
+								<span>扫描二维码关注我们</span>
+							</div>
+							<div class="footer_message_nav">
+								<p class="footer_company">广东省冶金建筑设计研究院有限公司</p>
+								
+								<ul class="footer_company_list">
+									<li>
+										<img src="/yejin/static/image/address.png"/>
+										<span>地址：</span>
+										<span>广东省广州市越秀区中山二路35号</span>
+									</li>
+									<li>
+										<img src="/yejin/static/image/postcode.png" />
+										<span>电话：</span>
+										<span>020-37631798</span>
+									</li>
+									<li>
+										<img src="/yejin/static/image/email.png" />
+										<span>邮编：</span>
+										<span>510080</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+        <div class="footer_copyright">
+          COPYRIGHT 广东省冶金建筑设计研究院有限公司 2004-2015 粤ICP备15043811号-2
+        </div>
+      </div>
+    </div>
+
+
+    <script src="/yejin/static/js/jquery.min.js" charset="utf-8"></script>
+    <script src="/yejin/static/layui/layui.js"></script>
+    <script src="/yejin/static/js/pagetion.js"></script>
+    <script src="/yejin/static/swiper-4.5.1/js/swiper.min.js"></script>
+    <script type="text/javascript">
+      window.addEventListener("scroll",function(e){
+        var h =document.documentElement.scrollTop||document.body.scrollTop;
+        h<=0?$('.gotop_box').hide():'';
+        h>=200? $('.gotop_box').show():'';
+      });
+
+      $(document).ready(function() {
+        //轮播图
+        var swiperLi = $('#swiper1 .swiper-slide');
+        var swiperAutoplay = false;
+        var swiperLoop = false;
+        if (swiperLi.length > 1) {
+          swiperAutoplay = true;
+          swiperLoop = true;
+        }
+        var mySwiper1 = new Swiper('#swiper1', {
+          direction: 'horizontal',
+          loop: swiperLoop,
+          observer: true, //实时检测，动态更新
+          autoplay: swiperAutoplay,
+          // 如果需要分页器
+          pagination: {
+            el: swiperLi.length < 2 ? null : '.swiper-pagination',
+            clickable: true,
+            type: 'custom',
+            renderCustom: function(swiper, current, total) {
+              var customPaginationHtml = "";
+              for (var i = 0; i < total; i++) {
+                //判断哪个分页器此刻应该被激活
+                if (i == (current - 1)) {
+                  customPaginationHtml +=
+                    '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
+                } else {
+                  customPaginationHtml +=
+                    '<span class="swiper-pagination-customs"></span>';
+                }
+              }
+              return customPaginationHtml;
+            }
+          }
+        });
+      });
+
+
+      // $(document).ready(function() {
+      // 	queryPriceOfStock();
+      // })
+      // 查询股价
+      // function queryPriceOfStock() {
+      //     $.get("http://qt.gtimg.cn/q=sz000833,sz002683,sz836892", {}, function (res) {
+      //         var html = "";
+      //         // 获取以;分割的内容
+      //         var arr = res.split(";");
+      //         for (var i = 0; i < arr.length; i++) {
+      //             // 名字
+      //             var name = arr[i].split("~")[1];
+      //             // 代码
+      //             var code = arr[i].split("~")[2];
+      //             // 价格
+      //             var price = arr[i].split("~")[3];
+      //             // 涨跌
+      //             var rise = arr[i].split("~")[31];
+      //             // 涨跌%
+      //             var percentage = arr[i].split("~")[32];
+      //             if (name != undefined && code != undefined && price != undefined && rise != undefined) {
+      //                 // 设置 html <i class='layui-icon "+ (Number(rise) > 0 ? 'layui-icon-up' : 'layui-icon-down') +"' style='color: red;'></i>
+      //                 html += "<div class='stock_price_data'>" +
+      //                     "<span>" + name + "(" + code + ")</span>" +
+      //                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + price + "</span>" +
+      //                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + rise + "</span>" +
+      //                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + percentage + "%</span>" +
+      //                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;' class='iconfont " + (Number(rise) > 0 ? 'icon-xiangshang4' : 'icon-xiangxia4') + "'></span>" +
+      //                     "</div>"
+      //             }
+      //         }
+      //         $("#stock_info").empty().html(html);
+      //     })
+      // }
+      
+      // setInterval(function () {
+      //     queryPriceOfStock();
+      // }, 60 * 2 * 1000);
+    </script>
+  </body>
+</html>
