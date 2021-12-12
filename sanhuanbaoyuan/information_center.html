@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<title>广东省环境保护工程研究设计院有限公司</title>
+		<!-- <link rel="stylesheet" href="/templates/jidian/static/css/common.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/index.css">
+		<link rel="stylesheet" href="/templates/jidian/static/swiper-4.5.1/css/swiper.min.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/animate.compat.css">
+		<link rel="stylesheet" href="/templates/jidian/static/layui/css/layui.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/iconfont.css"> -->
+
+		<link rel="stylesheet" href="/sanhuanbaoyuan/static/css/common.css">
+		<link rel="stylesheet" href="/sanhuanbaoyuan/static/css/other-page.css">
+		<link rel="stylesheet" href="/sanhuanbaoyuan/static/css/index.css">
+		<link rel="stylesheet" href="/sanhuanbaoyuan/static/swiper-4.5.1/css/swiper.min.css">
+		<link rel="stylesheet" href="/sanhuanbaoyuan/static/css/animate.compat.css">
+		<link rel="stylesheet" href="/sanhuanbaoyuan/static/layui/css/layui.css">
+		<link rel="stylesheet" href="/sanhuanbaoyuan/static/css/iconfont.css">
+	</head>
+	<style>
+		.swiper-button-prev {
+			background-image: none;
+		}
+
+		.swiper-button-next {
+			background-image: none;
+			padding-right: 10px;
+		}
+	</style>
+	<body>
+		<div>
+			<!-- 导航栏 -->
+			<!-- #include("./common/header.html") -->
+			<div class="header">
+				<div class="header_box">
+					<div class="logo" style="margin-left: 0px;">
+						<img class="logo_img" src="/sanhuanbaoyuan/static/image/logo.png" alt="">
+					</div>
+					<div class="head_nav">
+						<div class="navbar">
+							<ul class="nav_list">
+								<!--头部栏目-->
+								<li class="nav_item" >
+									<a class="nav-link" href="/sanhuanbaoyuan/">网站首页</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/sanhuanbaoyuan/company_index.html">关于我们</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/sanhuanbaoyuan/company_business.html">经营业务</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/sanhuanbaoyuan/company_party.html">企业党建</a>
+								</li>
+								<li class="nav_item active">
+									<a class="nav-link" href="/sanhuanbaoyuan/information_center.html">资讯中心</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/sanhuanbaoyuan/company_recruitment.html">人才招聘</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 右边 -->
+					<div class="head_sear" style="padding: 45px 0px;position: absolute;height: auto;z-index: 999;right: 100px;">
+						<!-- 搜索输入框 -->
+						<div class="">
+							<form action="#(currentSite.url)/search/title" class="layui-form" method="get" id="titleForm">
+								<div class="search_input_wrap">
+									<div class="layui-input-inline" style="width:100%;height: 100%;">
+										<input type="text" id="keyword" name="keyword" required placeholder="搜索关键词..."
+											autocomplete="off" class="layui-input search_input_box">
+									</div>
+									<button type="submit" class="layui-btn ico_search_bn">
+										<img src="/sanhuanbaoyuan/static/image/ico_search.png" alt="">
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+			
+					<!-- 当屏幕小于1024 -->
+					<div class="head_col">
+						<div class="head_nav_item">
+							<img src="/sanhuanbaoyuan/static/image/ico_collapse.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>			
+
+
+			<div class="content">
+				<!-- banner -->
+				<div class="swiper-container swiper animated zoomIn" id="swiper1">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper_item">
+							<a href="#" class="swiper_href">
+								<img src="/sanhuanbaoyuan/static/image/banner_1.png" class="d-block w-100 swiper_ing">
+								<div class="swiper_title animated fadeInUp"></div>
+							</a>
+						</div>
+						<div class="swiper-slide swiper_item">
+							<a href="#" class="swiper_href">
+								<img src="/sanhuanbaoyuan/static/image/banner_2.png" class="d-block w-100 swiper_ing">
+								<div class="swiper_title animated fadeInUp"></div>
+							</a>
+						</div>
+						<div class="swiper-slide swiper_item">
+							<a href="#" class="swiper_href">
+								<img src="/sanhuanbaoyuan/static/image/banner03.png" class="d-block w-100 swiper_ing">
+								<div class="swiper_title animated fadeInUp"></div>
+							</a>
+						</div>
+					</div>
+					<!-- 分页器 -->
+					<div class="swiper-pagination"></div>
+				</div>
+				<!-- sub nav -->
+				<div class="sub_nav flex_align" style="margin-bottom: 0;">
+					<div class="breadcrumb">
+						<span class="icon-home iconfont"></span>
+						<span>首页 > 资讯中心 > <span class="cur_nav"></span>
+					</div>
+					<ul class="nav_box">
+						<a href="javascript:;"><li onclick="handleClickNav(0)" class="active">新闻动态</li></a>
+						<a href="javascript:;"><li onclick="handleClickNav(1)" class="">信息公开</li></a>
+					</ul>
+				</div>
+
+				<!-- 资讯中心 -->
+				<div class="information_center">
+					<!-- 新闻动态 -->
+					<div class="container">
+						<div class="card flex_align">
+							<div class="image_box">
+								<img src="/sanhuanbaoyuan/static/image/证书.png" alt="">
+							</div>
+							<div class="desc_box">
+								<div class="desc_title">喜报！冶金院公司多个项目获得2021年广东省优秀工程勘察设计奖</div>
+								<p class="desc_text">近期，由广东工程勘察设计行业协会组织开展的 “2021年度广东优秀工程勘察设计奖” 评选结果公布，冶金院公司荣获多个奖项，其中，一等奖2项，二等奖4项，三等奖1项。项目位于怒江州泸水市境内，由G219主线及泸水联络线组成，路线合计57.764km。项目设计充分彰显云南 “美丽公路” 的核心理念，按照云南省委提出的 “五个带，三个结合” 的原则将...</p>
+								<a class="check_details first fill flex" href="">
+									<span>了解更多</span>
+								</a>
+								<a class="check_details arrow flex" href="">
+									<img src="/sanhuanbaoyuan/static/image/ico_more.png" />
+								</a>
+							</div>
+						</div>
+						<div class="card flex_align">
+							<div class="image_box">
+								<img src="/sanhuanbaoyuan/static/image/证书2.png" alt="">
+							</div>
+							<div class="desc_box">
+								<div class="desc_title">喜报！冶金院公司获省工程勘察设计行业协会科学技术奖</div>
+								<p class="desc_text">8月30日下午，广业环保集团党委组织召开党建工作推进会。广业环保集团党委书记、董事长韩培彬出席会议并讲话，广业环保集团党委副书记、董事、工会主席黄炘佳主持会议并作工作部署。会议总结分析了广业环保集团党委2021年1月至8月党建工作和党史学习教育开展情况，并对下一阶段工作进行了安排部署。各三级企、经营部、项目部...</p>
+								<a class="check_details first fill flex" href="">
+									<span>了解更多</span>
+								</a>
+								<a class="check_details arrow flex" href="">
+									<img src="/sanhuanbaoyuan/static/image/ico_more.png" />
+								</a>
+							</div>
+						</div>
+						<div class="card flex_align">
+							<div class="image_box">
+								<img src="/sanhuanbaoyuan/static/image/广业环保集团.png" alt="">
+							</div>
+							<div class="desc_box">
+								<div class="desc_title">广业环保集团召开党建工作推进会</div>
+								<p class="desc_text">8月30日下午，广业环保集团党委组织召开党建工作推进会。广业环保集团党委书记、当市长韩培彬出席会议并讲话，广业环保集团党委副书记、董事、工会主席黄炘佳主持会议并作工作部署。会议总结分析了广业环保集团党委2021年1月至8月党建工作和党史学习教育开展情况，并对下一阶段工作进行了安排部署。各三级企、经营部、项目部...</p>
+								<a class="check_details first fill flex" href="">
+									<span>了解更多</span>
+								</a>
+								<a class="check_details arrow flex" href="">
+									<img src="/sanhuanbaoyuan/static/image/ico_more.png" />
+								</a>
+							</div>
+						</div>
+						<div class="card flex_align">
+							<div class="image_box">
+								<img src="/sanhuanbaoyuan/static/image/广业环保集团.png" alt="">
+							</div>
+							<div class="desc_box">
+								<div class="desc_title">广业环保集团召开党建工作推进会</div>
+								<p class="desc_text">8月30日下午，广业环保集团党委组织召开党建工作推进会。广业环保集团党委书记、当市长韩培彬出席会议并讲话，广业环保集团党委副书记、董事、工会主席黄炘佳主持会议并作工作部署。会议总结分析了广业环保集团党委2021年1月至8月党建工作和党史学习教育开展情况，并对下一阶段工作进行了安排部署。各三级企、经营部、项目部...</p>
+								<a class="check_details first fill flex" href="">
+									<span>了解更多</span>
+								</a>
+								<a class="check_details arrow flex" href="">
+									<img src="/sanhuanbaoyuan/static/image/ico_more.png" />
+								</a>
+							</div>
+						</div>
+						<div class="card flex_align">
+							<div class="image_box">
+								<img src="/sanhuanbaoyuan/static/image/广业环保集团.png" alt="">
+							</div>
+							<div class="desc_box">
+								<div class="desc_title">广业环保集团召开党建工作推进会</div>
+								<p class="desc_text">8月30日下午，广业环保集团党委组织召开党建工作推进会。广业环保集团党委书记、当市长韩培彬出席会议并讲话，广业环保集团党委副书记、董事、工会主席黄炘佳主持会议并作工作部署。会议总结分析了广业环保集团党委2021年1月至8月党建工作和党史学习教育开展情况，并对下一阶段工作进行了安排部署。各三级企、经营部、项目部...</p>
+								<a class="check_details first fill flex" href="">
+									<span>了解更多</span>
+								</a>
+								<a class="check_details arrow flex" href="">
+									<img src="/sanhuanbaoyuan/static/image/ico_more.png" />
+								</a>
+							</div>
+						</div>
+						<div class="card flex_align">
+							<div class="image_box">
+								<img src="/sanhuanbaoyuan/static/image/广业环保集团.png" alt="">
+							</div>
+							<div class="desc_box">
+								<div class="desc_title">广业环保集团召开党建工作推进会</div>
+								<p class="desc_text">8月30日下午，广业环保集团党委组织召开党建工作推进会。广业环保集团党委书记、当市长韩培彬出席会议并讲话，广业环保集团党委副书记、董事、工会主席黄炘佳主持会议并作工作部署。会议总结分析了广业环保集团党委2021年1月至8月党建工作和党史学习教育开展情况，并对下一阶段工作进行了安排部署。各三级企、经营部、项目部...</p>
+								<a class="check_details first fill flex" href="">
+									<span>了解更多</span>
+								</a>
+								<a class="check_details arrow flex" href="">
+									<img src="/sanhuanbaoyuan/static/image/ico_more.png" />
+								</a>
+							</div>
+						</div>
+						<div class="pageHelp"></div>
+					</div>
+					<!-- 信息公开 -->
+					<div class="container">
+						<ul class="list">
+							<li class="item flex_align">
+								<div class="list_title">财务状况和经营成果</div>
+								<div class="list_date">2021-08-01</div>
+							</li>
+							<li class="item flex_align">
+								<div class="list_title">财务状况和经营成果</div>
+								<div class="list_date">2021-08-01</div>
+							</li>
+							<li class="item flex_align">
+								<div class="list_title">财务状况和经营成果</div>
+								<div class="list_date">2021-08-01</div>
+							</li>
+							<li class="item flex_align">
+								<div class="list_title">财务状况和经营成果</div>
+								<div class="list_date">2021-08-01</div>
+							</li>
+							<li class="item flex_align">
+								<div class="list_title">财务状况和经营成果</div>
+								<div class="list_date">2021-08-01</div>
+							</li>
+							<li class="item flex_align">
+								<div class="list_title">财务状况和经营成果</div>
+								<div class="list_date">2021-08-01</div>
+							</li>
+							<li class="item flex_align">
+								<div class="list_title">财务状况和经营成果</div>
+								<div class="list_date">2021-08-01</div>
+							</li>
+							<li class="item flex_align">
+								<div class="list_title">财务状况和经营成果</div>
+								<div class="list_date">2021-08-01</div>
+							</li>
+						</ul>
+						<div class="pageHelp"></div>
+					</div>
+				</div>
+				
+				<!-- 股票 -->
+				<!-- <div class="stock_price stock_price_fixed">
+				    <div class="stock_price_wrap width_col">
+				        <div class="stock_price_title font-size-16">实时股价</div>
+				        <div class="stock_price_content" id="stock_info">
+				        </div>
+				    </div>
+				</div> -->
+			</div>
+			<!-- 底部 -->
+			<!-- #include("./common/top.html")
+			#include("./common/footer.html") -->
+			<div class="gotop_box">
+				<a href="#" class="gotop_href">
+						<img src="/sanhuanbaoyuan/static/image/ico_top.png" alt="">
+				</a>
+			</div>
+			<div class="footer">
+				<!-- 防止手机浏览器自动识别电话号码造成样式错误 -->
+				<meta name="format-detection" content="telephone=no" />
+				<div class="footer_box">
+					<div class="footer_nav flex">
+						<!--底部栏目-->
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">关于我们</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司简介</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">企业文化</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">组织结构</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">经营业务</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">业务介绍</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">荣誉资质</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">企业党建</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">党建专栏</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">廉洁专栏</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">资讯中心</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">新闻动态</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">信息公开</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">人才招聘</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">集团招聘</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">海股招聘</a>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="footer_right">
+						<p style="font-size: 18px;font-family: Source Han Sans CN, Source Han Sans CN-Normal;color: #ffffff;">联系我们
+						</p>
+						<p style="width: 26px;height: 2px;background: #dbe8e2;margin-top: 20px;"></p>
+						<div class="footer_message flex">
+							<div class="footer_qr_code">
+								<img src="/sanhuanbaoyuan/static/image/qr_code.png" alt="">
+								<span>扫描二维码关注我们</span>
+							</div>
+							<div class="footer_message_nav">
+								<p class="footer_company">广东省环境保护工程研究设计院有限公司</p>
+								
+								<ul class="footer_company_list">
+									<li>
+										<img src="/sanhuanbaoyuan/static/image/address.png"/>
+										<span>地址：</span>
+										<span>广东省广州市越秀区环市东路503号</span>
+									</li>
+									<li>
+										<img src="/sanhuanbaoyuan/static/image/postcode.png" />
+										<span>传真：</span>
+										<span>020-37605840</span>
+									</li>
+									<li>
+										<img src="/sanhuanbaoyuan/static/image/email.png" />
+										<span>邮编：</span>
+										<span>510075</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer_copyright">
+					COPYRIGHT 广东省环境保护工程研究设计院有限公司 2004-2015 粤ICP备15043811号-2
+				</div>
+			</div>
+		</div>
+
+
+		<script src="/sanhuanbaoyuan/static/js/jquery.min.js" charset="utf-8"></script>
+		<script src="/sanhuanbaoyuan/static/layui/layui.js"></script>
+		<script src="/sanhuanbaoyuan/static/js/pagetion.js"></script>
+		<script src="/sanhuanbaoyuan/static/swiper-4.5.1/js/swiper.min.js"></script>
+		<script type="text/javascript">
+			window.addEventListener("scroll",function(e){
+        var h =document.documentElement.scrollTop||document.body.scrollTop;
+        h<=0?$('.gotop_box').hide():'';
+        h>=200? $('.gotop_box').show():'';
+   	 	});
+			// 子导航点击方法
+			function handleClickNav(index) {
+				const $container = $('.container');
+				const $li = $('.sub_nav .nav_box li');
+				const $curNav = $('.sub_nav .cur_nav');
+				$container.hide();
+				$container.eq(index).show();
+				$li.removeClass('active');
+				$li.eq(index).addClass('active');
+				$curNav.text($li.eq(index).text());
+
+				switch (index) {
+					case 0:
+						// 分页器
+						pageHelp({
+							ele:'.pageHelp',
+							count:76,
+							limit:6,
+							limits:true,
+							allPage:true,
+							first:true,
+							last:true,
+							next:true,
+							prev:true,
+							jump:true,
+							counts:true,
+							fn:function(count){
+								// 切换分页回调
+								// console.log('pageHelp_1', count);
+								$('.layui-laypage-skip .jumpPageNum').val(count);
+								window.location.href = '#';
+							}
+						});
+						break;
+					case 1:
+						// 分页器
+						pageHelp({
+							ele:'.pageHelp',
+							count:76,
+							limit:8,
+							limits:true,
+							allPage:true,
+							first:true,
+							last:true,
+							next:true,
+							prev:true,
+							jump:true,
+							counts:true,
+							fn:function(count){
+								// 切换分页回调
+								// console.log('pageHelp_2', count);
+								$('.layui-laypage-skip .jumpPageNum').val(count);
+								window.location.href = '#';
+							}
+						});
+						break;
+					default:
+						break;
+				}
+			}
+			// 默认选中第一个
+			handleClickNav(0);
+
+			$(document).ready(function() {
+				//轮播图
+				var swiperLi = $('#swiper1 .swiper-slide');
+				var swiperAutoplay = false;
+				var swiperLoop = false;
+				if (swiperLi.length > 1) {
+					swiperAutoplay = true;
+					swiperLoop = true;
+				}
+				var mySwiper1 = new Swiper('#swiper1', {
+					direction: 'horizontal',
+					loop: swiperLoop,
+					observer: true, //实时检测，动态更新
+					autoplay: swiperAutoplay,
+					// 如果需要分页器
+					pagination: {
+						el: swiperLi.length < 2 ? null : '.swiper-pagination',
+						clickable: true,
+						type: 'custom',
+						renderCustom: function(swiper, current, total) {
+							var customPaginationHtml = "";
+							for (var i = 0; i < total; i++) {
+								//判断哪个分页器此刻应该被激活
+								if (i == (current - 1)) {
+									customPaginationHtml +=
+										'<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
+								} else {
+									customPaginationHtml +=
+										'<span class="swiper-pagination-customs"></span>';
+								}
+							}
+							return customPaginationHtml;
+						}
+					}
+				});
+			});
+
+
+			// $(document).ready(function() {
+			// 	queryPriceOfStock();
+			// })
+			// 查询股价
+			// function queryPriceOfStock() {
+			//     $.get("http://qt.gtimg.cn/q=sz000833,sz002683,sz836892", {}, function (res) {
+			//         var html = "";
+			//         // 获取以;分割的内容
+			//         var arr = res.split(";");
+			//         for (var i = 0; i < arr.length; i++) {
+			//             // 名字
+			//             var name = arr[i].split("~")[1];
+			//             // 代码
+			//             var code = arr[i].split("~")[2];
+			//             // 价格
+			//             var price = arr[i].split("~")[3];
+			//             // 涨跌
+			//             var rise = arr[i].split("~")[31];
+			//             // 涨跌%
+			//             var percentage = arr[i].split("~")[32];
+			//             if (name != undefined && code != undefined && price != undefined && rise != undefined) {
+			//                 // 设置 html <i class='layui-icon "+ (Number(rise) > 0 ? 'layui-icon-up' : 'layui-icon-down') +"' style='color: red;'></i>
+			//                 html += "<div class='stock_price_data'>" +
+			//                     "<span>" + name + "(" + code + ")</span>" +
+			//                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + price + "</span>" +
+			//                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + rise + "</span>" +
+			//                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + percentage + "%</span>" +
+			//                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;' class='iconfont " + (Number(rise) > 0 ? 'icon-xiangshang4' : 'icon-xiangxia4') + "'></span>" +
+			//                     "</div>"
+			//             }
+			//         }
+			//         $("#stock_info").empty().html(html);
+			//     })
+			// }
+			
+			// setInterval(function () {
+			//     queryPriceOfStock();
+			// }, 60 * 2 * 1000);
+		</script>
+	</body>
+</html>
