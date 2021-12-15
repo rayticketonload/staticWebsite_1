@@ -652,9 +652,9 @@ img {
 	box-shadow: 20px 20px 0 0 #e6f0eb;
 }
 .business{
-	width: 100%;
-	padding: 0 240px;
-	margin: 100px 0;
+	width: 80%;
+	/* padding: 0 240px; */
+	margin: 100px auto;
 	box-sizing: border-box;
 	text-align: center;
 	/* background-image: url(../image/business_bg.png); */
@@ -816,8 +816,8 @@ img {
 	align-items: center;
 	justify-content: center;
 	/* text-align: center; */
-	width: 250px;
-	height: 175px;
+	/* width: 250px;
+	height: 175px; */
 	border: 1px solid #eee;
 	transition: all 0.3s;
 }
@@ -2008,6 +2008,24 @@ img {
 		font-size: 16px;
 		padding-left: 10px;
 		padding-right: 10px;
+	}
+	.footer .footer_box {
+		box-sizing: border-box;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.information_center .card {
+		margin-left: 120px;
+		margin-right: 120px;
+	}
+	.information_center.detail,
+	.information_center .list,
+	.information_center .card,
+	.company_party .card,
+	.container,
+	.sub_nav {
+		padding-left: 120px;
+		padding-right: 120px;
 	}
 	.header {
 		width: 95%;

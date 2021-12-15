@@ -191,6 +191,7 @@
 */
 /* 业务介绍 */
 .company_business .card {
+  margin-top: 50px;
   padding: 40px;
   background-color: #f9f9f9;
 }
@@ -208,13 +209,15 @@
   justify-content: flex-start;
 }
 .company_business .enterprise_content > div {
-  flex: 0.25;
+  /* flex: 0.25; */
+  width: 25%;
   margin-bottom: 40px;
 }
 .company_business .enterprise_content .img_box {
   position: relative;
-  width: 275px;
-  height: 200px;
+  width: 90%;
+  /* width: 275px;
+  height: 200px; */
   margin: auto;
   cursor: zoom-in;
 }
@@ -382,7 +385,7 @@
 /* 新闻动态 */
 .information_center .card {
   margin: 0 360px 50px;
-  padding: 30px;
+  padding: 30px !important;
   transition: all 0.3s;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
