@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<title>广东省环保研究总院有限公司</title>
+		<!-- <link rel="stylesheet" href="/templates/jidian/static/css/common.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/index.css">
+		<link rel="stylesheet" href="/templates/jidian/static/swiper-4.5.1/css/swiper.min.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/animate.compat.css">
+		<link rel="stylesheet" href="/templates/jidian/static/layui/css/layui.css">
+		<link rel="stylesheet" href="/templates/jidian/static/css/iconfont.css"> -->
+
+		<link rel="stylesheet" href="/huanbaozongyuan/static/css/common.css">
+		<link rel="stylesheet" href="/huanbaozongyuan/static/css/index.css">
+		<link rel="stylesheet" href="/huanbaozongyuan/static/swiper-4.5.1/css/swiper.min.css">
+		<link rel="stylesheet" href="/huanbaozongyuan/static/css/animate.compat.css">
+		<link rel="stylesheet" href="/huanbaozongyuan/static/layui/css/layui.css">
+		<link rel="stylesheet" href="/huanbaozongyuan/static/css/iconfont.css">
+	</head>
+	<style>
+		.swiper-button-prev {
+			background-image: none;
+		}
+
+		.swiper-button-next {
+			background-image: none;
+			padding-right: 10px;
+		}
+	</style>
+	<body>
+		<div>
+			<!-- 导航栏 -->
+			<!-- #include("./common/header.html") -->
+			<div class="header">
+				<div class="header_box">
+					<div class="logo flex_align" style="margin-left: 0px;">
+						<img class="logo_img" src="/huanbaozongyuan/static/image/logo.png" alt="">
+					</div>
+					<div class="head_nav">
+						<div class="navbar">
+							<ul class="nav_list">
+								<!--头部栏目-->
+								<li class="nav_item active" >
+									<a class="nav-link" href="/huanbaozongyuan/">首页</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/huanbaozongyuan/company_index.html">走进环保</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/huanbaozongyuan/information_center.html">新闻中心</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/huanbaozongyuan/company_business.html">业务范围</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/huanbaozongyuan/company_party.html">企业党建</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/huanbaozongyuan/behalf_project.html">信息公开</a>
+								</li>
+								<li class="nav_item">
+									<a class="nav-link" href="/huanbaozongyuan/company_recruitment.html">人才招聘</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 右边 -->
+					<div class="flex_align">
+						<div class="head_sear">
+							<!-- 搜索输入框 -->
+							<div class="">
+								<form action="#(currentSite.url)/search/title" class="layui-form" method="get" id="titleForm">
+									<div class="search_input_wrap">
+										<div class="layui-input-inline" style="width:100%;height: 100%;">
+											<input type="text" id="keyword" name="keyword" required placeholder="搜索关键词..."
+												autocomplete="off" class="layui-input search_input_box">
+										</div>
+										<button type="submit" class="layui-btn ico_search_bn">
+											<img src="/huanbaozongyuan/static/image/ico_search.png" alt="">
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						
+						<!-- 员工登录 -->
+						<div class="login_box">
+							<a class="login_btn flex_align" href="#">
+								<img src="/huanbaozongyuan/static/image/user.png" alt="" />
+								<span>员工登录</span>
+							</a>
+						</div>
+					</div>
+			
+					<!-- 当屏幕小于1024 -->
+					<div class="head_col">
+						<div class="head_nav_item">
+							<img src="/huanbaozongyuan/static/image/ico_collapse.png" alt="">
+						</div>
+					</div>
+			
+					<!-- h5版头部 -->
+					<!-- <div class="collapse_box">
+						<div class="shadow_box"></div>
+						<div class="collapse_wrap">
+							<ul class="collapse_nav">
+								<li class="collapse_item cursor">
+									<a href="#(currentSite.url)/" class="collapse_href">首页</a>
+									<div class="collapse_ico" onclick="javascript:location.href = '#(currentSite.url)/'">></div>
+								</li>
+								#category_root_list()
+								#for(category : categorys)
+								<li class="collapse_item cursor">
+									<a href="#(category.path ??)" class="collapse_href">#(category.name ??)</a>
+									<div class="collapse_ico collapse_more font-size-30">+</div>
+									<div class="sub_nav">
+										#category_children_list(categoryId=category.id)
+										#for(categoryItem : categorys)
+										<a class="sub_nav_item" href="#(categoryItem.path ??)">#(categoryItem.name ??)</a>
+										#end
+										#end
+									</div>
+								</li>
+								#end
+								#end
+							</ul>
+						</div>
+					</div> -->
+			
+				</div>
+			</div>			
+
+
+			<div class="content">
+				<!-- banner -->
+				<div class="swiper-container swiper animated zoomIn" id="swiper1">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper_item">
+							<a href="#" class="swiper_href">
+								<img src="/huanbaozongyuan/static/image/banner.png" class="d-block w-100 swiper_ing">
+								<div class="swiper_title animated fadeInUp"></div>
+							</a>
+						</div>
+						<div class="swiper-slide swiper_item">
+							<a href="#" class="swiper_href">
+								<img src="/huanbaozongyuan/static/image/banner.png" class="d-block w-100 swiper_ing">
+								<div class="swiper_title animated fadeInUp"></div>
+							</a>
+						</div>
+						<div class="swiper-slide swiper_item">
+							<a href="#" class="swiper_href">
+								<img src="/huanbaozongyuan/static/image/banner.png" class="d-block w-100 swiper_ing">
+								<div class="swiper_title animated fadeInUp"></div>
+							</a>
+						</div>
+						<!-- #slide_list(count=10,gid=1)
+						#for(slide : slides)
+						<div class="swiper-slide swiper_item">
+							<a href="#" class="swiper_href">
+								<img src="#(slide.image)" class="d-block w-100 swiper_ing">
+								<div class="swiper_title animated fadeInUp">#(slide.style)</div>
+							</a>
+						</div>
+						#end
+						#end -->
+					</div>
+					<!-- 分页器 -->
+					<div class="swiper-pagination"></div>
+				</div>
+				<!-- 公司概况 -->
+				<div class="company flex_align">
+					<div class="company_left">
+						<div class="title">
+							<span>公司概况</span>
+							<p class="title_en">ABOUT GMI</p>
+						</div>
+						<div class="article_box">
+							<p>
+								广东省环保研究总院有限公司成立于2019年，是按照省委省政府、省国资委要求，对标省级研发机构标准，通过整合集团内四家设计院（广东省环保研究总院有限公司、广东省冶金建筑设计研究院有限公司、广东省轻纺建筑设计院有限公司和广东省机电建筑设计研究院有限公司）环保资源组建而成的，充分发挥科技创新对集团绿色环保主业的支撑和引领作用。我院人才汇聚，专业配备齐全，技术实力雄厚。公司共设有5个事业部门，5个职能部门，1个环保产业研究中心，12家外地分院。现有员工近750人，其中本科以上学历600余人，教授级工程师9人，高级工程师204人，各类注册师117人，拥有一批技...
+							</p>
+						</div>
+						<div class="tabs_box flex_align">
+							<div class="tab_item flex_align">
+								<img src="/huanbaozongyuan/static/image/公司成立时间.png" alt="">
+								<div>公司成立时间</div>
+							</div>
+							<div class="tab_item flex_align">
+								<img src="/huanbaozongyuan/static/image/分院.png" alt="">
+								<div>外地分院</div>
+							</div>
+							<div class="tab_item flex_align">
+								<img src="/huanbaozongyuan/static/image/员工.png" alt="">
+								<div>公司员工</div>
+							</div>
+							<div class="tab_item flex_align">
+								<img src="/huanbaozongyuan/static/image/工程师.png" alt="">
+								<div>教授级工程师</div>
+							</div>
+						</div>
+						<a class="check_details flex" href="">
+							<span>了解更多</span>
+							<span class="iconfont icon-arrow-right"></span>
+						</a>
+					</div>
+					<div class="company_right">
+						<img src="/huanbaozongyuan/static/image/公司概况img.png" alt="">
+					</div>
+				</div>
+				<!-- 产业领域 -->
+				<div class="industries">
+					<div class="title">
+						<span>产业领域</span>
+						<p class="title_en">INDUSTRY</p>
+					</div>
+					<div class="flex">
+						<div class="industries_card">
+							<img class="" src="/huanbaozongyuan/static/image/img1.png" alt="">
+							<div class="card_label">
+								<div class="label">科研与产业化</div>
+								<span class="label_en">Scientific research and industrialization</span>
+							</div>
+						</div>
+						<div class="industries_card">
+							<img class="" src="/huanbaozongyuan/static/image/img2.png" alt="">
+							<div class="card_label">
+								<div class="label">工程技术服务</div>
+								<span class="label_en">Engineering Technical Service</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 重点项目 -->
+				<div class="major_project clearFix">
+					<div class="title">
+						<span>重点项目</span>
+						<p class="title_en">MAJOR PROJECT</p>
+					</div>
+					<section class="nav_box flex_align">
+						<div class="nav_item">
+							<div class="nav">规划咨询</div>
+							<div class="nav_en">Planning consultation</div>
+						</div>
+						<div class="nav_item">
+							<div class="nav">环境工程设计</div>
+							<div class="nav_en">Environmental engineering design</div>
+						</div>
+						<div class="nav_item">
+							<div class="nav">市政与交通设计</div>
+							<div class="nav_en">Municipal and traffic design</div>
+						</div>
+						<div class="nav_item active">
+							<div class="nav">建筑设计</div>
+							<div class="nav_en">Architectural design</div>
+						</div>
+						<div class="nav_item">
+							<div class="nav">项目管理</div>
+							<div class="nav_en">Project management</div>
+						</div>
+					</section>
+					<div class="project_content">
+						<img src="/huanbaozongyuan/static/image/建筑设计.png" alt="">
+						<div class="project_name">广州市受助人员安置中心项目勘察设计</div>
+					</div>
+				</div>
+				<!-- 新闻中心 -->
+				<div class="information">
+					<div class="information_box">
+						<div class="information_title">
+							<div class="title">
+								<span>新闻中心</span>
+								<p class="title_en">NEWS</p>
+							</div>
+							<a class="check_details flex" style="font-size: 14px; line-height: 1.5em;" href="#">
+								<span>查看更多</span>
+								<img src="/huanbaozongyuan/static/image/ico_more.png" />
+							</a>
+						</div>
+						<div class="information_content flex_align">
+							<div class="info_left">
+								<img src="/huanbaozongyuan/static/image/img3.png" />
+								<div class="info_bottom">
+									<p class="news_title">
+										环保院乔迁新址，从 “新” 出发！
+									</p>
+									<p class="">
+										历经70余日，环保总院下属企业环保院于今日整体乔迁至新的办公地址（广州市越秀...
+									</p>
+								</div>
+								<div class="date_box flex_align">
+									<div class="date">08-25</div>
+									<div class="line"></div>
+									<div class="year">2021</div>
+								</div>
+							</div>
+							<div class="info_right flex_align">
+								<div class="info_card">
+									<div class="info_title">环保总院与省城规院签署战略合作协议</div>
+									<div class="info_desc">
+										7月14日，环保总院党委书记、董事长曾始毅率队拜访了广东省城乡规划设计研究院有限公司（以下简称省规划院），双方就充分发挥各自在品牌...
+									</div>
+									<div class="flex_align info_bottom">
+										<span>08/20</span>
+										<img src="/huanbaozongyuan/static/image/ico_more2.png" />
+									</div>
+								</div>
+								<div class="info_card">
+									<div class="info_title">环保总院与省城规院签署战略合作协议</div>
+									<div class="info_desc">
+										7月14日，环保总院党委书记、董事长曾始毅率队拜访了广东省城乡规划设计研究院有限公司（以下简称省规划院），双方就充分发挥各自在品牌...
+									</div>
+									<div class="flex_align info_bottom">
+										<span>08/20</span>
+										<img src="/huanbaozongyuan/static/image/ico_more2.png" />
+									</div>
+								</div>
+								<div class="info_card">
+									<div class="info_title">环保总院与省城规院签署战略合作协议</div>
+									<div class="info_desc">
+										7月14日，环保总院党委书记、董事长曾始毅率队拜访了广东省城乡规划设计研究院有限公司（以下简称省规划院），双方就充分发挥各自在品牌...
+									</div>
+									<div class="info_bottom flex_align">
+										<span>08/20</span>
+										<img src="/huanbaozongyuan/static/image/ico_more2.png" />
+									</div>
+								</div>
+								<div class="info_card">
+									<div class="info_title">环保总院与省城规院签署战略合作协议</div>
+									<div class="info_desc">
+										7月14日，环保总院党委书记、董事长曾始毅率队拜访了广东省城乡规划设计研究院有限公司（以下简称省规划院），双方就充分发挥各自在品牌...
+									</div>
+									<div class="info_bottom flex_align">
+										<span>08/20</span>
+										<img src="/huanbaozongyuan/static/image/ico_more2.png" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 分页器 -->
+						<div class="information_footer">
+							<div class="pagination flex_align">
+								<div class="page_item current"></div>
+								<div class="page_item"></div>
+								<div class="page_item"></div>
+								<div class="page_item"></div>
+								<div class="page_item"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 股票 -->
+				<div class="stock_price stock_price_fixed">
+				    <div class="stock_price_wrap width_col">
+				        <div class="stock_price_title font-size-16">实时股价</div>
+				        <div class="stock_price_content" id="stock_info">
+				        </div>
+				    </div>
+				</div>
+			</div>
+			<!-- 底部 -->
+			<!-- #include("./common/top.html")
+			#include("./common/footer.html") -->
+			<div class="gotop_box">
+				<a href="#" class="gotop_href">
+						<img src="/huanbaozongyuan/static/image/ico_top.png" alt="">
+				</a>
+			</div>
+			<div class="footer">
+				<!-- 防止手机浏览器自动识别电话号码造成样式错误 -->
+				<meta name="format-detection" content="telephone=no" />
+				<div class="footer_box">
+					<div class="footer_nav flex">
+						<!--底部栏目-->
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">走进环保</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">公司概况</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">组织架构</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">战略定位</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">团队管理</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">荣誉资质</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">目标愿景</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">联系我们</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">新闻中心</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">集团要闻</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">总院动态</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">专题报道</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">视频中心</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">通知公告</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">业务范围</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">产业领域</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">重点项目</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">企业党建</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">十大党建实事</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">党史学习教育</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">环保故事</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">员工风采</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">艺术长廊</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">信息公开</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">企业简介</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">管理架构</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">重要人事变动</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">重大变革重组</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">产权转让和增资</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">社会责任活动</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">下属企业</a>
+							</li>
+						</ul>
+						<ul class="footer_nav_item">
+							<li>
+								<a class="footer_nav_first" href="#(category.path ??)">人才招聘</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">社会招聘</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">校园招聘</a>
+							</li>
+							<li style="margin: 5px 0">
+								<a class="footer_nav_other" href="#(categoryItem.path ??)">内部公开招聘</a>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="footer_right">
+						<!-- <p style="font-size: 18px;font-family: Source Han Sans CN, Source Han Sans CN-Normal;color: #ffffff;">联系我们
+						</p>
+						<p style="width: 26px;height: 2px;background: #dbe8e2;margin-top: 20px;"></p> -->
+						<div class="footer_message">
+							<div class="footer_qr_code flex_align">
+								<img src="/huanbaozongyuan/static/image/qr_code.png" alt="">
+								<span>扫描二维码关注我们</span>
+							</div>
+							<!-- <div class="footer_message_nav">
+								<p class="footer_company">广东省环保研究总院有限公司</p>
+								
+								<ul class="footer_company_list">
+									<li>
+										<img src="/huanbaozongyuan/static/image/address.png"/>
+										<span>地址：</span>
+										<span>广州市越秀区中山二路35号7-9楼</span>
+									</li>
+									<li>
+										<img src="/huanbaozongyuan/static/image/postcode.png" />
+										<span>传真：</span>
+										<span>020-87558760</span>
+									</li>
+									<li>
+										<img src="/huanbaozongyuan/static/image/email.png" />
+										<span>邮编：</span>
+										<span>510062</span>
+									</li>
+								</ul>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<div class="footer_contact flex_align">
+					<div>
+						<img src="/huanbaozongyuan/static/image/footer_logo.jpg" alt="">
+					</div>
+					<div>
+						<img style="width: 44px;" src="/huanbaozongyuan/static/image/地址.png" alt="">
+						<span>广东越秀区中山二路35号10楼</span>
+					</div>
+					<div>
+						<img style="width: 44px;" src="/huanbaozongyuan/static/image/电话.png" alt="">
+						<span>020-37602863</span>
+					</div>
+					<div>
+						<select name="" id="">
+							<option value="">友情链接</option>
+						</select>
+					</div>
+				</div>
+				<div class="footer_copyright" style="background-color: #095e37;">
+					COPYRIGHT 广东省环保研究总院有限公司 2004-2015 粤ICP备15043811号-2
+				</div>
+			</div>
+			
+		</div>
+		<script src="/huanbaozongyuan/static/js/jquery.min.js" charset="utf-8"></script>
+		<script src="/huanbaozongyuan/static/swiper-4.5.1/js/swiper.min.js"></script>
+		<script type="text/javascript">
+			window.addEventListener("scroll",function(e){
+        var h =document.documentElement.scrollTop||document.body.scrollTop;
+        h<=0?$('.gotop_box').hide():'';
+        h>=200? $('.gotop_box').show():'';
+			});
+			$(document).ready(function() {
+				//轮播图
+				var swiperLi = $('#swiper1 .swiper-slide');
+				var swiperAutoplay = false;
+				var swiperLoop = false;
+				if (swiperLi.length > 1) {
+					swiperAutoplay = true;
+					swiperLoop = true;
+				}
+				var mySwiper1 = new Swiper('#swiper1', {
+					direction: 'horizontal',
+					loop: swiperLoop,
+					observer: true, //实时检测，动态更新
+					autoplay: swiperAutoplay,
+					// 如果需要分页器
+					pagination: {
+						el: swiperLi.length < 2 ? null : '.swiper-pagination',
+						clickable: true,
+						type: 'custom',
+						renderCustom: function(swiper, current, total) {
+							var customPaginationHtml = "";
+							for (var i = 0; i < total; i++) {
+								//判断哪个分页器此刻应该被激活
+								if (i == (current - 1)) {
+									customPaginationHtml +=
+										'<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
+								} else {
+									customPaginationHtml +=
+										'<span class="swiper-pagination-customs"></span>';
+								}
+							}
+							return customPaginationHtml;
+						}
+					}
+				});
+				//监听页面滚动加动画
+				$(window).scroll(function(e) {
+					if (!window.name) { //是否是第一次加载页面
+						var viewHeight = window.innerHeight; //获取可视高度(屏幕高度)
+						var scrollHeight = document.documentElement.scrollTop || document.body
+							.scrollTop; //获取滚动的值
+						var animateList = $('.animated');
+						animateList.each(function(index, domEle) {
+							// 第一个（index为0）是banner，不用加滑入动效
+							if ((viewHeight + scrollHeight) > ($(domEle).offset().top) && index > 0) {
+								if (!$(domEle).hasClass('slideInUp')) {
+									$(domEle).addClass('slideInUp');
+								}
+							}
+						});
+					}
+				});
+				queryPriceOfStock();
+			})
+			function handleBusinessSwitch(index) {
+				$('.business_list > li').removeClass('active');
+				$('.business_list > li').eq(index).addClass('active');
+			}
+			// 查询股价
+			function queryPriceOfStock() {
+			    $.get("http://qt.gtimg.cn/q=sz000833,sz002683,sz836892", {}, function (res) {
+			        var html = "";
+			        // 获取以;分割的内容
+			        var arr = res.split(";");
+			        for (var i = 0; i < arr.length; i++) {
+			            // 名字
+			            var name = arr[i].split("~")[1];
+			            // 代码
+			            var code = arr[i].split("~")[2];
+			            // 价格
+			            var price = arr[i].split("~")[3];
+			            // 涨跌
+			            var rise = arr[i].split("~")[31];
+			            // 涨跌%
+			            var percentage = arr[i].split("~")[32];
+			            if (name != undefined && code != undefined && price != undefined && rise != undefined) {
+			                // 设置 html <i class='layui-icon "+ (Number(rise) > 0 ? 'layui-icon-up' : 'layui-icon-down') +"' style='color: red;'></i>
+			                html += "<div class='stock_price_data'>" +
+			                    "<span>" + name + "(" + code + ")</span>" +
+			                    "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + price + "</span>" +
+			                    "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + rise + "</span>" +
+			                    "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + percentage + "%</span>" +
+			                    "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;' class='iconfont " + (Number(rise) > 0 ? 'icon-xiangshang4' : 'icon-xiangxia4') + "'></span>" +
+			                    "</div>"
+			            }
+			        }
+			        $("#stock_info").empty().html(html);
+			    })
+			}
+			
+			setInterval(function () {
+			    queryPriceOfStock();
+			}, 60 * 2 * 1000);
+		</script>
+	</body>
+</html>

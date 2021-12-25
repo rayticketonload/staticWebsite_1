@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <title>广东省环保研究总院有限公司</title>
+    <!-- <link rel="stylesheet" href="/templates/jidian/static/css/common.css">
+    <link rel="stylesheet" href="/templates/jidian/static/css/index.css">
+    <link rel="stylesheet" href="/templates/jidian/static/swiper-4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" href="/templates/jidian/static/css/animate.compat.css">
+    <link rel="stylesheet" href="/templates/jidian/static/layui/css/layui.css">
+    <link rel="stylesheet" href="/templates/jidian/static/css/iconfont.css"> -->
+
+    <link rel="stylesheet" href="/huanbaozongyuan/static/css/common.css">
+    <link rel="stylesheet" href="/huanbaozongyuan/static/css/other-page.css">
+    <link rel="stylesheet" href="/huanbaozongyuan/static/css/index.css">
+    <link rel="stylesheet" href="/huanbaozongyuan/static/swiper-4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" href="/huanbaozongyuan/static/css/animate.compat.css">
+    <link rel="stylesheet" href="/huanbaozongyuan/static/layui/css/layui.css">
+    <link rel="stylesheet" href="/huanbaozongyuan/static/css/iconfont.css">
+  </head>
+  <style>
+    .swiper-button-prev {
+      background-image: none;
+    }
+
+    .swiper-button-next {
+      background-image: none;
+      padding-right: 10px;
+    }
+  </style>
+  <body>
+    <div>
+      <!-- 导航栏 -->
+      <!-- #include("./common/header.html") -->
+      <div class="header">
+        <div class="header_box">
+          <div class="logo" style="margin-left: 0px;">
+            <img class="logo_img" src="/huanbaozongyuan/static/image/logo.png" alt="">
+          </div>
+          <div class="head_nav">
+            <div class="navbar">
+              <ul class="nav_list">
+                <!--头部栏目-->
+                <li class="nav_item" >
+                  <a class="nav-link" href="/huanbaozongyuan/">网站首页</a>
+                </li>
+                <li class="nav_item">
+                  <a class="nav-link" href="/huanbaozongyuan/company_index.html">走进环保院</a>
+                </li>
+                <li class="nav_item">
+                  <a class="nav-link" href="/huanbaozongyuan/behalf_project.html">代表项目</a>
+                </li>
+                <li class="nav_item">
+                  <a class="nav-link" href="/huanbaozongyuan/company_business.html">荣誉资质</a>
+                </li>
+                <li class="nav_item">
+                  <a class="nav-link" href="/huanbaozongyuan/company_party.html">企业党建</a>
+                </li>
+                <li class="nav_item active">
+                  <a class="nav-link" href="/huanbaozongyuan/information_center.html">新闻中心</a>
+                </li>
+                <li class="nav_item">
+                  <a class="nav-link" href="/huanbaozongyuan/company_recruitment.html">人才招聘</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 右边 -->
+          <div class="head_sear">
+            <!-- 搜索输入框 -->
+            <div class="">
+              <form action="#(currentSite.url)/search/title" class="layui-form" method="get" id="titleForm">
+                <div class="search_input_wrap">
+                  <div class="layui-input-inline" style="width:100%;height: 100%;">
+                    <input type="text" id="keyword" name="keyword" required placeholder="搜索关键词..."
+                      autocomplete="off" class="layui-input search_input_box">
+                  </div>
+                  <button type="submit" class="layui-btn ico_search_bn">
+                    <img src="/huanbaozongyuan/static/image/ico_search.png" alt="">
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+      
+          <!-- 当屏幕小于1024 -->
+          <div class="head_col">
+            <div class="head_nav_item">
+              <img src="/huanbaozongyuan/static/image/ico_collapse.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>			
+
+
+      <div class="content">
+        <!-- banner -->
+        <div class="swiper-container swiper animated zoomIn" id="swiper1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper_item">
+              <a href="#" class="swiper_href">
+                <img src="/huanbaozongyuan/static/image/banner05.png" class="d-block w-100 swiper_ing">
+                <div class="swiper_title animated fadeInUp"></div>
+              </a>
+            </div>
+            <div class="swiper-slide swiper_item">
+              <a href="#" class="swiper_href">
+                <img src="/huanbaozongyuan/static/image/banner04.png" class="d-block w-100 swiper_ing">
+                <div class="swiper_title animated fadeInUp"></div>
+              </a>
+            </div>
+            <div class="swiper-slide swiper_item">
+              <a href="#" class="swiper_href">
+                <img src="/huanbaozongyuan/static/image/banner03.png" class="d-block w-100 swiper_ing">
+                <div class="swiper_title animated fadeInUp"></div>
+              </a>
+            </div>
+          </div>
+          <!-- 分页器 -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- sub nav -->
+        <div class="sub_nav flex_align" style="margin-bottom: 0;">
+          <div class="breadcrumb">
+            <span class="icon-home iconfont"></span>
+            <span>首页 > 新闻中心 > <span class="cur_nav">企业动态</span>
+          </div>
+          <ul class="nav_box">
+            <a href="javascript:;"><li onclick="handleClickNav(0)" class="">公司要闻</li></a>
+            <a href="javascript:;"><li onclick="handleClickNav(1)" class="active">企业动态</li></a>
+          </ul>
+        </div>
+
+        <!-- 新闻中心 -->
+        <div class="information_center detail company_profile">
+          <!-- 企业动态 详情 -->
+          <div class="container flex">
+            <div class="detail_left">
+              <div class="left_header">
+                <div class="left_title">环卫院顺利完成新办公场所搬迁工作</div>
+                <div class="time">
+                  <span class="iconfont icon-time_fill"></span>
+                  <span>2021-08-25</span>
+                </div>
+              </div>
+              <div class="article_box">
+                <p>
+                  在广东省国资委三年国企改革行动的号召下、环保总院的战略部署下，2021年8月22日，环保院顺利完成了从原办公地点越秀区北京路374号之二瑞安中心12至13楼，搬迁至新办公点越秀区中山二路35号7至9楼的相关工作，并于8月23日恢复正常办公
+                </p>
+                <p>
+                  环保院领导班子明确搬迁时限，高度重视，认真部署，为确保顺利完成搬迁工作并按时恢复正常办公秩序，环保院综合办制定了详细搬迁方案，虚化搬迁工作步骤和具体事项，协调各方，以提前完成为目标，以按时完成为底线，预留了更多时间应对突发状况。
+                </p>
+                <p>
+                  各方公司领导、部门的大力支持下，环保院各部所倾力配合，全体员工通力合作，团结一心，综合办积极发挥先锋带头作用，历经若干个通宵，加班加点提前完成了全部物件的拆装、转移、设备调试、办公区布置等工作，使公司按时恢复了正常办公。
+                </p>
+                <div class="image_box">
+                  <img src="/huanbaozongyuan/static/image/img-1.png" alt="">
+                </div>
+                <p>
+                  各干部、员工以实际行动践行了中国共产党全心全意为人民服务的宗旨，牢记国企不忘初心的使命，用尽一切办法确保任务顺利完成，展现了环保人吃苦耐劳的精神和优秀的抗压能力，涌现了一批批能干能拼的能人将士。
+                </p>
+                <p>
+                  环保院将继续在上级的带领下，以新办公环境为契机，以更专业的能力、饱满的热情，脚踏实地，做优做强核心业务，为广东环保集团、环保总院及各合作单位提供更高质高效的服务，为环保行业的可持续发展贡献国企力量。
+                </p>
+              </div>
+
+              <div class="detail_footer">
+                <a href="javascript:;">
+                  <div class="prev is_null">上一篇：<span>已经到顶了</span></div>
+                </a>
+                <a href="javascript:;">
+                  <div class="next">下一篇：<span>我司多个项目获得2017年度轻工业优秀工程勘察设计奖</span></div>
+                </a>
+              </div>
+            </div>
+            <div class="detail_right">
+              <div class="item">
+                <div class="right_title">最新动态</div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div class="item_title">【十大党建实事】 “三正三强三聚焦” 为广业环保揭阳汕尾经营部开创经...</div>
+                  <div class="time">
+                    <span class="iconfont icon-time_fill"></span>
+                    <span>2021-08-25</span>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item_title">【十大党建实事】 “三正三强三聚焦” 为广业环保揭阳汕尾经营部开创经...</div>
+                  <div class="time">
+                    <span class="iconfont icon-time_fill"></span>
+                    <span>2021-08-25</span>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item_title">【十大党建实事】 “三正三强三聚焦” 为广业环保揭阳汕尾经营部开创经...</div>
+                  <div class="time">
+                    <span class="iconfont icon-time_fill"></span>
+                    <span>2021-08-25</span>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item_title">【十大党建实事】 “三正三强三聚焦” 为广业环保揭阳汕尾经营部开创经...</div>
+                  <div class="time">
+                    <span class="iconfont icon-time_fill"></span>
+                    <span>2021-08-25</span>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="item_title">【十大党建实事】 “三正三强三聚焦” 为广业环保揭阳汕尾经营部开创经...</div>
+                  <div class="time">
+                    <span class="iconfont icon-time_fill"></span>
+                    <span>2021-08-25</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 股票 -->
+        <!-- <div class="stock_price stock_price_fixed">
+            <div class="stock_price_wrap width_col">
+                <div class="stock_price_title font-size-16">实时股价</div>
+                <div class="stock_price_content" id="stock_info">
+                </div>
+            </div>
+        </div> -->
+      </div>
+      <!-- 底部 -->
+      <!-- #include("./common/top.html")
+      #include("./common/footer.html") -->
+      <div class="gotop_box">
+        <a href="#" class="gotop_href">
+            <img src="/huanbaozongyuan/static/image/ico_top.png" alt="">
+        </a>
+      </div>
+      <div class="footer">
+        <!-- 防止手机浏览器自动识别电话号码造成样式错误 -->
+        <meta name="format-detection" content="telephone=no" />
+        <div class="footer_box">
+          <div class="footer_nav flex">
+            <!--底部栏目-->
+            <ul class="footer_nav_item">
+              <li>
+                <a class="footer_nav_first" href="#(category.path ??)">走进环保院</a>
+              </li>
+              <li style="margin: 5px 0">
+                <a class="footer_nav_other" href="#(categoryItem.path ??)">公司概况</a>
+              </li>
+              <li style="margin: 5px 0">
+                <a class="footer_nav_other" href="#(categoryItem.path ??)">发展历程</a>
+              </li>
+              <li style="margin: 5px 0">
+                <a class="footer_nav_other" href="#(categoryItem.path ??)">管理团队</a>
+              </li>
+            </ul>
+            <ul class="footer_nav_item">
+              <li>
+                <a class="footer_nav_first" href="#(category.path ??)">代表项目</a>
+              </li>
+              <li style="margin: 5px 0">
+                <a class="footer_nav_other" href="#(categoryItem.path ??)">污水处理项目</a>
+              </li>
+              <li style="margin: 5px 0">
+                <a class="footer_nav_other" href="#(categoryItem.path ??)">固废处理项目</a>
+              </li>
+            </ul>
+            <ul class="footer_nav_item">
+              <li>
+                <a class="footer_nav_first" href="#(category.path ??)">荣誉资质</a>
+              </li>
+              <li style="margin: 5px 0">
+                <a class="footer_nav_other" href="#(categoryItem.path ??)">公司荣誉</a>
+              </li>
+              <li style="margin: 5px 0">
+                <a class="footer_nav_other" href="#(categoryItem.path ??)">公司资质</a>
+              </li>
+            </ul>
+            <ul class="footer_nav_item">
+              <li>
+                <a class="footer_nav_first" href="#(category.path ??)">企业党建</a>
+              </li>
+              <li style="margin: 5px 0">
+                <a class="footer_nav_other" href="#(categoryItem.path ??)">党建团建</a>
+              </li>
+              <li style="margin: 5px 0">
+                <a class="footer_nav_other" href="#(categoryItem.path ??)">学习专栏</a>
+              </li>
+            </ul>
+            <ul class="footer_nav_item">
+              <li>
+                <a class="footer_nav_first" href="#(category.path ??)">新闻中心</a>
+              </li>
+              <li style="margin: 5px 0">
+                <a class="footer_nav_other" href="#(categoryItem.path ??)">公司要闻</a>
+              </li>
+              <li style="margin: 5px 0">
+                <a class="footer_nav_other" href="#(categoryItem.path ??)">企业动态</a>
+              </li>
+            </ul>
+            <ul class="footer_nav_item">
+              <li>
+                <a class="footer_nav_first" href="#(category.path ??)">人才招聘</a>
+              </li>
+              <li style="margin: 5px 0">
+                <a class="footer_nav_other" href="#(categoryItem.path ??)">社会招聘</a>
+              </li>
+              <li style="margin: 5px 0">
+                <a class="footer_nav_other" href="#(categoryItem.path ??)">校园招聘</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="footer_right">
+            <p style="font-size: 18px;font-family: Source Han Sans CN, Source Han Sans CN-Normal;color: #ffffff;">联系我们
+            </p>
+            <p style="width: 26px;height: 2px;background: #dbe8e2;margin-top: 20px;"></p>
+            <div class="footer_message">
+              <!-- <div class="footer_qr_code">
+                <img src="/huanbaozongyuan/static/image/qr_code.png" alt="">
+                <span>扫描二维码关注我们</span>
+              </div> -->
+              <div class="footer_message_nav">
+                <p class="footer_company">广东省环保研究总院有限公司</p>
+                
+                <ul class="footer_company_list">
+                  <li>
+                    <img src="/huanbaozongyuan/static/image/address.png"/>
+                    <span>地址：</span>
+                    <span>广州市越秀区中山二路35号7-9楼</span>
+                  </li>
+                  <li>
+                    <img src="/huanbaozongyuan/static/image/postcode.png" />
+                    <span>传真：</span>
+                    <span>020-87558760</span>
+                  </li>
+                  <li>
+                    <img src="/huanbaozongyuan/static/image/email.png" />
+                    <span>邮编：</span>
+                    <span>510062</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_copyright">
+          COPYRIGHT 广东省环保研究总院有限公司 2004-2015 粤ICP备15043811号-2
+        </div>
+      </div>
+    </div>
+
+
+    <script src="/huanbaozongyuan/static/js/jquery.min.js" charset="utf-8"></script>
+    <script src="/huanbaozongyuan/static/layui/layui.js"></script>
+    <script src="/huanbaozongyuan/static/js/pagetion.js"></script>
+    <script src="/huanbaozongyuan/static/swiper-4.5.1/js/swiper.min.js"></script>
+    <script type="text/javascript">
+      window.addEventListener("scroll",function(e){
+        var h =document.documentElement.scrollTop||document.body.scrollTop;
+        h<=0?$('.gotop_box').hide():'';
+        h>=200? $('.gotop_box').show():'';
+      });
+
+      $(document).ready(function() {
+        //轮播图
+        var swiperLi = $('#swiper1 .swiper-slide');
+        var swiperAutoplay = false;
+        var swiperLoop = false;
+        if (swiperLi.length > 1) {
+          swiperAutoplay = true;
+          swiperLoop = true;
+        }
+        var mySwiper1 = new Swiper('#swiper1', {
+          direction: 'horizontal',
+          loop: swiperLoop,
+          observer: true, //实时检测，动态更新
+          autoplay: swiperAutoplay,
+          // 如果需要分页器
+          pagination: {
+            el: swiperLi.length < 2 ? null : '.swiper-pagination',
+            clickable: true,
+            type: 'custom',
+            renderCustom: function(swiper, current, total) {
+              var customPaginationHtml = "";
+              for (var i = 0; i < total; i++) {
+                //判断哪个分页器此刻应该被激活
+                if (i == (current - 1)) {
+                  customPaginationHtml +=
+                    '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
+                } else {
+                  customPaginationHtml +=
+                    '<span class="swiper-pagination-customs"></span>';
+                }
+              }
+              return customPaginationHtml;
+            }
+          }
+        });
+      });
+
+
+      // $(document).ready(function() {
+      // 	queryPriceOfStock();
+      // })
+      // 查询股价
+      // function queryPriceOfStock() {
+      //     $.get("http://qt.gtimg.cn/q=sz000833,sz002683,sz836892", {}, function (res) {
+      //         var html = "";
+      //         // 获取以;分割的内容
+      //         var arr = res.split(";");
+      //         for (var i = 0; i < arr.length; i++) {
+      //             // 名字
+      //             var name = arr[i].split("~")[1];
+      //             // 代码
+      //             var code = arr[i].split("~")[2];
+      //             // 价格
+      //             var price = arr[i].split("~")[3];
+      //             // 涨跌
+      //             var rise = arr[i].split("~")[31];
+      //             // 涨跌%
+      //             var percentage = arr[i].split("~")[32];
+      //             if (name != undefined && code != undefined && price != undefined && rise != undefined) {
+      //                 // 设置 html <i class='layui-icon "+ (Number(rise) > 0 ? 'layui-icon-up' : 'layui-icon-down') +"' style='color: red;'></i>
+      //                 html += "<div class='stock_price_data'>" +
+      //                     "<span>" + name + "(" + code + ")</span>" +
+      //                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + price + "</span>" +
+      //                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + rise + "</span>" +
+      //                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;'>" + percentage + "%</span>" +
+      //                     "<span style='color: " + (Number(rise) > 0 ? 'red' : 'green') + "; margin-left: 10px;' class='iconfont " + (Number(rise) > 0 ? 'icon-xiangshang4' : 'icon-xiangxia4') + "'></span>" +
+      //                     "</div>"
+      //             }
+      //         }
+      //         $("#stock_info").empty().html(html);
+      //     })
+      // }
+      
+      // setInterval(function () {
+      //     queryPriceOfStock();
+      // }, 60 * 2 * 1000);
+    </script>
+  </body>
+</html>

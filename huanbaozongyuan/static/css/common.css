@@ -1,0 +1,13 @@
+.swiper-pagination-customs {
+  display: inline-block;
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+.swiper-pagination-customs-active {
+  /* background-color: #666666; */
+  opacity: 1;
+}

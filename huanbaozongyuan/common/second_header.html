@@ -1,0 +1,53 @@
+<div class="enter_nav">
+    <div class="enter_nav_box">
+        <div class="enter_nav_lf">
+                        <span class="ico_prev">
+                            <img src="/templates/guangye/static/image/ico_prev.png" alt="">
+                        </span>
+            <a href="/zhuangbei" class="prev_href font-size-12">首页</a>
+            #if(currentCategory.parentId==null)
+                #category(id=currentCategory.Id)
+                    <a href="#(category.path)" class="prev_href font-size-12"><span class="prev_href font-size-12">>#(category.name)</span></a>
+                #end
+            #else if(currentCategory.parentId!=null)
+                #category(id=currentCategory.parentId)
+                    <a href="#(category.path)" class="prev_href font-size-12"><span class="prev_href font-size-12">>#(category.name)</span></a>
+                #end
+            #end
+            #if(currentCategory.parentId==null)
+                #category_children_list(categoryId=currentCategory.Id)
+                     <span class="prev_href font-size-12">#if(categorys.size()>0)>#(categorys[0].name)#end</span>
+                #end
+            #else if(currentCategory.parentId!=null)
+                #category(id=currentCategory.Id)
+                   <span class="prev_href font-size-12">>#(category.name)</span>
+                #end
+            #end
+        </div>
+        <div class="enter_nav_rt">
+            <div class="enter_nav_list">
+                #if(currentCategory.parentId!=null)
+                #category_children_list(categoryId=currentCategory.parentId)
+                #if(categorys.size()>0)
+                #for(category:categorys)
+                <a href="#(category.path ??)" class="enter_nav_item #if(currentCategory.path == category.path) active #end">#(category.name ??)</a>
+                #end
+                #else if(categorys.size()==0)
+                <a href="#(currentCategory.path ??)" class="enter_nav_item">#(currentCategory.name ??)</a>
+                #end
+                #end
+                #else
+                #category_children_list(categoryId=currentCategory.Id)
+                #if(categorys.size()>0)
+                #for(category:categorys)
+                <a href="#(category.path ??)" class="enter_nav_item #if(currentCategory.path == category.path) active #end">#(category.name ??)</a>
+                #end
+                #else if(categorys.size()==0)
+                <a href="#(currentCategory.path ??)" class="enter_nav_item active">#(currentCategory.name ??)</a>
+                #end
+                #end
+                #end
+            </div>
+        </div>
+    </div>
+</div>
