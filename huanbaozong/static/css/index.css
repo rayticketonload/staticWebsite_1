@@ -629,17 +629,17 @@ img {
 .company .company_left {
 	width: 46%;
 }
-.company .company_left .tabs_box {
+.tabs_box {
 	font-size: 14px;
 	color: #999;
 	margin: 20px 0 0;
 }
-.company .company_left .tabs_box .tab_item {
+.tabs_box .tab_item {
 	/* flex: 0.2; */
 	width: 17%;
 	flex-direction: column;
 }
-.company .company_left .tabs_box .tab_item img {
+.tabs_box .tab_item img {
 	margin-bottom: 10px;
 }
 .company .company_right {
