@@ -2240,6 +2240,7 @@ img {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+	.information_center .wrapper,
 	.information_center .card {
 		margin-left: 120px;
 		margin-right: 120px;

@@ -29,6 +29,23 @@
 			background-image: none;
 			padding-right: 10px;
 		}
+		
+		.innovation .detail_right li + li {
+			height: 0;
+			padding: 0;
+			font-size: 14px;
+		}
+		.innovation .detail_right ul.current li + li {
+			height: auto;
+			padding: 20px;
+			border-top: 1px solid #eee;
+		}
+		.innovation .detail_right ul.current li:nth-child(1) {
+			color: #0c673e;
+		}
+		.innovation .detail_right ul.current li:nth-child(1) .icon-arrow-right {
+			transform: rotate(90deg);
+		}
 	</style>
 	<body>
 		<div>
@@ -43,7 +60,7 @@
 						<div class="navbar">
 							<ul class="nav_list">
 								<!--头部栏目-->
-								<li class="nav_item active" >
+								<li class="nav_item" >
 									<a class="nav-link" href="/huanbaozong/">首页</a>
 								</li>
 								<li class="nav_item">
@@ -52,14 +69,14 @@
 								<li class="nav_item">
 									<a class="nav-link" href="/huanbaozong/information_center.html">新闻中心</a>
 								</li>
-								<li class="nav_item">
+								<li class="nav_item active">
 									<a class="nav-link" href="/huanbaozong/company_business.html">业务范围</a>
 								</li>
 								<li class="nav_item">
 									<a class="nav-link" href="/huanbaozong/company_party.html">企业党建</a>
 								</li>
 								<li class="nav_item">
-									<a class="nav-link" href="/huanbaozong/behalf_project.html">信息公开</a>
+									<a class="nav-link" href="/huanbaozong/Information_disclosure.html">信息公开</a>
 								</li>
 								<li class="nav_item">
 									<a class="nav-link" href="/huanbaozong/company_recruitment.html">人才招聘</a>
@@ -111,209 +128,124 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide swiper_item">
 							<a href="#" class="swiper_href">
-								<img src="/huanbaozong/static/image/banner04.png" class="d-block w-100 swiper_ing">
+								<img src="/huanbaozong/static/image/important_project_banner_1.png" class="d-block w-100 swiper_ing">
 								<div class="swiper_title animated fadeInUp"></div>
 							</a>
 						</div>
 						<div class="swiper-slide swiper_item">
 							<a href="#" class="swiper_href">
-								<img src="/huanbaozong/static/image/banner05.png" class="d-block w-100 swiper_ing">
-								<div class="swiper_title animated fadeInUp"></div>
-							</a>
-						</div>
-						<div class="swiper-slide swiper_item">
-							<a href="#" class="swiper_href">
-								<img src="/huanbaozong/static/image/banner03.png" class="d-block w-100 swiper_ing">
+								<img src="/huanbaozong/static/image/important_project_banner_2.png" class="d-block w-100 swiper_ing">
 								<div class="swiper_title animated fadeInUp"></div>
 							</a>
 						</div>
 					</div>
-					<!-- 分页器 -->
-					<div class="swiper-pagination"></div>
 				</div>
 				<!-- sub nav -->
-				<div class="sub_nav flex_align">
+				<div class="sub_nav flex_align" style="margin-bottom: 0;">
 					<div class="breadcrumb">
 						<span class="icon-home iconfont"></span>
-						<span>首页 > 荣誉资质 > <span class="cur_nav"></span>
+						<span>首页 > 业务范围 > <span class="cur_nav"></span>
 					</div>
 					<ul class="nav_box">
-						<a href="javascript:;"><li onclick="handleClickNav(0)" class="active">公司荣誉</li></a>
-						<a href="javascript:;"><li onclick="handleClickNav(1)" class="">公司资质</li></a>
+						<a href="javascript:;"><li onclick="handleClickNav(0)" class="active">产业领域</li></a>
+						<a href="javascript:;"><li onclick="handleClickNav(1)" class="">重点项目</li></a>
 					</ul>
 				</div>
 
-				<!-- 经营业务 -->
-				<div class="company_business">
-					<!-- 业务介绍 -->
-					<div class="container">
-						<div class="enterprise_header_btn flex_align" style="justify-content: center">
-							<button type="button" style="margin: 0 20px; width: 160px" class="layui-btn layui-btn-primary layui-btn-radius layui-border-green">已获国家专利</button>
-							<button type="button" style="margin: 0 20px; width: 160px" class="layui-btn layui-btn-radius">近年获奖情况</button>
-							<button type="button" style="margin: 0 20px; width: 160px" class="layui-btn layui-btn-primary layui-btn-radius layui-border-green">荣誉称号</button>
+				<!-- 业务范围 -->
+				<div class="company_business innovation information_center detail company_profile">
+					<!-- 产业领域 -->
+					<div class="container flex">
+						<div class="detail_right" style="margin-top: 0;">
+							<ul class="current">
+								<li class="">
+									环境工程服务
+									<span class="iconfont icon-arrow-right"></span>
+								</li>
+								<li><a href="#">规划咨询</a></li>
+								<li class="active"><a href="/huanbaozong/company_business.html">环境工程设计</a></li>
+								<li><a href="#">市政与交通设计</a></li>
+								<li><a href="#">建筑设计</a></li>
+								<li><a href="#">项目管理</a></li>
+								<li><a href="#">冶金矿山</a></li>
+							</ul>
+							<ul>
+								<li>
+									科研与产业化
+									<span class="iconfont icon-arrow-right"></span>
+								</li>
+							</ul>
 						</div>
-						<div class="enterprise_content flex_align">
-							<!-- row start -->
-							<div>
-								<div class="img_box">
-									<img src="/huanbaozong/static/image/科学技术奖.png" alt="">
-									<span class="icon-zoom"></span>
-								</div>
-								<p class="desc">环卫科学技术奖</p>
+						<div class="detail_left">
+							<div class="left_header">
+								<div class="left_title">环境工程设计</div>
 							</div>
-							<div>
-								<div class="img_box">
-									<img src="/huanbaozong/static/image/科学技术奖.png" alt="">
-									<span class="icon-zoom"></span>
-								</div>
-								<p class="desc">广东企业500强</p>
+							<div class="article_title">
+								勘察设计
 							</div>
-							<div>
-								<div class="img_box">
-									<img src="/huanbaozong/static/image/科学技术奖.png" alt="">
-									<span class="icon-zoom"></span>
+							<div class="paragraph">
+								<p>
+									勘察设计是现阶段总院生存发展的基础业务，是现金牛业务，在省内拥有那个号的口碑和品牌，未来我们将加强与国内、省内优秀的设计团队合作，实现资源互补，努力达到综甲水平，深耕省内市场的同时，逐步打开国内市场。
+								</p>
+								<div class="image_box">
+									<img src="/huanbaozong/static/image/innovation_img_1.png" alt="">
 								</div>
-								<p class="desc">南服总荣获第二十四届广东省企业管理现代化...</p>
+								<p style="text-align: center">城西污水处理厂</p>
+								<div class="image_box">
+									<img src="/huanbaozong/static/image/innovation_img_2.png" alt="">
+								</div>
+								<p style="text-align: center">佛山市高明中心污水处理厂一、二期提标改造工程</p>
 							</div>
-							<div>
-								<div class="img_box">
-									<img src="/huanbaozong/static/image/科学技术奖.png" alt="">
-									<span class="icon-zoom"></span>
-								</div>
-								<p class="desc">中国服务业500强第425位</p>
+						</div>
+					</div>
+					<!-- 重点项目 -->
+					<div class="container">
+						<div class="important-project-ray clearfix">
+							<div class="important-project-item">
+								<img src="/huanbaozong/static/image/important_project_img_1.png" alt="">
+								<a class="hover" href="/huanbaozong/major_project_details.html">
+									<div class="hover-wrap">
+										<div class="hover-tit">
+											政府环境治理决策智囊广业环保产业发展智库
+										</div>
+										<div class="hover-con">
+											政府环境治理决策智囊广业环保产业发展智库政府环境治理决策智囊广业环保产业发展智库政府环境治理决策智囊广业环保产业发展智库政府环境治理决策智囊广业环保产业发展智库
+										</div>
+										<div class="hover-icon"></div>
+									</div>
+								</a>
 							</div>
-							<!-- row start -->
-							<div>
-								<div class="img_box">
-									<img src="/huanbaozong/static/image/科学技术奖.png" alt="">
-									<span class="icon-zoom"></span>
-								</div>
-								<p class="desc">广东服务100强</p>
+							<div class="important-project-item">
+								<img src="/huanbaozong/static/image/important_project_img_2.png" alt="">
+								<a class="hover" href="/huanbaozong/major_project_details.html">
+									<div class="hover-wrap">
+										<div class="hover-tit">
+											政府环境治理决策智囊广业环保产业发展智库
+										</div>
+										<div class="hover-con">
+											政府环境治理决策智囊广业环保产业发展智库政府环境治理决策智囊广业环保产业发展智库政府环境治理决策智囊广业环保产业发展智库政府环境治理决策智囊广业环保产业发展智库
+										</div>
+										<div class="hover-icon"></div>
+									</div>
+								</a>
 							</div>
-							<div>
-								<div class="img_box">
-									<img src="/huanbaozong/static/image/科学技术奖.png" alt="">
-									<span class="icon-zoom"></span>
-								</div>
-								<p class="desc">广东企业500强</p>
-							</div>
-							<div>
-								<div class="img_box">
-									<img src="/huanbaozong/static/image/科学技术奖.png" alt="">
-									<span class="icon-zoom"></span>
-								</div>
-								<p class="desc">南服总荣获第二十四届广东省企业管理现代化...</p>
-							</div>
-							<div>
-								<div class="img_box">
-									<img src="/huanbaozong/static/image/科学技术奖.png" alt="">
-									<span class="icon-zoom"></span>
-								</div>
-								<p class="desc">中国服务业500强第425位</p>
-							</div>
-							<!-- row start -->
-							<div>
-								<div class="img_box">
-									<img src="/huanbaozong/static/image/科学技术奖.png" alt="">
-									<span class="icon-zoom"></span>
-								</div>
-								<p class="desc">广东服务100强</p>
-							</div>
-							<div>
-								<div class="img_box">
-									<img src="/huanbaozong/static/image/科学技术奖.png" alt="">
-									<span class="icon-zoom"></span>
-								</div>
-								<p class="desc">广东企业500强</p>
-							</div>
-							<div>
-								<div class="img_box">
-									<img src="/huanbaozong/static/image/科学技术奖.png" alt="">
-									<span class="icon-zoom"></span>
-								</div>
-								<p class="desc">南服总荣获第二十四届广东省企业管理现代化...</p>
-							</div>
-							<div>
-								<div class="img_box">
-									<img src="/huanbaozong/static/image/科学技术奖.png" alt="">
-									<span class="icon-zoom"></span>
-								</div>
-								<p class="desc">中国服务业500强第425位</p>
-							</div>
-							<!-- row start -->
-							<div>
-								<div class="img_box">
-									<img src="/huanbaozong/static/image/科学技术奖.png" alt="">
-									<span class="icon-zoom"></span>
-								</div>
-								<p class="desc">广东服务100强</p>
-							</div>
-							<div>
-								<div class="img_box">
-									<img src="/huanbaozong/static/image/科学技术奖.png" alt="">
-									<span class="icon-zoom"></span>
-								</div>
-								<p class="desc">广东企业500强</p>
-							</div>
-							<div>
-								<div class="img_box">
-									<img src="/huanbaozong/static/image/科学技术奖.png" alt="">
-									<span class="icon-zoom"></span>
-								</div>
-								<p class="desc">南服总荣获第二十四届广东省企业管理现代化...</p>
+							<div class="important-project-item">
+								<img src="/huanbaozong/static/image/important_project_img_3.png" alt="">
+								<a class="hover" href="/huanbaozong/major_project_details.html">
+									<div class="hover-wrap">
+										<div class="hover-tit">
+											政府环境治理决策智囊广业环保产业发展智库
+										</div>
+										<div class="hover-con">
+											政府环境治理决策智囊广业环保产业发展智库政府环境治理决策智囊广业环保产业发展智库政府环境治理决策智囊广业环保产业发展智库政府环境治理决策智囊广业环保产业发展智库
+										</div>
+										<div class="hover-icon"></div>
+									</div>
+								</a>
 							</div>
 						</div>
 						<!-- 分页器 -->
 						<div class="pageHelp"></div>
-					</div>
-					<!-- 公司资质 -->
-					<div class="container">
-						<div class="enterprise_header_btn flex_align" style="justify-content: center">
-							<button type="button" style="margin: 0 20px; width: 160px" class="layui-btn layui-btn-primary layui-btn-radius layui-border-green">已获国家专利</button>
-							<button type="button" style="margin: 0 20px; width: 160px" class="layui-btn layui-btn-primary layui-btn-radius layui-border-green">近年获奖情况</button>
-							<button type="button" style="margin: 0 20px; width: 160px" class="layui-btn layui-btn-radius">荣誉称号</button>
-						</div>
-						<div class="card flex">
-							<div class="image_box">
-								<!-- <img src="/nanyou/static/image/business.png" alt=""> -->
-								<div class="swiper-container swiper animated zoomIn" id="swiper2">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide swiper_item">
-											<a href="#" class="swiper_href">
-												<img src="/huanbaozong/static/image/sub_banner1.png" class="d-block w-100 swiper_ing">
-												<div class="swiper_title animated fadeInUp"></div>
-											</a>
-										</div>
-										<div class="swiper-slide swiper_item">
-											<a href="#" class="swiper_href">
-												<img src="/huanbaozong/static/image/sub_banner2.png" class="d-block w-100 swiper_ing">
-												<div class="swiper_title animated fadeInUp"></div>
-											</a>
-										</div>
-										<div class="swiper-slide swiper_item">
-											<a href="#" class="swiper_href">
-												<img src="/huanbaozong/static/image/sub_banner3.png" class="d-block w-100 swiper_ing">
-												<div class="swiper_title animated fadeInUp"></div>
-											</a>
-										</div>
-									</div>
-									<!-- 分页器 -->
-									<div class="swiper-pagination"></div>
-								</div>
-							</div>
-							<div class="desc_box">
-								<div class="desc_title">荣誉称号</div>
-								<p class="desc_text">连续十八年获广东省 “守合同重信用” 企业称号</p>
-								<p class="desc_text">企业信用等级AAA</p>
-								<p class="desc_text">广东省工程咨询协会常务理事单位</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- mask -->
-				<div class="mask" style="display: none;">
-					<div class="image">
-						<div class="close"></div>
 					</div>
 				</div>
 				
@@ -519,8 +451,8 @@
 
 		<script src="/huanbaozong/static/js/jquery.min.js" charset="utf-8"></script>
 		<script src="/huanbaozong/static/swiper-4.5.1/js/swiper.min.js"></script>
-		<script src="/huanbaozong/static/layui/layui.js"></script>
-		<script src="/huanbaozong/static/js/pagetion.js"></script>
+		<script src="/sanhuanbaoyuan/static/layui/layui.js"></script>
+		<script src="/sanhuanbaoyuan/static/js/pagetion.js"></script>
 		<script type="text/javascript">
 			window.addEventListener("scroll",function(e){
         var h =document.documentElement.scrollTop||document.body.scrollTop;
@@ -581,26 +513,6 @@
 				});
 			}
 
-			// 分页器
-			pageHelp({
-				ele:'.container .pageHelp',
-				count:76,
-				limit:4,
-				limits:true,
-				allPage:true,
-				first:true,
-				last:true,
-				next:true,
-				prev:true,
-				jump:true,
-				counts:true,
-				fn:function(count){
-					// 切换分页回调
-					$('.layui-laypage-skip .jumpPageNum').val(count);
-					window.location.href = '#';
-				}
-			});
-
 			$(document).ready(function() {
 				//轮播图
 				var swiperLi = $('#swiper1 .swiper-slide');
@@ -636,17 +548,32 @@
 						}
 					}
 				});
-			});
 
-			// 图片放大
-			$('.company_business .img_box').click(function() {
-				$('.mask .image').css({
-					backgroundImage: 'url(' + $(this).children('img').attr('src') + ')'
+				// 分页器
+				pageHelp({
+					ele:'.container .pageHelp',
+					count:76,
+					limit:4,
+					limits:true,
+					allPage:true,
+					first:true,
+					last:true,
+					next:true,
+					prev:true,
+					jump:true,
+					counts:true,
+					fn:function(count){
+						// 切换分页回调
+						$('.layui-laypage-skip .jumpPageNum').val(count);
+						window.location.href = '#';
+					}
 				});
-				$('.mask').show();
-			});
-			$('.mask').click(function() {
-				$('.mask').hide();
+				
+				$('.innovation ul li:nth-child(1)').click(function() {
+					console.log(2414);
+					$('.innovation ul').removeClass('current');
+					$(this).parents('ul').addClass('current');
+				});
 			});
 
 

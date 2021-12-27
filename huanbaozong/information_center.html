@@ -29,6 +29,39 @@
 			background-image: none;
 			padding-right: 10px;
 		}
+
+		.video-ray .video-item {
+			width: 30%;
+			background-color: #f7f7f7;
+			margin-bottom: 50px;
+			margin-right: 5%;
+			float: left;
+		}
+
+		.video-ray .video-item:nth-child(3n) {
+			margin-right: 0;
+		}
+
+		.video-ray .video-item .video {
+			width: 100%;
+			height: 240px;
+		}
+
+		.video-ray .video-item .video > video {
+			display: block;
+		}
+
+		.video-ray .video-item > .video-name {
+			font-size: 18px;
+			line-height: 60px;
+			text-align: center;
+			padding: 0 20px;
+			word-wrap: normal;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			box-sizing: border-box;
+		}
 	</style>
 	<body>
 		<div>
@@ -43,13 +76,13 @@
 						<div class="navbar">
 							<ul class="nav_list">
 								<!--头部栏目-->
-								<li class="nav_item active" >
+								<li class="nav_item" >
 									<a class="nav-link" href="/huanbaozong/">首页</a>
 								</li>
 								<li class="nav_item">
 									<a class="nav-link" href="/huanbaozong/company_index.html">走进环保</a>
 								</li>
-								<li class="nav_item">
+								<li class="nav_item active">
 									<a class="nav-link" href="/huanbaozong/information_center.html">新闻中心</a>
 								</li>
 								<li class="nav_item">
@@ -59,7 +92,7 @@
 									<a class="nav-link" href="/huanbaozong/company_party.html">企业党建</a>
 								</li>
 								<li class="nav_item">
-									<a class="nav-link" href="/huanbaozong/behalf_project.html">信息公开</a>
+									<a class="nav-link" href="/huanbaozong/Information_disclosure.html">信息公开</a>
 								</li>
 								<li class="nav_item">
 									<a class="nav-link" href="/huanbaozong/company_recruitment.html">人才招聘</a>
@@ -111,19 +144,7 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide swiper_item">
 							<a href="#" class="swiper_href">
-								<img src="/huanbaozong/static/image/banner05.png" class="d-block w-100 swiper_ing">
-								<div class="swiper_title animated fadeInUp"></div>
-							</a>
-						</div>
-						<div class="swiper-slide swiper_item">
-							<a href="#" class="swiper_href">
-								<img src="/huanbaozong/static/image/banner04.png" class="d-block w-100 swiper_ing">
-								<div class="swiper_title animated fadeInUp"></div>
-							</a>
-						</div>
-						<div class="swiper-slide swiper_item">
-							<a href="#" class="swiper_href">
-								<img src="/huanbaozong/static/image/banner03.png" class="d-block w-100 swiper_ing">
+								<img src="/huanbaozong/static/image/banner_新闻.png" class="d-block w-100 swiper_ing">
 								<div class="swiper_title animated fadeInUp"></div>
 							</a>
 						</div>
@@ -138,143 +159,300 @@
 						<span>首页 > 新闻中心 > <span class="cur_nav"></span>
 					</div>
 					<ul class="nav_box">
-						<a href="javascript:;"><li onclick="handleClickNav(0)" class="active">公司要闻</li></a>
-						<a href="javascript:;"><li onclick="handleClickNav(1)" class="">企业动态</li></a>
+						<a href="javascript:;"><li onclick="handleClickNav(0)" class="active">集团要闻</li></a>
+						<a href="javascript:;"><li onclick="handleClickNav(1)" class="">总院动态</li></a>
+						<a href="javascript:;"><li onclick="handleClickNav(2)" class="">专题报道</li></a>
+						<a href="javascript:;"><li onclick="handleClickNav(3)" class="">视频中心</li></a>
+						<a href="javascript:;"><li onclick="handleClickNav(4)" class="">通知公告</li></a>
 					</ul>
 				</div>
 
 				<!-- 新闻中心 -->
 				<div class="information_center">
-					<!-- 公司要闻 -->
-					<div class="container">
-						<ul class="list">
-							<li class="item flex_align">
-								<div class="list_title">财务状况和经营成果</div>
-								<div class="list_date">2021-08-01</div>
-							</li>
-							<li class="item flex_align">
-								<div class="list_title">财务状况和经营成果</div>
-								<div class="list_date">2021-08-01</div>
-							</li>
-							<li class="item flex_align">
-								<div class="list_title">财务状况和经营成果</div>
-								<div class="list_date">2021-08-01</div>
-							</li>
-							<li class="item flex_align">
-								<div class="list_title">财务状况和经营成果</div>
-								<div class="list_date">2021-08-01</div>
-							</li>
-							<li class="item flex_align">
-								<div class="list_title">财务状况和经营成果</div>
-								<div class="list_date">2021-08-01</div>
-							</li>
-							<li class="item flex_align">
-								<div class="list_title">财务状况和经营成果</div>
-								<div class="list_date">2021-08-01</div>
-							</li>
-							<li class="item flex_align">
-								<div class="list_title">财务状况和经营成果</div>
-								<div class="list_date">2021-08-01</div>
-							</li>
-							<li class="item flex_align">
-								<div class="list_title">财务状况和经营成果</div>
-								<div class="list_date">2021-08-01</div>
-							</li>
-						</ul>
-						<div class="pageHelp"></div>
-					</div>
-					<!-- 企业动态 -->
+					<!-- 集团要闻 -->
 					<div class="container">
 						<div class="card flex_align">
 							<div class="image_box">
 								<img src="/huanbaozong/static/image/img-1.png" alt="">
 							</div>
 							<div class="desc_box">
-								<div class="desc_title">环保院顺利完成新办公场所搬迁工作</div>
-								<p class="desc_text">在广东省国资委三年国企改革行动的号召下、环保总院的战略部署下，2021年8月22日，环保院顺利完成了从原办公地点越秀区北京路374号之二瑞安中心12至13楼，搬迁至新办公点越秀区中山二路35号7至9楼的相关工作，并于8月23日恢复正常办公。环保院领导班子明确搬迁时限，高度重视，认真部署，为确保顺利完成搬迁工作并按时恢复正常办公秩序，环保院综...</p>
-								<a class="check_details first fill flex" href="/huanbaozong/information_center_detail.html">
+								<div class="desc_title">请党放心，强国有我</div>
+								<p class="desc_text">8月25日下午，共青团广东省机械研究所有限公司总支部委员会组织了学习贯彻习近平总书记 “七一” 重要讲话精神专题学习会，公司全体青年团员参加。公司团总支书记黄晓婷同志带领全体青年团员学习回顾了习总书记的 “七一” 重要讲话，传达习总书记寄语 “未来属于青年，希望寄予青年。” 会议强调，要牢记习总书记嘱托，以实现中...</p>
+								<p class="desc_date">2021-08-25</p>
+								<a class="check_details first flex" href="/huanbaozong/information_center_detail.html">
 									<span>了解更多</span>
-								</a>
-								<a class="check_details arrow flex" href="/huanbaozong/information_center_detail.html">
-									<img src="/huanbaozong/static/image/ico_more.png" />
+									<span class="iconfont icon-arrow-right"></span>
 								</a>
 							</div>
 						</div>
-						<div class="card flex_align">
-							<div class="image_box">
-								<img src="/huanbaozong/static/image/广业环保集团.png" alt="">
+						<div class="wrapper flex">
+							<div class="news_left">
+								<div class="news_item">
+									<img src="/huanbaozong/static/image/img-1.png" alt="">
+									<div class="news_title">省纪委监委驻省国资委纪检监察组组长叶秀佑到广东环保集团调研</div>
+								</div>
+								<div class="news_item">
+									<img src="/huanbaozong/static/image/img-1.png" alt="">
+									<div class="news_title">省纪委监委驻省国资委纪检监察组组长叶秀佑到广东环保集团调研</div>
+								</div>
+								<div class="news_item">
+									<img src="/huanbaozong/static/image/img-1.png" alt="">
+									<div class="news_title">省纪委监委驻省国资委纪检监察组组长叶秀佑到广东环保集团调研</div>
+								</div>
 							</div>
-							<div class="desc_box">
-								<div class="desc_title">环保院顺利完成新办公场所搬迁工作</div>
-								<p class="desc_text">在广东省国资委三年国企改革行动的号召下、环保总院的战略部署下，2021年8月22日，环保院顺利完成了从原办公地点越秀区北京路374号之二瑞安中心12至13楼，搬迁至新办公点越秀区中山二路35号7至9楼的相关工作，并于8月23日恢复正常办公。环保院领导班子明确搬迁时限，高度重视，认真部署，为确保顺利完成搬迁工作并按时恢复正常办公秩序，环保院综...</p>
-								<a class="check_details first fill flex" href="/huanbaozong/information_center_detail.html">
-									<span>了解更多</span>
-								</a>
-								<a class="check_details arrow flex" href="/huanbaozong/information_center_detail.html">
-									<img src="/huanbaozong/static/image/ico_more.png" />
-								</a>
+							<div class="news_right">
+								<div class="news_item flex_align">
+									<div style="flex: 1;">
+										<a href="#">
+											<div class="news_title">“五多五忧” 为鞍矿爆破 注入发展新动能</div>
+										</a>
+										<div class="news_desc">
+											近日，由广业装备集团统筹规划，广业装备研究院和省机械所联合研发生产的首台高速磁悬浮鼓风机经过测试正式下线，对比传统风机加个更低，节能效果提升达30%以上。该设备运用磁悬浮轴承、高速电机
+										</div>
+									</div>
+									<div class="news_date">
+										<div class="date">01-30</div>
+										<div class="line"></div>
+										<div class="year">2021</div>
+									</div>
+								</div>
+								<div class="news_item flex_align">
+									<div style="flex: 1;">
+										<a href="#">
+											<div class="news_title">“五多五忧” 为鞍矿爆破 注入发展新动能</div>
+										</a>
+										<div class="news_desc">
+											近日，由广业装备集团统筹规划，广业装备研究院和省机械所联合研发生产的首台高速磁悬浮鼓风机经过测试正式下线，对比传统风机加个更低，节能效果提升达30%以上。该设备运用磁悬浮轴承、高速电机
+										</div>
+									</div>
+									<div class="news_date">
+										<div class="date">01-30</div>
+										<div class="line"></div>
+										<div class="year">2021</div>
+									</div>
+								</div>
+								<div class="news_item flex_align">
+									<div style="flex: 1;">
+										<a href="#">
+											<div class="news_title">“五多五忧” 为鞍矿爆破 注入发展新动能</div>
+										</a>
+										<div class="news_desc">
+											近日，由广业装备集团统筹规划，广业装备研究院和省机械所联合研发生产的首台高速磁悬浮鼓风机经过测试正式下线，对比传统风机加个更低，节能效果提升达30%以上。该设备运用磁悬浮轴承、高速电机
+										</div>
+									</div>
+									<div class="news_date">
+										<div class="date">01-30</div>
+										<div class="line"></div>
+										<div class="year">2021</div>
+									</div>
+								</div>
+								<div class="news_item flex_align">
+									<div style="flex: 1;">
+										<a href="#">
+											<div class="news_title">“五多五忧” 为鞍矿爆破 注入发展新动能</div>
+										</a>
+										<div class="news_desc">
+											近日，由广业装备集团统筹规划，广业装备研究院和省机械所联合研发生产的首台高速磁悬浮鼓风机经过测试正式下线，对比传统风机加个更低，节能效果提升达30%以上。该设备运用磁悬浮轴承、高速电机
+										</div>
+									</div>
+									<div class="news_date">
+										<div class="date">01-30</div>
+										<div class="line"></div>
+										<div class="year">2021</div>
+									</div>
+								</div>
+								<div class="news_item flex_align">
+									<div style="flex: 1;">
+										<a href="#">
+											<div class="news_title">“五多五忧” 为鞍矿爆破 注入发展新动能</div>
+										</a>
+										<div class="news_desc">
+											近日，由广业装备集团统筹规划，广业装备研究院和省机械所联合研发生产的首台高速磁悬浮鼓风机经过测试正式下线，对比传统风机加个更低，节能效果提升达30%以上。该设备运用磁悬浮轴承、高速电机
+										</div>
+									</div>
+									<div class="news_date">
+										<div class="date">01-30</div>
+										<div class="line"></div>
+										<div class="year">2021</div>
+									</div>
+								</div>
+								<div class="pageHelp"></div>
 							</div>
 						</div>
-						<div class="card flex_align">
-							<div class="image_box">
-								<img src="/huanbaozong/static/image/广业环保集团.png" alt="">
-							</div>
-							<div class="desc_box">
-								<div class="desc_title">环保院顺利完成新办公场所搬迁工作</div>
-								<p class="desc_text">在广东省国资委三年国企改革行动的号召下、环保总院的战略部署下，2021年8月22日，环保院顺利完成了从原办公地点越秀区北京路374号之二瑞安中心12至13楼，搬迁至新办公点越秀区中山二路35号7至9楼的相关工作，并于8月23日恢复正常办公。环保院领导班子明确搬迁时限，高度重视，认真部署，为确保顺利完成搬迁工作并按时恢复正常办公秩序，环保院综...</p>
-								<a class="check_details first fill flex" href="/huanbaozong/information_center_detail.html">
-									<span>了解更多</span>
-								</a>
-								<a class="check_details arrow flex" href="/huanbaozong/information_center_detail.html">
-									<img src="/huanbaozong/static/image/ico_more.png" />
-								</a>
-							</div>
-						</div>
-						<div class="card flex_align">
-							<div class="image_box">
-								<img src="/huanbaozong/static/image/广业环保集团.png" alt="">
-							</div>
-							<div class="desc_box">
-								<div class="desc_title">环保院顺利完成新办公场所搬迁工作</div>
-								<p class="desc_text">在广东省国资委三年国企改革行动的号召下、环保总院的战略部署下，2021年8月22日，环保院顺利完成了从原办公地点越秀区北京路374号之二瑞安中心12至13楼，搬迁至新办公点越秀区中山二路35号7至9楼的相关工作，并于8月23日恢复正常办公。环保院领导班子明确搬迁时限，高度重视，认真部署，为确保顺利完成搬迁工作并按时恢复正常办公秩序，环保院综...</p>
-								<a class="check_details first fill flex" href="/huanbaozong/information_center_detail.html">
-									<span>了解更多</span>
-								</a>
-								<a class="check_details arrow flex" href="/huanbaozong/information_center_detail.html">
-									<img src="/huanbaozong/static/image/ico_more.png" />
-								</a>
-							</div>
-						</div>
-						<div class="card flex_align">
-							<div class="image_box">
-								<img src="/huanbaozong/static/image/广业环保集团.png" alt="">
-							</div>
-							<div class="desc_box">
-								<div class="desc_title">环保院顺利完成新办公场所搬迁工作</div>
-								<p class="desc_text">在广东省国资委三年国企改革行动的号召下、环保总院的战略部署下，2021年8月22日，环保院顺利完成了从原办公地点越秀区北京路374号之二瑞安中心12至13楼，搬迁至新办公点越秀区中山二路35号7至9楼的相关工作，并于8月23日恢复正常办公。环保院领导班子明确搬迁时限，高度重视，认真部署，为确保顺利完成搬迁工作并按时恢复正常办公秩序，环保院综...</p>
-								<a class="check_details first fill flex" href="/huanbaozong/information_center_detail.html">
-									<span>了解更多</span>
-								</a>
-								<a class="check_details arrow flex" href="/huanbaozong/information_center_detail.html">
-									<img src="/huanbaozong/static/image/ico_more.png" />
-								</a>
-							</div>
-						</div>
-						<div class="card flex_align">
-							<div class="image_box">
-								<img src="/huanbaozong/static/image/广业环保集团.png" alt="">
-							</div>
-							<div class="desc_box">
-								<div class="desc_title">环保院顺利完成新办公场所搬迁工作</div>
-								<p class="desc_text">在广东省国资委三年国企改革行动的号召下、环保总院的战略部署下，2021年8月22日，环保院顺利完成了从原办公地点越秀区北京路374号之二瑞安中心12至13楼，搬迁至新办公点越秀区中山二路35号7至9楼的相关工作，并于8月23日恢复正常办公。环保院领导班子明确搬迁时限，高度重视，认真部署，为确保顺利完成搬迁工作并按时恢复正常办公秩序，环保院综...</p>
-								<a class="check_details first fill flex" href="/huanbaozong/information_center_detail.html">
-									<span>了解更多</span>
-								</a>
-								<a class="check_details arrow flex" href="/huanbaozong/information_center_detail.html">
-									<img src="/huanbaozong/static/image/ico_more.png" />
-								</a>
+					</div>
+					
+					<!-- 总院动态 -->
+					<div class="container">
+
+					</div>
+
+					<!-- 专题报道 -->
+					<div class="container">
+
+					</div>
+
+					<!-- 视频中心 -->
+					<div class="container">
+						<div class="wrapper">
+							<div class="video-ray clearfix">
+								<div class="video-item">
+									<div class="video">
+										<video style="width: 100%; height: 100%; object-fit: fill" controls="controls" muted="muted" src="https://www.w3school.com.cn/i/movie.ogg"></video>
+									</div>
+									<div class="video-name">
+										视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1
+									</div>
+								</div>
+								<div class="video-item">
+									<div class="video">
+										<video style="width: 100%; height: 100%; object-fit: fill" controls="controls" muted="muted" src="https://www.w3school.com.cn/i/movie.ogg"></video>
+									</div>
+									<div class="video-name">
+										视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1
+									</div>
+								</div>
+								<div class="video-item">
+									<div class="video">
+										<video style="width: 100%; height: 100%; object-fit: fill" controls="controls" muted="muted" src="https://www.w3school.com.cn/i/movie.ogg"></video>
+									</div>
+									<div class="video-name">
+										视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1
+									</div>
+								</div>
+								<div class="video-item">
+									<div class="video">
+										<video style="width: 100%; height: 100%; object-fit: fill" controls="controls" muted="muted" src="https://www.w3school.com.cn/i/movie.ogg"></video>
+									</div>
+									<div class="video-name">
+										视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1
+									</div>
+								</div>
+								<div class="video-item">
+									<div class="video">
+										<video style="width: 100%; height: 100%; object-fit: fill" controls="controls" muted="muted" src="https://www.w3school.com.cn/i/movie.ogg"></video>
+									</div>
+									<div class="video-name">
+										视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1视频名称1
+									</div>
+								</div>
 							</div>
 						</div>
+					</div>
+
+					<!-- 通知公告 -->
+					<div class="container">
+						<ul class="list flex">
+							<li class="item flex">
+								<div class="list_title">我司多个项目获得2017年度轻工业优秀工程勘察设计奖</div>
+								<div class="list_desc">今日，由中国轻工业工程建设协会（原中国轻工业勘察设计协会）组织评选的 “2017年度亲工业优秀工程报...</div>
+								<div class="flex_align">
+									<div class="list_date">2020-09-10</div>
+									<div>
+										<button class="layui-btn layui-btn-radius layui-btn-normal">详情</button>
+									</div>
+								</div>
+							</li>
+							<li class="item flex">
+								<div class="list_title">我司多个项目获得2017年度轻工业优秀工程勘察设计奖</div>
+								<div class="list_desc">今日，由中国轻工业工程建设协会（原中国轻工业勘察设计协会）组织评选的 “2017年度亲工业优秀工程报...</div>
+								<div class="flex_align">
+									<div class="list_date">2020-09-10</div>
+									<div>
+										<button class="layui-btn layui-btn-radius layui-btn-normal">详情</button>
+									</div>
+								</div>
+							</li>
+							<li class="item flex">
+								<div class="list_title">我司多个项目获得2017年度轻工业优秀工程勘察设计奖</div>
+								<div class="list_desc">今日，由中国轻工业工程建设协会（原中国轻工业勘察设计协会）组织评选的 “2017年度亲工业优秀工程报...</div>
+								<div class="flex_align">
+									<div class="list_date">2020-09-10</div>
+									<div>
+										<button class="layui-btn layui-btn-radius layui-btn-normal">详情</button>
+									</div>
+								</div>
+							</li>
+							<li class="item flex">
+								<div class="list_title">我司多个项目获得2017年度轻工业优秀工程勘察设计奖</div>
+								<div class="list_desc">今日，由中国轻工业工程建设协会（原中国轻工业勘察设计协会）组织评选的 “2017年度亲工业优秀工程报...</div>
+								<div class="flex_align">
+									<div class="list_date">2020-09-10</div>
+									<div>
+										<button class="layui-btn layui-btn-radius layui-btn-normal">详情</button>
+									</div>
+								</div>
+							</li>
+							<li class="item flex">
+								<div class="list_title">我司多个项目获得2017年度轻工业优秀工程勘察设计奖</div>
+								<div class="list_desc">今日，由中国轻工业工程建设协会（原中国轻工业勘察设计协会）组织评选的 “2017年度亲工业优秀工程报...</div>
+								<div class="flex_align">
+									<div class="list_date">2020-09-10</div>
+									<div>
+										<button class="layui-btn layui-btn-radius layui-btn-normal">详情</button>
+									</div>
+								</div>
+							</li>
+							<li class="item flex">
+								<div class="list_title">我司多个项目获得2017年度轻工业优秀工程勘察设计奖</div>
+								<div class="list_desc">今日，由中国轻工业工程建设协会（原中国轻工业勘察设计协会）组织评选的 “2017年度亲工业优秀工程报...</div>
+								<div class="flex_align">
+									<div class="list_date">2020-09-10</div>
+									<div>
+										<button class="layui-btn layui-btn-radius layui-btn-normal">详情</button>
+									</div>
+								</div>
+							</li>
+							<li class="item flex">
+								<div class="list_title">我司多个项目获得2017年度轻工业优秀工程勘察设计奖</div>
+								<div class="list_desc">今日，由中国轻工业工程建设协会（原中国轻工业勘察设计协会）组织评选的 “2017年度亲工业优秀工程报...</div>
+								<div class="flex_align">
+									<div class="list_date">2020-09-10</div>
+									<div>
+										<button class="layui-btn layui-btn-radius layui-btn-normal">详情</button>
+									</div>
+								</div>
+							</li>
+							<li class="item flex">
+								<div class="list_title">我司多个项目获得2017年度轻工业优秀工程勘察设计奖</div>
+								<div class="list_desc">今日，由中国轻工业工程建设协会（原中国轻工业勘察设计协会）组织评选的 “2017年度亲工业优秀工程报...</div>
+								<div class="flex_align">
+									<div class="list_date">2020-09-10</div>
+									<div>
+										<button class="layui-btn layui-btn-radius layui-btn-normal">详情</button>
+									</div>
+								</div>
+							</li>
+							<li class="item flex">
+								<div class="list_title">我司多个项目获得2017年度轻工业优秀工程勘察设计奖</div>
+								<div class="list_desc">今日，由中国轻工业工程建设协会（原中国轻工业勘察设计协会）组织评选的 “2017年度亲工业优秀工程报...</div>
+								<div class="flex_align">
+									<div class="list_date">2020-09-10</div>
+									<div>
+										<button class="layui-btn layui-btn-radius layui-btn-normal">详情</button>
+									</div>
+								</div>
+							</li>
+							<li class="item flex">
+								<div class="list_title">我司多个项目获得2017年度轻工业优秀工程勘察设计奖</div>
+								<div class="list_desc">今日，由中国轻工业工程建设协会（原中国轻工业勘察设计协会）组织评选的 “2017年度亲工业优秀工程报...</div>
+								<div class="flex_align">
+									<div class="list_date">2020-09-10</div>
+									<div>
+										<button class="layui-btn layui-btn-radius layui-btn-normal">详情</button>
+									</div>
+								</div>
+							</li>
+							<li class="item flex">
+								<div class="list_title">我司多个项目获得2017年度轻工业优秀工程勘察设计奖</div>
+								<div class="list_desc">今日，由中国轻工业工程建设协会（原中国轻工业勘察设计协会）组织评选的 “2017年度亲工业优秀工程报...</div>
+								<div class="flex_align">
+									<div class="list_date">2020-09-10</div>
+									<div>
+										<button class="layui-btn layui-btn-radius layui-btn-normal">详情</button>
+									</div>
+								</div>
+							</li>
+						</ul>
 						<div class="pageHelp"></div>
 					</div>
 				</div>
@@ -502,6 +680,7 @@
 
 				switch (index) {
 					case 0:
+						// 集团要闻
 						// 分页器
 						pageHelp({
 							ele:'.pageHelp',
@@ -509,8 +688,8 @@
 							limit:8,
 							limits:true,
 							allPage:true,
-							first:true,
-							last:true,
+							first:false,
+							last:false,
 							next:true,
 							prev:true,
 							jump:true,
@@ -523,7 +702,8 @@
 							}
 						});
 						break;
-					case 1:
+					case 4:
+						// 通知公告
 						// 分页器
 						pageHelp({
 							ele:'.pageHelp',
@@ -531,8 +711,8 @@
 							limit:6,
 							limits:true,
 							allPage:true,
-							first:true,
-							last:true,
+							first:false,
+							last:false,
 							next:true,
 							prev:true,
 							jump:true,
@@ -550,7 +730,7 @@
 				}
 			}
 			// 默认选中第一个
-			handleClickNav(1);
+			handleClickNav(0);
 
 			$(document).ready(function() {
 				//轮播图
